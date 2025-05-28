@@ -5,7 +5,8 @@
 <main>
   <header>
     <h1>My Courses</h1>
-  </header>  <section class="grid">
+  </header>
+  <section class="grid">
     <div class="cell color-1">
       <h3>ECS 162</h3>
       <p>Web Programming</p>
@@ -45,22 +46,4 @@
   </section>
 </main>
 
-<style>
-  main {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  header {
-    width: 100%;
-    padding: 2rem 0;
-    text-align: center;
-  }
-  
-  h1 {
-    margin: 0;
-    color: var(--color-text);
-  }
-</style>
+<!-- All styling is handled by app.scss -->

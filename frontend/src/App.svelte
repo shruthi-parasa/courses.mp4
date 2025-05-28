@@ -41,12 +41,18 @@
     {/if}
   </div>
 
-  <!-- Show API key during development -->
-  <!--
-  <footer>
-    <p>API Key: {apiKey || 'Loading...'}</p>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="logo">Courses.MP4</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="copyright">© {new Date().getFullYear()} Courses.MP4 | UC Davis</div>
+    </div>
   </footer>
-  -->
 </main>
 
 <style>
