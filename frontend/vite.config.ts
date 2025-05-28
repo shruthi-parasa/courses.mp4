@@ -3,8 +3,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  plugins: [svelte()],
-  server: mode === 'development' ? {
+  plugins: [svelte()],  server: mode === 'development' ? {
     proxy: {
       '/api': {
         target: 'http://backend:8000',
@@ -15,7 +14,7 @@ export default defineConfig(({ mode }) => ({
             console.log('Proxying request:', req.url)
           })
         }
-      },
+      }
     },
   } : undefined,
 }))
