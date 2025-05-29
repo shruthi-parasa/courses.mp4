@@ -1,10 +1,18 @@
+// global styles to remove white space around the page
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 // Color palette
 $color-1: #b0a2e6;
 $color-2: #9e7be0;
 $color-3: #7c6dd5;
-$color-bg: #23223a; // dark background
+$color-bg: #181727; // dark background. original #23223a,changed for deeper contrast
 $color-text: #f6f6fa; // light text
-$max-width: 1200px;
+$max-width: 100%; //changed from 1200px to 100% to make the page full width
 
 :root {
   --color-1: #{$color-1};
@@ -40,6 +48,24 @@ a {
 h1, h2, h3, h4, h5, h6 {
   color: $color-3;
   text-align: center;
+}
+// adjusted the heading to be bigger and subheading to replicate figma design
+header {
+  text-align: center;
+  h1 {
+    font-size: 3.5rem;
+    color: $color-3;
+    letter-spacing: -0.02rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  h2 {
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-weight: 400; 
+    max-width: 600px;
+    color: rgba($color-text, 0.5); //reduced opacity for subheader
+  }
 }
 
 // Grid layouts
@@ -184,6 +210,106 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
+
+//landing page styles for search bar and course list, replicated the search bar from the "search"/"course catalog" page
+.search-bar {
+  width: 100%;
+  margin: 2rem auto 1.5rem auto;
+  padding: 0 1rem;
+  max-width: 600px;
+}
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.2s;
+  background: rgba(255,255,255,0.15);
+  color: $color-text;
+}
+.search-bar input:focus {
+  background: rgba(255,255,255,0.25);
+}
+// course list styles ------------------------------------------
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.course-card {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  min-width: 260px;
+  max-width: 380px;
+  cursor: pointer; //replicated the hover effect from the .cell class
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+.course-title {
+  margin: 0.5rem 1rem 0 1rem;
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.course-data {
+  margin: 0.5rem 1rem 1rem 1rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+.course-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  background: #eee;
+}
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-placeholder {
+  background: #e0e0e0;
+  border-radius: 0 0 0 0;
+  height: 100%;
+}
+.course-tags {
+  margin: 0.5rem 1rem 0 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.tag {
+  color: #555;
+  background: #f3f3f3;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.8rem;
+  font-weight: 500;
+  border-radius: 12px;
+}
+.star {
+  color: #888; // same as the other course data, can change later if wanted for emphasis
+  font-weight: 400;
+}
+
 // Responsive Media Queries
 // Desktop first approach
 
@@ -284,9 +410,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
   }
   
-  .hero p {
-    font-size: 1rem;
-  }
+  // .hero p {
+  //   font-size: 1rem;
+  // }
   
   .site-footer {
     padding: 1.5rem 1rem;
