@@ -27,7 +27,7 @@
     <ul>
       <li><button class:active={currentPage === 'landing'} on:click={() => navigateTo('landing')}>Home</button></li>
       <li><button class:active={currentPage === 'my-courses'} on:click={() => navigateTo('my-courses')}>My Courses</button></li>
-      <li><button class:active={currentPage === 'search'} on:click={() => navigateTo('search')}>Search</button></li>
+      <li><button class:active={currentPage === 'search'} on:click={() => navigateTo('search')}>Course Catalog</button></li> <!--nav title changed to course catalog from search-->
     </ul>
   </nav>
 

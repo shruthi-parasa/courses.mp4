@@ -4,7 +4,7 @@
 
 <main>
   <header>
-    <h1>Search Courses</h1>
+    <h1>Course Catalog</h1>
   </header>  <section class="search-container">
     <div class="search-input">
       <input type="text" placeholder="Search for courses (e.g. ECS 162)" />
