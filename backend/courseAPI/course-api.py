@@ -1,4 +1,3 @@
-
 from bs4 import BeautifulSoup
 import requests
 
@@ -45,18 +44,9 @@ def getCourseInfo(course_block):
             course_info['description'] = desc_text.strip()
     
     return course_info
-
-
-
-if __name__ == "__main__":
-    course_code = input("Please enter the Subject Code You Wish to Learn About (EX. 'ECS'): ").lower()
-    
-    request_url = f"https://catalog.ucdavis.edu/courses-subject-code/{course_code}/"
-    
-    courses = extractCoursesProtocol(request_url)
-        
-    for course in courses:
-        print(f"Code: {course.get('code', 'N/A')}")
-        print(f"Title: {course.get('title', 'N/A')}")
-        print(f"Description: {course.get('description', 'N/A')}")
-        print() 
+  
+def fetchCoursesByCode(course_code):
+  course_code = course_code.lower()
+  request_url = f"https://catalog.ucdavis.edu/courses-subject-code/{course_code}/"
+  courses = extractCoursesProtocol(request_url)
+  return courses
