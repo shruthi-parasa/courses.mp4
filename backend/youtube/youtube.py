@@ -34,8 +34,7 @@ def fetch_videos(query, video_num):
         "video_url": f"https://www.youtube.com/watch?v={id}"
       }
       
-      json_video = json.dumps(video)
-      result.append(json_video)
+      result.append(video)
       
     return result
   except Exception as e:
