@@ -34,27 +34,25 @@ def process_courses():
 # Get videos for all keywords
 def get_videos():
   curr_dir = os.path.dirname(os.path.abspath(__file__))
-  in_path = os.path.join(curr_dir, 'data', 'test_course_info.json')
-  out_path = os.path.join(curr_dir, 'data', 'test_videos.json')
+  file_path = os.path.join(curr_dir, 'data', 'test_course_info.json')
   
-  with open(in_path, "r") as file:
+  with open(file_path, "r") as file:
     courses = json.load(file)
-    
-  keywords = set()
   
   for code, course_info in courses.items():
-    keywords.update(course_info["keywords"])
+    keywords = course_info["keywords"]
     
-  videos = dict()
+    videos = []
+    for keyword in keywords:
+      videos.extend(fetch_videos(keyword, 3))
+      
+    course_info["videos"] = videos
     
-  for keyword in keywords:
-    videos[keyword] = fetch_videos(keyword, 3)
-    
-  with open(out_path, "w") as file:
-    json.dump(videos, file, indent=2)
+  with open(file_path, "w") as file:
+    json.dump(courses, file, indent=2)
   
 
 if __name__ == "__main__":
-  # process_courses()
+  process_courses()
   get_videos()
   
