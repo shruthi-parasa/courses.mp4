@@ -2,6 +2,7 @@ from flask import Flask, redirect, url_for, session
 from authlib.integrations.flask_client import OAuth
 from authlib.common.security import generate_token
 import os
+import json
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
@@ -51,6 +52,19 @@ def authorize():
 def logout():
     session.clear()
     return redirect('/')
+  
+@app.route('/api/videos/<course_code>', methods=["GET"])
+def get_videos(course_code):
+  curr_dir = os.path.dirname(os.path.abspath(__file__))
+  courses_path = os.path.join(curr_dir, 'data', 'test_course_info.json')
+  
+  with open(courses_path, "r") as file:
+    courses = json.load(file)
+    
+  videos = courses[course_code]["videos"]
+  
+  return videos
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

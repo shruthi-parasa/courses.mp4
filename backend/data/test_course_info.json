@@ -1,5 +1,5 @@
 {
-  "ECS 036C": {
+  "ECS036C": {
     "title": "Data Structures, Algorithms, & Programming",
     "description": "Design and analysis of data structures for a variety of applications; trees, heaps, searching, sorting, hashing, and graphs. Extensive programming.",
     "keywords": [
@@ -82,7 +82,7 @@
       }
     ]
   },
-  "ECS 150": {
+  "ECS150": {
     "title": "Operating Systems & System Programming",
     "description": "Basic concepts of operating systems and system programming. Processes and interprocess communication/synchronization; virtual memory, program loading and linking; file and I/O subsystems; utility programs. Study of a real operating system.",
     "keywords": [
@@ -165,7 +165,7 @@
       }
     ]
   },
-  "ECS 162": {
+  "ECS162": {
     "title": "Web Programming",
     "description": "Technical aspects of building websites, including both server-side and client-side software development.",
     "keywords": [
