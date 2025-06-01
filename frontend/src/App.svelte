@@ -1,10 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import svelteLogo from './assets/svelte.svg';
-  import viteLogo from '/vite.svg';
-  import Counter from './lib/Counter.svelte';
-
+  import Landing from './routes/Landing.svelte';
+  import MyCourses from './routes/MyCourses.svelte';
+  import SearchCourses from './routes/SearchCourses.svelte';
+  
   let apiKey: string = '';
+  let currentPage = 'landing';
 
   onMount(async () => {
     try {
@@ -14,51 +15,98 @@
     } catch (error) {
       console.error('Failed to fetch API key:', error);
     }
-  }); 
+  });
+
+  function navigateTo(page: string) {
+    currentPage = page;
+  }
 </script>
 
 <main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+  <nav>
+    <ul>
+      <li><button class:active={currentPage === 'landing'} on:click={() => navigateTo('landing')}>Home</button></li>
+      <li><button class:active={currentPage === 'my-courses'} on:click={() => navigateTo('my-courses')}>My Courses</button></li>
+      <li><button class:active={currentPage === 'search'} on:click={() => navigateTo('search')}>Course Catalog</button></li> <!--nav title changed to course catalog from search-->
+    </ul>
+  </nav>
+
+  <div class="content">
+    {#if currentPage === 'landing'}
+      <Landing />
+    {:else if currentPage === 'my-courses'}
+      <MyCourses />
+    {:else if currentPage === 'search'}
+      <SearchCourses />
+    {/if}
   </div>
-  <h1>Vite + Svelte</h1>
 
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Your API Key: <strong>{apiKey}</strong>
-  </p>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="logo">Courses.MP4</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="copyright">© {new Date().getFullYear()} Courses.MP4 | UC Davis</div>
+    </div>
+  </footer>
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  /* Use regular CSS with variables */
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+
+  nav {
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-3);
+    padding: 0.5rem 1rem;
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap: 1rem;
   }
-  .read-the-docs {
-    color: #888;
+
+  nav button {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    border-radius: 4px;
+  }
+
+  nav button:hover {
+    color: var(--color-1);
+  }
+
+  nav button.active {
+    background-color: var(--color-3);
+    color: white;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--color-text);
+    opacity: 0.6;
   }
 </style>
