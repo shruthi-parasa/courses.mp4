@@ -3,42 +3,34 @@
     "title": "Data Structures, Algorithms, & Programming",
     "description": "Design and analysis of data structures for a variety of applications; trees, heaps, searching, sorting, hashing, and graphs. Extensive programming.",
     "keywords": [
-      "Algorithms",
-      "Data Structures",
-      "Hashing"
+      "hashing graphs",
+      "structures algorithms",
+      "algorithms programming"
     ],
     "videos": [
       {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
       },
       {
-        "title": "What&#39;s an algorithm? - David J. Malan",
-        "id": "6hfOvs8pY1k",
-        "channel": "TED-Ed",
-        "thumbnail": "https://i.ytimg.com/vi/6hfOvs8pY1k/default.jpg",
-        "publish_time": "2013-05-20T15:19:32Z",
-        "video_url": "https://www.youtube.com/watch?v=6hfOvs8pY1k"
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
       },
       {
-        "title": "Algorithms are breaking how we think",
-        "id": "QEJpZjg8GuA",
-        "channel": "Technology Connections",
-        "thumbnail": "https://i.ytimg.com/vi/QEJpZjg8GuA/default.jpg",
-        "publish_time": "2025-02-22T17:04:13Z",
-        "video_url": "https://www.youtube.com/watch?v=QEJpZjg8GuA"
-      },
-      {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
       },
       {
         "title": "Data Structures and Algorithms in 15 Minutes",
@@ -49,36 +41,44 @@
         "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
       },
       {
-        "title": "Data Structures: Crash Course Computer Science #14",
-        "id": "DuDz6B4cqVc",
-        "channel": "CrashCourse",
-        "thumbnail": "https://i.ytimg.com/vi/DuDz6B4cqVc/default.jpg",
-        "publish_time": "2017-05-31T22:00:50Z",
-        "video_url": "https://www.youtube.com/watch?v=DuDz6B4cqVc"
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
       },
       {
-        "title": "What is Hashing? Hash Functions Explained Simply",
-        "id": "2BldESGZKB8",
-        "channel": "Lisk",
-        "thumbnail": "https://i.ytimg.com/vi/2BldESGZKB8/default.jpg",
-        "publish_time": "2018-08-08T09:16:21Z",
-        "video_url": "https://www.youtube.com/watch?v=2BldESGZKB8"
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
       },
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
       },
       {
-        "title": "Hashing Algorithms and Security - Computerphile",
-        "id": "b4b8ktEV4Bg",
-        "channel": "Computerphile",
-        "thumbnail": "https://i.ytimg.com/vi/b4b8ktEV4Bg/default.jpg",
-        "publish_time": "2013-11-08T17:21:55Z",
-        "video_url": "https://www.youtube.com/watch?v=b4b8ktEV4Bg"
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
       }
     ]
   },
@@ -86,82 +86,82 @@
     "title": "Operating Systems & System Programming",
     "description": "Basic concepts of operating systems and system programming. Processes and interprocess communication/synchronization; virtual memory, program loading and linking; file and I/O subsystems; utility programs. Study of a real operating system.",
     "keywords": [
-      "Operating Systems",
-      "multi-thread",
-      "virtual memory"
+      "file subsystems",
+      "programming processes",
+      "systems programming"
     ],
     "videos": [
       {
-        "title": "Computer Basics: Understanding Operating Systems",
-        "id": "fkGCLIQx1MI",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/fkGCLIQx1MI/default.jpg",
-        "publish_time": "2020-09-01T14:06:19Z",
-        "video_url": "https://www.youtube.com/watch?v=fkGCLIQx1MI"
+        "title": "File Sharing in Windows Subsystem for Android #Windows11",
+        "id": "NyOpGiUeICE",
+        "channel": "PerplexPixel",
+        "thumbnail": "https://i.ytimg.com/vi/NyOpGiUeICE/default.jpg",
+        "publish_time": "2024-07-10T06:42:16Z",
+        "video_url": "https://www.youtube.com/watch?v=NyOpGiUeICE"
       },
       {
-        "title": "Operating Systems: Crash Course Computer Science #18",
-        "id": "26QPDBe-NB8",
-        "channel": "CrashCourse",
-        "thumbnail": "https://i.ytimg.com/vi/26QPDBe-NB8/default.jpg",
-        "publish_time": "2017-06-28T21:13:17Z",
-        "video_url": "https://www.youtube.com/watch?v=26QPDBe-NB8"
+        "title": "L-7.1: File System in Operating System | Windows, Linux, Unix, Android etc.",
+        "id": "0LtuQhNFFe0",
+        "channel": "Gate Smashers",
+        "thumbnail": "https://i.ytimg.com/vi/0LtuQhNFFe0/default.jpg",
+        "publish_time": "2020-05-21T08:45:14Z",
+        "video_url": "https://www.youtube.com/watch?v=0LtuQhNFFe0"
       },
       {
-        "title": "How Do Operating Systems Work?",
-        "id": "GjNp0bBrjmU",
-        "channel": "ClickView",
-        "thumbnail": "https://i.ytimg.com/vi/GjNp0bBrjmU/default.jpg",
-        "publish_time": "2018-09-24T07:36:57Z",
-        "video_url": "https://www.youtube.com/watch?v=GjNp0bBrjmU"
+        "title": "ANDROID Subsystem for Windows gets file sharing feature Documents Pictures",
+        "id": "ZfrofaOAxj4",
+        "channel": "Windows, computers and Technology",
+        "thumbnail": "https://i.ytimg.com/vi/ZfrofaOAxj4/default.jpg",
+        "publish_time": "2023-06-13T16:49:53Z",
+        "video_url": "https://www.youtube.com/watch?v=ZfrofaOAxj4"
       },
       {
-        "title": "Multithreading vs Multiprocessing | System Design",
-        "id": "PgDaJEjlBuI",
-        "channel": "System Design School",
-        "thumbnail": "https://i.ytimg.com/vi/PgDaJEjlBuI/default.jpg",
-        "publish_time": "2024-10-10T19:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=PgDaJEjlBuI"
+        "title": "How To Learn Programming for BEGINNERS! (2022/2023)",
+        "id": "bJzb-RuUcMU",
+        "channel": "CroatCode",
+        "thumbnail": "https://i.ytimg.com/vi/bJzb-RuUcMU/default.jpg",
+        "publish_time": "2018-11-04T01:12:12Z",
+        "video_url": "https://www.youtube.com/watch?v=bJzb-RuUcMU"
       },
       {
-        "title": "Multithreading in Java Explained in 10 Minutes",
-        "id": "r_MbozD32eo",
-        "channel": "Coding with John",
-        "thumbnail": "https://i.ytimg.com/vi/r_MbozD32eo/default.jpg",
-        "publish_time": "2021-06-28T13:00:18Z",
-        "video_url": "https://www.youtube.com/watch?v=r_MbozD32eo"
+        "title": "Programming vs Coding - What&#39;s the difference?",
+        "id": "CIRGjwYgdT4",
+        "channel": "Aaron Jack",
+        "thumbnail": "https://i.ytimg.com/vi/CIRGjwYgdT4/default.jpg",
+        "publish_time": "2021-02-25T08:56:12Z",
+        "video_url": "https://www.youtube.com/watch?v=CIRGjwYgdT4"
       },
       {
-        "title": "Multithreading Code - Computerphile",
-        "id": "7ENFeb-J75k",
-        "channel": "Computerphile",
-        "thumbnail": "https://i.ytimg.com/vi/7ENFeb-J75k/default.jpg",
-        "publish_time": "2018-12-14T13:04:24Z",
-        "video_url": "https://www.youtube.com/watch?v=7ENFeb-J75k"
+        "title": "Introduction to Programming and Computer Science - Full Course",
+        "id": "zOjov-2OZ0E",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/zOjov-2OZ0E/default.jpg",
+        "publish_time": "2020-04-21T13:45:02Z",
+        "video_url": "https://www.youtube.com/watch?v=zOjov-2OZ0E"
       },
       {
-        "title": "What is virtual memory? \u2013 Gary explains",
-        "id": "2quKyPnUShQ",
-        "channel": "Android Authority",
-        "thumbnail": "https://i.ytimg.com/vi/2quKyPnUShQ/default.jpg",
-        "publish_time": "2017-02-13T12:41:24Z",
-        "video_url": "https://www.youtube.com/watch?v=2quKyPnUShQ"
+        "title": "before you code, learn how computers work",
+        "id": "97i2BAUw5Xc",
+        "channel": "Low Level",
+        "thumbnail": "https://i.ytimg.com/vi/97i2BAUw5Xc/default.jpg",
+        "publish_time": "2024-02-07T17:17:46Z",
+        "video_url": "https://www.youtube.com/watch?v=97i2BAUw5Xc"
       },
       {
-        "title": "But, what is Virtual Memory?",
-        "id": "A9WLYbE0p-I",
-        "channel": "Tech With Nikola",
-        "thumbnail": "https://i.ytimg.com/vi/A9WLYbE0p-I/default.jpg",
-        "publish_time": "2023-10-21T15:39:46Z",
-        "video_url": "https://www.youtube.com/watch?v=A9WLYbE0p-I"
+        "title": "is it possible to make an OS from scratch solo? Terry Davis wrote TempleOS so yes.",
+        "id": "BiUCyhgHf1Q",
+        "channel": "You Suck at Programming",
+        "thumbnail": "https://i.ytimg.com/vi/BiUCyhgHf1Q/default.jpg",
+        "publish_time": "2024-10-29T01:52:03Z",
+        "video_url": "https://www.youtube.com/watch?v=BiUCyhgHf1Q"
       },
       {
-        "title": "16.2.2 Basics of Virtual Memory",
-        "id": "8yO2FBBfaB0",
-        "channel": "MIT OpenCourseWare",
-        "thumbnail": "https://i.ytimg.com/vi/8yO2FBBfaB0/default.jpg",
-        "publish_time": "2019-07-12T18:35:56Z",
-        "video_url": "https://www.youtube.com/watch?v=8yO2FBBfaB0"
+        "title": "zig will change programming forever",
+        "id": "pnnx1bkFXng",
+        "channel": "Low Level",
+        "thumbnail": "https://i.ytimg.com/vi/pnnx1bkFXng/default.jpg",
+        "publish_time": "2024-04-30T14:00:43Z",
+        "video_url": "https://www.youtube.com/watch?v=pnnx1bkFXng"
       }
     ]
   },
@@ -169,11 +169,35 @@
     "title": "Web Programming",
     "description": "Technical aspects of building websites, including both server-side and client-side software development.",
     "keywords": [
-      "Web Programming",
-      "Database",
-      "React"
+      "software development",
+      "web programming",
+      "building websites"
     ],
     "videos": [
+      {
+        "title": "Introduction To Software Development LifeCycle | What Is Software Development? | Simplilearn",
+        "id": "Fi3_BjVzpqk",
+        "channel": "Simplilearn",
+        "thumbnail": "https://i.ytimg.com/vi/Fi3_BjVzpqk/default.jpg",
+        "publish_time": "2022-09-21T15:30:04Z",
+        "video_url": "https://www.youtube.com/watch?v=Fi3_BjVzpqk"
+      },
+      {
+        "title": "Software Development Life Cycle: Explained",
+        "id": "SaCYkPD4_K0",
+        "channel": "AltexSoft",
+        "thumbnail": "https://i.ytimg.com/vi/SaCYkPD4_K0/default.jpg",
+        "publish_time": "2023-10-18T13:16:54Z",
+        "video_url": "https://www.youtube.com/watch?v=SaCYkPD4_K0"
+      },
+      {
+        "title": "What is Software Development",
+        "id": "pquPUX1EihM",
+        "channel": "Technology Profession",
+        "thumbnail": "https://i.ytimg.com/vi/pquPUX1EihM/default.jpg",
+        "publish_time": "2015-09-10T21:54:34Z",
+        "video_url": "https://www.youtube.com/watch?v=pquPUX1EihM"
+      },
       {
         "title": "Learn web development as an absolute beginner",
         "id": "ysEN5RaKOlA",
@@ -199,52 +223,28 @@
         "video_url": "https://www.youtube.com/watch?v=5YDVJaItmaY"
       },
       {
-        "title": "Database Tutorial for Beginners",
-        "id": "wR0jg0eQsZA",
-        "channel": "Lucid Software",
-        "thumbnail": "https://i.ytimg.com/vi/wR0jg0eQsZA/default.jpg",
-        "publish_time": "2018-04-16T16:50:11Z",
-        "video_url": "https://www.youtube.com/watch?v=wR0jg0eQsZA"
+        "title": "How to build a website in seconds #ai #productivity #aitools #websitebuilder @Framer",
+        "id": "3_pjNppPLMA",
+        "channel": "SetupsAI",
+        "thumbnail": "https://i.ytimg.com/vi/3_pjNppPLMA/default.jpg",
+        "publish_time": "2024-06-20T15:59:31Z",
+        "video_url": "https://www.youtube.com/watch?v=3_pjNppPLMA"
       },
       {
-        "title": "What is Database &amp; Database Management System DBMS | Intro to DBMS",
-        "id": "X7v0O8yiUuY",
-        "channel": "Tech Might",
-        "thumbnail": "https://i.ytimg.com/vi/X7v0O8yiUuY/default.jpg",
-        "publish_time": "2022-10-30T13:42:53Z",
-        "video_url": "https://www.youtube.com/watch?v=X7v0O8yiUuY"
+        "title": "How to Make a Website | Step by Step [2025]",
+        "id": "prLv5uwUtuY",
+        "channel": "Steve Builds Websites",
+        "thumbnail": "https://i.ytimg.com/vi/prLv5uwUtuY/default.jpg",
+        "publish_time": "2024-11-08T14:30:24Z",
+        "video_url": "https://www.youtube.com/watch?v=prLv5uwUtuY"
       },
       {
-        "title": "What is a Relational Database?",
-        "id": "OqjJjpjDRLc",
-        "channel": "IBM Technology",
-        "thumbnail": "https://i.ytimg.com/vi/OqjJjpjDRLc/default.jpg",
-        "publish_time": "2021-10-22T14:30:06Z",
-        "video_url": "https://www.youtube.com/watch?v=OqjJjpjDRLc"
-      },
-      {
-        "title": "React Tutorial for Beginners",
-        "id": "SqcY0GlETPk",
-        "channel": "Programming with Mosh",
-        "thumbnail": "https://i.ytimg.com/vi/SqcY0GlETPk/default.jpg",
-        "publish_time": "2023-03-12T08:00:07Z",
-        "video_url": "https://www.youtube.com/watch?v=SqcY0GlETPk"
-      },
-      {
-        "title": "Switch Disco - REACT (feat. Ella Henderson) (Lyric Video)",
-        "id": "cPN4H0sSCHQ",
-        "channel": "SwitchDiscoVEVO",
-        "thumbnail": "https://i.ytimg.com/vi/cPN4H0sSCHQ/default.jpg",
-        "publish_time": "2023-01-16T16:58:40Z",
-        "video_url": "https://www.youtube.com/watch?v=cPN4H0sSCHQ"
-      },
-      {
-        "title": "React JS 19 Full Course 2025 | Build an App and Master React in 2 Hours",
-        "id": "dCLhUialKPQ",
-        "channel": "JavaScript Mastery",
-        "thumbnail": "https://i.ytimg.com/vi/dCLhUialKPQ/default.jpg",
-        "publish_time": "2025-01-24T14:21:30Z",
-        "video_url": "https://www.youtube.com/watch?v=dCLhUialKPQ"
+        "title": "The fastest way to build a beautiful website with AI (bolt.new tutorial)",
+        "id": "1MSVWUiNmxs",
+        "channel": "Prompt Warrior",
+        "thumbnail": "https://i.ytimg.com/vi/1MSVWUiNmxs/default.jpg",
+        "publish_time": "2024-10-14T15:00:20Z",
+        "video_url": "https://www.youtube.com/watch?v=1MSVWUiNmxs"
       }
     ]
   }

@@ -19,7 +19,7 @@ def extract_keywords(desc : str):
     doc_embedding = model.encode([desc])
     candidate_embeddings = model.encode(candidates)
 
-    top_n = 10
+    top_n = 3
     distances = cosine_similarity(doc_embedding, candidate_embeddings)
     keywords = [candidates[index] for index in distances.argsort()[0][-top_n:]]
 
