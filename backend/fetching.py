@@ -5,9 +5,9 @@ import json
 import os
 from pymongo import MongoClient
 
-from courseAPI.course_api import fetchCoursesByCode
+from APIs.course_api import fetchCoursesByCode
 from extract_keywords.extract_keywords import extract_keywords
-from youtube.youtube import fetch_videos
+from APIs.youtube import fetch_videos
 
 mongo = MongoClient(os.getenv("MONGO_URI"))
 db = mongo["database"]
