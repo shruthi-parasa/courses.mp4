@@ -3,10 +3,13 @@ from authlib.integrations.flask_client import OAuth
 from authlib.common.security import generate_token
 import os
 import json
+from pymongo import MongoClient
+
+mongo = MongoClient(os.getenv("MONGO_URI"))
+db = mongo["database"]
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
-
 
 oauth = OAuth(app)
 
@@ -57,44 +60,28 @@ def logout():
 @app.route('/api/courses_list', methods=["GET"])
 def get_courses_list():
   curr_dir = os.path.dirname(os.path.abspath(__file__))
-  courses_path = os.path.join(curr_dir, 'data', 'test_course_info.json')
+  courses_path = os.path.join(curr_dir, 'data', 'course_list.json')
   
   with open(courses_path, "r") as file:
     courses = json.load(file)
-    
-  courses_list = list(courses.keys())
   
-  return jsonify(courses_list)
+  return courses
   
 # Get videos for a course code
 @app.route('/api/videos/<course_code>', methods=["GET"])
 def get_videos(course_code):
-  curr_dir = os.path.dirname(os.path.abspath(__file__))
-  courses_path = os.path.join(curr_dir, 'data', 'test_course_info.json')
-  
-  with open(courses_path, "r") as file:
-    courses = json.load(file)
-    
-  videos = courses[course_code]["videos"]
-  
+  entry = db["videos"].find_one({"code": course_code})
+  videos = entry["videos"]
   return jsonify(videos)
 
 # Get course information for a course code
 @app.route('/api/courses/<course_code>', methods=["GET"])
 def get_course_info(course_code):
-  curr_dir = os.path.dirname(os.path.abspath(__file__))
-  courses_path = os.path.join(curr_dir, 'data', 'test_course_info.json')
-  
-  with open(courses_path, "r") as file:
-    courses = json.load(file)
-    
-  course_info = {
-    "title": courses[course_code]["title"],
-    "description": courses[course_code]["description"]
-  } 
-  
-  return jsonify(course_info)
-
+  course = db["course-info"].find_one({"code": course_code})
+  return jsonify({
+    "title": course["title"],
+    "description": course["description"]
+  })
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
