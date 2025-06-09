@@ -4,11 +4,13 @@ from authlib.common.security import generate_token
 import os
 import json
 from pymongo import MongoClient
+from flask_cors import CORS
 
 mongo = MongoClient(os.getenv("MONGO_URI"))
 db = mongo["database"]
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 app.secret_key = os.urandom(24)
 
 oauth = OAuth(app)
@@ -83,5 +85,17 @@ def get_course_info(course_code):
     "description": course["description"]
   })
 
+# Get test course data
+@app.route('/api/test_courses', methods=["GET"])
+def get_test_courses():
+    curr_dir = os.path.dirname(os.path.abspath(__file__))
+    courses_path = os.path.join(curr_dir, 'data', 'test_course_info.json')
+    
+    with open(courses_path, "r") as file:
+        courses = json.load(file)
+    
+    return jsonify(courses)
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8000)
+    #app.run(debug=True, host='0.0.0.0', port=8000)
+    app.run(debug=True, host='0.0.0.0', port=8001)
