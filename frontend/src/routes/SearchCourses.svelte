@@ -39,7 +39,7 @@
   async function fetchCourses() {
     try {
       // Fetch test course data
-      const response = await fetch('http://localhost:8001/api/test_courses');
+      const response = await fetch('/api/test_courses');
       if (!response.ok) throw new Error('Failed to fetch courses');
       const courseData = await response.json();
       

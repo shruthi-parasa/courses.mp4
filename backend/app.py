@@ -1,10 +1,13 @@
-from flask import Flask, redirect, url_for, session, jsonify
+from flask import Flask, redirect, url_for, session, jsonify, send_from_directory
 from authlib.integrations.flask_client import OAuth
 from authlib.common.security import generate_token
 import os
 import json
 from pymongo import MongoClient
 from flask_cors import CORS
+
+static_path = os.getenv('STATIC_PATH','static')
+template_path = os.getenv('TEMPLATE_PATH','templates')
 
 mongo = MongoClient(os.getenv("MONGO_URI"))
 db = mongo["database"]
@@ -16,6 +19,7 @@ app.secret_key = os.urandom(24)
 oauth = OAuth(app)
 
 nonce = generate_token()
+
 
 
 oauth.register(
@@ -31,25 +35,28 @@ oauth.register(
     client_kwargs={'scope': 'openid email profile'}
 )
 
+flask_app = oauth.create_client(os.getenv('OIDC_CLIENT_NAME'))
+
+
 @app.route('/')
-def home():
-    user = session.get('user')
-    if user:
-        return f"<h2>Logged in as {user['email']}</h2><a href='/logout'>Logout</a>"
-    return '<a href="/login">Login with Dex</a>'
+@app.route('/<path:path>')
+def serve_frontend(path=''):
+    if path != '' and os.path.exists(os.path.join(static_path,path)):
+        return send_from_directory(static_path, path)
+    return send_from_directory(template_path, 'index.html')
 
 @app.route('/login')
 def login():
     session['nonce'] = nonce
     redirect_uri = 'http://localhost:8000/authorize'
-    return oauth.flask_app.authorize_redirect(redirect_uri, nonce=nonce)
+    return flask_app.authorize_redirect(redirect_uri, nonce=nonce)
 
 @app.route('/authorize')
 def authorize():
-    token = oauth.flask_app.authorize_access_token()
+    token = flask_app.authorize_access_token()
     nonce = session.get('nonce')
 
-    user_info = oauth.flask_app.parse_id_token(token, nonce=nonce)  # or use .get('userinfo').json()
+    user_info = flask_app.parse_id_token(token, nonce=nonce)  # or use .get('userinfo').json()
     session['user'] = user_info
     return redirect('/')
 
@@ -96,6 +103,15 @@ def get_test_courses():
     
     return jsonify(courses)
 
+@app.route('/get-user')
+def get_user():
+    # gets the logged in user's username from the db
+    # @returns the username in JSON
+    user = session.get('user')
+    if (not user):
+        return jsonify({'username': None})
+    return jsonify({'username': f"{user['name']}"})
+
 if __name__ == '__main__':
-    #app.run(debug=True, host='0.0.0.0', port=8000)
-    app.run(debug=True, host='0.0.0.0', port=8001)
+    app.run(debug=True, host='0.0.0.0', port=8000)
+    # app.run(debug=True, host='0.0.0.0', port=8001)

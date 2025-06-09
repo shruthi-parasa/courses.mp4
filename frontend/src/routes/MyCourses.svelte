@@ -1,7 +1,8 @@
 <script lang="ts">
   // My Courses page logic will go here
+  import {getUser} from '../get_user';
   let showSidepanel = false;
-  let isLoggedIn = false; // TODO: need to change this after implementing dex
+  // let isLoggedIn = false; // TODO: need to change this after implementing dex
   let courses: { code: string; title: string; description: string }[] = [];
   let loading = true;
   let error: string | null = null;
@@ -9,14 +10,16 @@
 
   //login and logout functions manual for now, will change after implementing dex
   function handleLogin() {
-    isLoggedIn = true;
+    window.location.href = '/login';
+    //isLoggedIn = true;
     //load favorites from local storage and fetch courses
     loadFavorites();
     fetchCourses();
   }
 
   function handleLogout() {
-    isLoggedIn = false;
+    window.location.href = '/logout';
+    //isLoggedIn = false;
   }
 
   function loadFavorites() {
@@ -33,14 +36,14 @@
     loading = true;
     try {
       //fetch the course codes from the backend
-      const response = await fetch('http://localhost:8000/api/courses_list');
+      const response = await fetch('/api/courses_list');
       if (!response.ok) throw new Error('Failed to fetch courses');
       const courseCodes = await response.json();
       
       //fetch the details for each course
       const courseDetails = await Promise.all(
         courseCodes.map(async (code: string) => {
-          const detailResponse = await fetch(`http://localhost:8000/api/courses/${code}`);
+          const detailResponse = await fetch(`/api/courses/${code}`);
           if (!detailResponse.ok) throw new Error(`Failed to fetch details for ${code}`);
           const details = await detailResponse.json();
           return {
@@ -62,7 +65,8 @@
   import { onMount } from 'svelte';
   onMount(() => {
     loadFavorites();
-    if (isLoggedIn) fetchCourses();
+    let username = getUser();
+    if (username != null) fetchCourses();
   });
   //filtering courses based on favorites, so my courses page only shows favorited courses
   $: favoritedCourses = courses.filter(course => favoriteCourses.has(course.code));
@@ -84,7 +88,11 @@
     </button>
   </div>
   <div class="content-wrapper">
-    {#if !isLoggedIn}
+    {#await getUser()}
+    <p>Loading...</p>
+    {:then username}
+    {#if typeof username !== "undefined"}
+    {:else if username == null}
       <div class="login-prompt left-align">Please log in to view your courses.</div>
     {:else if loading}
       <div class="loading">Loading your courses...</div>
@@ -103,7 +111,6 @@
         {/each}
       </section>
     {/if}
-
     {#if showSidepanel}
       <aside class="sidepanel">
         <div class="sidepanel-header">
@@ -111,7 +118,7 @@
           <button class="close-btn" on:click={toggleSidepanel}>×</button>
         </div>
         <div class="sidepanel-content">
-          {#if isLoggedIn}
+          {#if username != null}
             <div class="account-info">
               <h3>Hello</h3>
               <button class="logout-btn" on:click={handleLogout}>
@@ -129,6 +136,7 @@
         </div>
       </aside>
     {/if}
+    {/await}
   </div>
 </main>
 </div>
