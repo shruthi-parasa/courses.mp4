@@ -44,3 +44,21 @@ db["user-courses"].insert_one({
     "ecs162"
   ]
 })
+
+db["user-votes"].insert_one({
+  "username": "user@hw3.com",
+  "upvote": [],
+  "downvote": []
+})
+
+db["user-votes"].insert_one({
+  "username": "moderator@hw3.com",
+  "upvote": [],
+  "downvote": []
+})
+
+db["user-votes"].insert_one({
+  "username": "admin@hw3.com",
+  "upvote": [],
+  "downvote": []
+})
