@@ -9,76 +9,94 @@
     ],
     "videos": [
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "Introduction to Graph Theory: A Computer Science Perspective",
+        "id": "LFKZLXVO-Dg",
+        "channel": "Reducible",
+        "thumbnail": "https://i.ytimg.com/vi/LFKZLXVO-Dg/default.jpg",
+        "publish_time": "2020-06-14T18:39:07Z",
+        "video_url": "https://www.youtube.com/watch?v=LFKZLXVO-Dg",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Hash Tables and Hash Functions",
-        "id": "KyUTuwz_b7Q",
-        "channel": "Computer Science Lessons",
-        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
-        "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "title": "What is a Graph? | Graph Theory",
+        "id": "ZQY4IfEcGvM",
+        "channel": "Wrath of Math",
+        "thumbnail": "https://i.ytimg.com/vi/ZQY4IfEcGvM/default.jpg",
+        "publish_time": "2018-09-03T11:00:03Z",
+        "video_url": "https://www.youtube.com/watch?v=ZQY4IfEcGvM",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
-        "id": "FsfRsGFHuv4",
-        "channel": "Bro Code",
-        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
-        "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "title": "Intro to Graph Theory | Definitions &amp; Ex: 7 Bridges of Konigsberg",
+        "id": "C7YrMRdLkqo",
+        "channel": "Dr. Trefor Bazett",
+        "thumbnail": "https://i.ytimg.com/vi/C7YrMRdLkqo/default.jpg",
+        "publish_time": "2018-11-28T13:04:19Z",
+        "video_url": "https://www.youtube.com/watch?v=C7YrMRdLkqo",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures and Algorithms in 15 Minutes",
-        "id": "oz9cEqFynHU",
-        "channel": "Tren Black",
-        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
-        "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "title": "TOP 5 DISCRETE MATH BOOKS",
+        "id": "woi8HsA-3-0",
+        "channel": "Mike the Coder",
+        "thumbnail": "https://i.ytimg.com/vi/woi8HsA-3-0/default.jpg",
+        "publish_time": "2022-08-14T03:56:36Z",
+        "video_url": "https://www.youtube.com/watch?v=woi8HsA-3-0",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
-        "id": "8hly31xKli0",
+        "title": "Maths for Programmers: Introduction (What Is Discrete Mathematics?)",
+        "id": "1FfX2xW3104",
         "channel": "freeCodeCamp.org",
-        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
-        "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "thumbnail": "https://i.ytimg.com/vi/1FfX2xW3104/default.jpg",
+        "publish_time": "2016-11-05T15:51:13Z",
+        "video_url": "https://www.youtube.com/watch?v=1FfX2xW3104",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "Introduction to Discrete Mathematics",
+        "id": "p2b2Vb-cYCs",
+        "channel": "Neso Academy",
+        "thumbnail": "https://i.ytimg.com/vi/p2b2Vb-cYCs/default.jpg",
+        "publish_time": "2018-04-14T02:30:00Z",
+        "video_url": "https://www.youtube.com/watch?v=p2b2Vb-cYCs",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
-        "id": "JJkWemM03Lg",
-        "channel": "Internet Made Coder",
-        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
-        "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+        "title": "The Math Needed for Computer Science",
+        "id": "eSFA1Fp8jcU",
+        "channel": "Zach Star",
+        "thumbnail": "https://i.ytimg.com/vi/eSFA1Fp8jcU/default.jpg",
+        "publish_time": "2018-04-21T10:30:35Z",
+        "video_url": "https://www.youtube.com/watch?v=eSFA1Fp8jcU",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+        "title": "The Man Who Revolutionized Computer Science With Math",
+        "id": "rkZzg7Vowao",
+        "channel": "Quanta Magazine",
+        "thumbnail": "https://i.ytimg.com/vi/rkZzg7Vowao/default.jpg",
+        "publish_time": "2022-05-17T14:17:09Z",
+        "video_url": "https://www.youtube.com/watch?v=rkZzg7Vowao",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "10 Math Concepts for Programmers",
+        "id": "bOCHTHkBoAs",
+        "channel": "Fireship",
+        "thumbnail": "https://i.ytimg.com/vi/bOCHTHkBoAs/default.jpg",
+        "publish_time": "2023-04-21T18:33:00Z",
+        "video_url": "https://www.youtube.com/watch?v=bOCHTHkBoAs",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   },
@@ -92,76 +110,94 @@
     ],
     "videos": [
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "How To Learn Programming for BEGINNERS! (2022/2023)",
+        "id": "bJzb-RuUcMU",
+        "channel": "CroatCode",
+        "thumbnail": "https://i.ytimg.com/vi/bJzb-RuUcMU/default.jpg",
+        "publish_time": "2018-11-04T01:12:12Z",
+        "video_url": "https://www.youtube.com/watch?v=bJzb-RuUcMU",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Hash Tables and Hash Functions",
-        "id": "KyUTuwz_b7Q",
-        "channel": "Computer Science Lessons",
-        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
-        "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "title": "What programming language you should learn\ud83d\udc69\u200d\ud83d\udcbb(based off your interests) #programming #technology",
+        "id": "6er14t0WA38",
+        "channel": "Coding with Lewis",
+        "thumbnail": "https://i.ytimg.com/vi/6er14t0WA38/default.jpg",
+        "publish_time": "2022-09-08T15:30:22Z",
+        "video_url": "https://www.youtube.com/watch?v=6er14t0WA38",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
-        "id": "FsfRsGFHuv4",
-        "channel": "Bro Code",
-        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
-        "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "title": "1 Year of Coding #programming #comedy #coding",
+        "id": "hRUJ41rdp4M",
+        "channel": "Devslopes",
+        "thumbnail": "https://i.ytimg.com/vi/hRUJ41rdp4M/default.jpg",
+        "publish_time": "2023-06-18T04:14:29Z",
+        "video_url": "https://www.youtube.com/watch?v=hRUJ41rdp4M",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures and Algorithms in 15 Minutes",
-        "id": "oz9cEqFynHU",
-        "channel": "Tren Black",
-        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
-        "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "title": "Unix Tools -  Scripting",
+        "id": "atsOm1F8ixA",
+        "channel": "Tech Upskill",
+        "thumbnail": "https://i.ytimg.com/vi/atsOm1F8ixA/default.jpg",
+        "publish_time": "2023-02-08T17:18:51Z",
+        "video_url": "https://www.youtube.com/watch?v=atsOm1F8ixA",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
-        "id": "8hly31xKli0",
+        "title": "Do Unix Version 1 Commands Still Work On Modern Linux?",
+        "id": "dG5B5ViyZOw",
+        "channel": "RobertElderSoftware",
+        "thumbnail": "https://i.ytimg.com/vi/dG5B5ViyZOw/default.jpg",
+        "publish_time": "2023-09-25T14:00:32Z",
+        "video_url": "https://www.youtube.com/watch?v=dG5B5ViyZOw",
+        "up_vote": 0,
+        "down_vote": 0
+      },
+      {
+        "title": "Basic Unix Tools - bc",
+        "id": "7Mc3HGiQfyc",
+        "channel": "SuperPepperMint",
+        "thumbnail": "https://i.ytimg.com/vi/7Mc3HGiQfyc/default.jpg",
+        "publish_time": "2020-10-08T23:26:46Z",
+        "video_url": "https://www.youtube.com/watch?v=7Mc3HGiQfyc",
+        "up_vote": 0,
+        "down_vote": 0
+      },
+      {
+        "title": "Introduction to Programming and Computer Science - Full Course",
+        "id": "zOjov-2OZ0E",
         "channel": "freeCodeCamp.org",
-        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
-        "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "thumbnail": "https://i.ytimg.com/vi/zOjov-2OZ0E/default.jpg",
+        "publish_time": "2020-04-21T13:45:02Z",
+        "video_url": "https://www.youtube.com/watch?v=zOjov-2OZ0E",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "How To Learn Programming for BEGINNERS! (2022/2023)",
+        "id": "bJzb-RuUcMU",
+        "channel": "CroatCode",
+        "thumbnail": "https://i.ytimg.com/vi/bJzb-RuUcMU/default.jpg",
+        "publish_time": "2018-11-04T01:12:12Z",
+        "video_url": "https://www.youtube.com/watch?v=bJzb-RuUcMU",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
-        "id": "JJkWemM03Lg",
-        "channel": "Internet Made Coder",
-        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
-        "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
-      },
-      {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
-      },
-      {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "It\u2019s literally perfect \ud83e\udee0 #coding #java #programmer #computer #python",
+        "id": "390Pc6_fdeg",
+        "channel": "Desk Mate",
+        "thumbnail": "https://i.ytimg.com/vi/390Pc6_fdeg/default.jpg",
+        "publish_time": "2024-12-19T00:40:54Z",
+        "video_url": "https://www.youtube.com/watch?v=390Pc6_fdeg",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   },
@@ -175,76 +211,94 @@
     ],
     "videos": [
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "Object-Oriented Programming, Simplified",
+        "id": "pTB0EiLXUC8",
+        "channel": "Programming with Mosh",
+        "thumbnail": "https://i.ytimg.com/vi/pTB0EiLXUC8/default.jpg",
+        "publish_time": "2018-03-30T00:24:17Z",
+        "video_url": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Hash Tables and Hash Functions",
-        "id": "KyUTuwz_b7Q",
+        "title": "Python Object Oriented Programming (OOP) - For Beginners",
+        "id": "JeznW_7DlB0",
+        "channel": "Tech With Tim",
+        "thumbnail": "https://i.ytimg.com/vi/JeznW_7DlB0/default.jpg",
+        "publish_time": "2020-03-29T17:02:09Z",
+        "video_url": "https://www.youtube.com/watch?v=JeznW_7DlB0",
+        "up_vote": 0,
+        "down_vote": 0
+      },
+      {
+        "title": "Fundamental Concepts of Object Oriented Programming",
+        "id": "m_MQYyJpIjg",
         "channel": "Computer Science Lessons",
-        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
-        "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "thumbnail": "https://i.ytimg.com/vi/m_MQYyJpIjg/default.jpg",
+        "publish_time": "2020-11-01T13:35:56Z",
+        "video_url": "https://www.youtube.com/watch?v=m_MQYyJpIjg",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
-        "id": "FsfRsGFHuv4",
-        "channel": "Bro Code",
-        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
-        "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "title": "basics of CODING in 10 minutes",
+        "id": "I-k-iTUMQAY",
+        "channel": "The StudyTube Project",
+        "thumbnail": "https://i.ytimg.com/vi/I-k-iTUMQAY/default.jpg",
+        "publish_time": "2020-05-30T17:00:07Z",
+        "video_url": "https://www.youtube.com/watch?v=I-k-iTUMQAY",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures and Algorithms in 15 Minutes",
-        "id": "oz9cEqFynHU",
-        "channel": "Tren Black",
-        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
-        "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "title": "How To Learn Programming for BEGINNERS! (2022/2023)",
+        "id": "bJzb-RuUcMU",
+        "channel": "CroatCode",
+        "thumbnail": "https://i.ytimg.com/vi/bJzb-RuUcMU/default.jpg",
+        "publish_time": "2018-11-04T01:12:12Z",
+        "video_url": "https://www.youtube.com/watch?v=bJzb-RuUcMU",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
-        "id": "8hly31xKli0",
-        "channel": "freeCodeCamp.org",
-        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
-        "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "title": "The basics of BASIC, the programming language of the 1980s.",
+        "id": "seM9SqTsRG4",
+        "channel": "The 8-Bit Guy",
+        "thumbnail": "https://i.ytimg.com/vi/seM9SqTsRG4/default.jpg",
+        "publish_time": "2017-03-09T00:01:03Z",
+        "video_url": "https://www.youtube.com/watch?v=seM9SqTsRG4",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "Introduction To Software Development LifeCycle | What Is Software Development? | Simplilearn",
+        "id": "Fi3_BjVzpqk",
+        "channel": "Simplilearn",
+        "thumbnail": "https://i.ytimg.com/vi/Fi3_BjVzpqk/default.jpg",
+        "publish_time": "2022-09-21T15:30:04Z",
+        "video_url": "https://www.youtube.com/watch?v=Fi3_BjVzpqk",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
-        "id": "JJkWemM03Lg",
-        "channel": "Internet Made Coder",
-        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
-        "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+        "title": "Software Development Life Cycle: Explained",
+        "id": "SaCYkPD4_K0",
+        "channel": "AltexSoft",
+        "thumbnail": "https://i.ytimg.com/vi/SaCYkPD4_K0/default.jpg",
+        "publish_time": "2023-10-18T13:16:54Z",
+        "video_url": "https://www.youtube.com/watch?v=SaCYkPD4_K0",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
-      },
-      {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "What is Software Development",
+        "id": "pquPUX1EihM",
+        "channel": "Technology Profession",
+        "thumbnail": "https://i.ytimg.com/vi/pquPUX1EihM/default.jpg",
+        "publish_time": "2015-09-10T21:54:34Z",
+        "video_url": "https://www.youtube.com/watch?v=pquPUX1EihM",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   },
@@ -263,7 +317,9 @@
         "channel": "Michael Sambol",
         "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
         "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
         "title": "Hash Tables and Hash Functions",
@@ -271,7 +327,9 @@
         "channel": "Computer Science Lessons",
         "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
         "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
         "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
@@ -279,7 +337,9 @@
         "channel": "Bro Code",
         "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
         "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
         "title": "Data Structures and Algorithms in 15 Minutes",
@@ -287,7 +347,9 @@
         "channel": "Tren Black",
         "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
         "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
         "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
@@ -295,7 +357,9 @@
         "channel": "freeCodeCamp.org",
         "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
         "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
         "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
@@ -303,7 +367,9 @@
         "channel": "Sajjaad Khader",
         "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
         "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
         "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
@@ -311,7 +377,9 @@
         "channel": "Internet Made Coder",
         "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
         "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
         "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
@@ -319,15 +387,19 @@
         "channel": "BBC Ideas",
         "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
         "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "3 Types of Algorithms Every Programmer Needs to Know",
+        "id": "Uym4-KhP3Lc",
+        "channel": "ForrestKnight",
+        "thumbnail": "https://i.ytimg.com/vi/Uym4-KhP3Lc/default.jpg",
+        "publish_time": "2024-01-22T15:00:25Z",
+        "video_url": "https://www.youtube.com/watch?v=Uym4-KhP3Lc",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   },
@@ -341,76 +413,94 @@
     ],
     "videos": [
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "Every Programming Language Explained In 8 Minutes!",
+        "id": "pkDz62xz15k",
+        "channel": "Privacy Matters",
+        "thumbnail": "https://i.ytimg.com/vi/pkDz62xz15k/default.jpg",
+        "publish_time": "2024-10-17T08:24:23Z",
+        "video_url": "https://www.youtube.com/watch?v=pkDz62xz15k",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Hash Tables and Hash Functions",
-        "id": "KyUTuwz_b7Q",
-        "channel": "Computer Science Lessons",
-        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
-        "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "title": "comparing the performance of different programming languages by running a for loop 1 billion times",
+        "id": "X0ooja7Ktso",
+        "channel": "You Suck at Programming",
+        "thumbnail": "https://i.ytimg.com/vi/X0ooja7Ktso/default.jpg",
+        "publish_time": "2024-12-05T20:37:36Z",
+        "video_url": "https://www.youtube.com/watch?v=X0ooja7Ktso",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
-        "id": "FsfRsGFHuv4",
-        "channel": "Bro Code",
-        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
-        "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "title": "Which Programming Languages Are the Fastest? | 1 Billion Loops: Which Language Wins?",
+        "id": "MrKOcXO3FJ0",
+        "channel": "Coding Classroom",
+        "thumbnail": "https://i.ytimg.com/vi/MrKOcXO3FJ0/default.jpg",
+        "publish_time": "2024-12-12T18:01:19Z",
+        "video_url": "https://www.youtube.com/watch?v=MrKOcXO3FJ0",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures and Algorithms in 15 Minutes",
-        "id": "oz9cEqFynHU",
-        "channel": "Tren Black",
-        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
-        "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "title": "Assembly Language in 100 Seconds",
+        "id": "4gwYkEK0gOk",
+        "channel": "Fireship",
+        "thumbnail": "https://i.ytimg.com/vi/4gwYkEK0gOk/default.jpg",
+        "publish_time": "2022-04-14T17:32:09Z",
+        "video_url": "https://www.youtube.com/watch?v=4gwYkEK0gOk",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
-        "id": "8hly31xKli0",
-        "channel": "freeCodeCamp.org",
-        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
-        "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "title": "How Do I Learn Assembly?",
+        "id": "UQEOvHNkwow",
+        "channel": "Low Level",
+        "thumbnail": "https://i.ytimg.com/vi/UQEOvHNkwow/default.jpg",
+        "publish_time": "2024-01-22T19:31:45Z",
+        "video_url": "https://www.youtube.com/watch?v=UQEOvHNkwow",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "Assembly Basics: The Language Behind the Hardware",
+        "id": "LdWU8JEfPhg",
+        "channel": "WhiteboardDoodles",
+        "thumbnail": "https://i.ytimg.com/vi/LdWU8JEfPhg/default.jpg",
+        "publish_time": "2024-09-27T16:23:44Z",
+        "video_url": "https://www.youtube.com/watch?v=LdWU8JEfPhg",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
-        "id": "JJkWemM03Lg",
-        "channel": "Internet Made Coder",
-        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
-        "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+        "title": "Architectural Programming: How it Works",
+        "id": "hdFwXNWim7U",
+        "channel": "Everything Architecture",
+        "thumbnail": "https://i.ytimg.com/vi/hdFwXNWim7U/default.jpg",
+        "publish_time": "2024-10-25T19:21:51Z",
+        "video_url": "https://www.youtube.com/watch?v=hdFwXNWim7U",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+        "title": "What Software Architects Do That Programmers DON&#39;T",
+        "id": "IwrvE-wHm84",
+        "channel": "Healthy Developer",
+        "thumbnail": "https://i.ytimg.com/vi/IwrvE-wHm84/default.jpg",
+        "publish_time": "2023-11-20T17:00:59Z",
+        "video_url": "https://www.youtube.com/watch?v=IwrvE-wHm84",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "Event-Driven Architecture: Explained in 7 Minutes!",
+        "id": "gOuAqRaDdHA",
+        "channel": "Alex Hyett",
+        "thumbnail": "https://i.ytimg.com/vi/gOuAqRaDdHA/default.jpg",
+        "publish_time": "2023-04-14T15:00:34Z",
+        "video_url": "https://www.youtube.com/watch?v=gOuAqRaDdHA",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   },
@@ -424,76 +514,94 @@
     ],
     "videos": [
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "Biggest Puzzle in Computer Science: P vs. NP",
+        "id": "pQsdygaYcE4",
+        "channel": "Quanta Magazine",
+        "thumbnail": "https://i.ytimg.com/vi/pQsdygaYcE4/default.jpg",
+        "publish_time": "2023-12-01T17:43:43Z",
+        "video_url": "https://www.youtube.com/watch?v=pQsdygaYcE4",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Hash Tables and Hash Functions",
-        "id": "KyUTuwz_b7Q",
-        "channel": "Computer Science Lessons",
-        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
-        "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "title": "Computational Thinking: What Is It? How Is It Used?",
+        "id": "qbnTZCj0ugI",
+        "channel": "College & Career Ready Labs \u2502 Paxton Patterson",
+        "thumbnail": "https://i.ytimg.com/vi/qbnTZCj0ugI/default.jpg",
+        "publish_time": "2018-05-08T14:57:10Z",
+        "video_url": "https://www.youtube.com/watch?v=qbnTZCj0ugI",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
-        "id": "FsfRsGFHuv4",
-        "channel": "Bro Code",
-        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
-        "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "title": "Are There Problems That Computers Can&#39;t Solve?",
+        "id": "eqvBaj8UYz4",
+        "channel": "Tom Scott",
+        "thumbnail": "https://i.ytimg.com/vi/eqvBaj8UYz4/default.jpg",
+        "publish_time": "2020-05-11T15:00:16Z",
+        "video_url": "https://www.youtube.com/watch?v=eqvBaj8UYz4",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures and Algorithms in 15 Minutes",
-        "id": "oz9cEqFynHU",
-        "channel": "Tren Black",
-        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
-        "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "title": "Operations on Languages - Georgia Tech - Computability, Complexity, Theory: Computability",
+        "id": "FTZjplHorto",
+        "channel": "Udacity",
+        "thumbnail": "https://i.ytimg.com/vi/FTZjplHorto/default.jpg",
+        "publish_time": "2015-02-23T19:02:22Z",
+        "video_url": "https://www.youtube.com/watch?v=FTZjplHorto",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
-        "id": "8hly31xKli0",
-        "channel": "freeCodeCamp.org",
-        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
-        "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "title": "Language Deciders - Georgia Tech - Computability, Complexity, Theory: Computability",
+        "id": "yH183drtm1o",
+        "channel": "Udacity",
+        "thumbnail": "https://i.ytimg.com/vi/yH183drtm1o/default.jpg",
+        "publish_time": "2015-02-23T19:25:16Z",
+        "video_url": "https://www.youtube.com/watch?v=yH183drtm1o",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "Language Recognizers - Georgia Tech - Computability, Complexity, Theory: Computability",
+        "id": "d1W4M61Mb-M",
+        "channel": "Udacity",
+        "thumbnail": "https://i.ytimg.com/vi/d1W4M61Mb-M/default.jpg",
+        "publish_time": "2015-02-23T19:28:19Z",
+        "video_url": "https://www.youtube.com/watch?v=d1W4M61Mb-M",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
-        "id": "JJkWemM03Lg",
-        "channel": "Internet Made Coder",
-        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
-        "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+        "title": "Why study theory of computation?",
+        "id": "SV57Yv8BXBc",
+        "channel": "lydia",
+        "thumbnail": "https://i.ytimg.com/vi/SV57Yv8BXBc/default.jpg",
+        "publish_time": "2020-04-22T05:42:32Z",
+        "video_url": "https://www.youtube.com/watch?v=SV57Yv8BXBc",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+        "title": "Introduction to Theory of Computation",
+        "id": "58N2N7zJGrQ",
+        "channel": "Neso Academy",
+        "thumbnail": "https://i.ytimg.com/vi/58N2N7zJGrQ/default.jpg",
+        "publish_time": "2016-12-15T04:30:00Z",
+        "video_url": "https://www.youtube.com/watch?v=58N2N7zJGrQ",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "1. Introduction, Finite Automata, Regular Expressions",
+        "id": "9syvZr-9xwk",
+        "channel": "MIT OpenCourseWare",
+        "thumbnail": "https://i.ytimg.com/vi/9syvZr-9xwk/default.jpg",
+        "publish_time": "2021-10-06T12:48:25Z",
+        "video_url": "https://www.youtube.com/watch?v=9syvZr-9xwk",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   },
@@ -507,76 +615,94 @@
     ],
     "videos": [
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "What is Data Mining?",
+        "id": "7rs0i-9nOjo",
+        "channel": "IBM Technology",
+        "thumbnail": "https://i.ytimg.com/vi/7rs0i-9nOjo/default.jpg",
+        "publish_time": "2022-04-13T12:00:03Z",
+        "video_url": "https://www.youtube.com/watch?v=7rs0i-9nOjo",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Hash Tables and Hash Functions",
-        "id": "KyUTuwz_b7Q",
-        "channel": "Computer Science Lessons",
-        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
-        "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "title": "What is Data Mining and Why is it Important?",
+        "id": "mOfPG5ZIY-k",
+        "channel": "Eye on Tech",
+        "thumbnail": "https://i.ytimg.com/vi/mOfPG5ZIY-k/default.jpg",
+        "publish_time": "2021-03-12T15:00:20Z",
+        "video_url": "https://www.youtube.com/watch?v=mOfPG5ZIY-k",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
-        "id": "FsfRsGFHuv4",
-        "channel": "Bro Code",
-        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
-        "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "title": "What is Data Mining",
+        "id": "81bm2OsEzbg",
+        "channel": "Cubeware GmbH",
+        "thumbnail": "https://i.ytimg.com/vi/81bm2OsEzbg/default.jpg",
+        "publish_time": "2021-09-08T07:00:10Z",
+        "video_url": "https://www.youtube.com/watch?v=81bm2OsEzbg",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures and Algorithms in 15 Minutes",
-        "id": "oz9cEqFynHU",
-        "channel": "Tren Black",
-        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
-        "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "title": "Crash Course Computer Science Preview",
+        "id": "tpIctyqH29Q",
+        "channel": "CrashCourse",
+        "thumbnail": "https://i.ytimg.com/vi/tpIctyqH29Q/default.jpg",
+        "publish_time": "2017-02-15T20:00:36Z",
+        "video_url": "https://www.youtube.com/watch?v=tpIctyqH29Q",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
-        "id": "8hly31xKli0",
-        "channel": "freeCodeCamp.org",
-        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
-        "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "title": "Map of Computer Science",
+        "id": "SzJ46YA_RaA",
+        "channel": "Domain of Science",
+        "thumbnail": "https://i.ytimg.com/vi/SzJ46YA_RaA/default.jpg",
+        "publish_time": "2017-09-06T15:36:30Z",
+        "video_url": "https://www.youtube.com/watch?v=SzJ46YA_RaA",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "100+ Computer Science Concepts Explained",
+        "id": "-uleG_Vecis",
+        "channel": "Fireship",
+        "thumbnail": "https://i.ytimg.com/vi/-uleG_Vecis/default.jpg",
+        "publish_time": "2022-05-04T16:07:06Z",
+        "video_url": "https://www.youtube.com/watch?v=-uleG_Vecis",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
-        "id": "JJkWemM03Lg",
-        "channel": "Internet Made Coder",
-        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
-        "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+        "title": "What is Bioinformatics?",
+        "id": "W-Ov2cUaYQY",
+        "channel": "The Explorer's Guide to Biology",
+        "thumbnail": "https://i.ytimg.com/vi/W-Ov2cUaYQY/default.jpg",
+        "publish_time": "2019-09-30T16:43:48Z",
+        "video_url": "https://www.youtube.com/watch?v=W-Ov2cUaYQY",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+        "title": "Bioinformatics Vs Biomedical Career - Which is Better &amp; Has More Scope?",
+        "id": "6j5e6WvhrZk",
+        "channel": "Biotecnika",
+        "thumbnail": "https://i.ytimg.com/vi/6j5e6WvhrZk/default.jpg",
+        "publish_time": "2024-07-25T13:10:08Z",
+        "video_url": "https://www.youtube.com/watch?v=6j5e6WvhrZk",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "Behind the Scenes: UNSW | Graduate Tour | Bioinformatics and Biomedical Engineering",
+        "id": "d0RQvMfCUvU",
+        "channel": "The Careers Department",
+        "thumbnail": "https://i.ytimg.com/vi/d0RQvMfCUvU/default.jpg",
+        "publish_time": "2018-11-22T07:58:51Z",
+        "video_url": "https://www.youtube.com/watch?v=d0RQvMfCUvU",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   },
@@ -590,76 +716,94 @@
     ],
     "videos": [
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "File Sharing in Windows Subsystem for Android #Windows11",
+        "id": "NyOpGiUeICE",
+        "channel": "PerplexPixel",
+        "thumbnail": "https://i.ytimg.com/vi/NyOpGiUeICE/default.jpg",
+        "publish_time": "2024-07-10T06:42:16Z",
+        "video_url": "https://www.youtube.com/watch?v=NyOpGiUeICE",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Hash Tables and Hash Functions",
-        "id": "KyUTuwz_b7Q",
-        "channel": "Computer Science Lessons",
-        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
-        "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "title": "L-7.1: File System in Operating System | Windows, Linux, Unix, Android etc.",
+        "id": "0LtuQhNFFe0",
+        "channel": "Gate Smashers",
+        "thumbnail": "https://i.ytimg.com/vi/0LtuQhNFFe0/default.jpg",
+        "publish_time": "2020-05-21T08:45:14Z",
+        "video_url": "https://www.youtube.com/watch?v=0LtuQhNFFe0",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
-        "id": "FsfRsGFHuv4",
-        "channel": "Bro Code",
-        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
-        "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "title": "ANDROID Subsystem for Windows gets file sharing feature Documents Pictures",
+        "id": "ZfrofaOAxj4",
+        "channel": "Windows, computers and Technology",
+        "thumbnail": "https://i.ytimg.com/vi/ZfrofaOAxj4/default.jpg",
+        "publish_time": "2023-06-13T16:49:53Z",
+        "video_url": "https://www.youtube.com/watch?v=ZfrofaOAxj4",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures and Algorithms in 15 Minutes",
-        "id": "oz9cEqFynHU",
-        "channel": "Tren Black",
-        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
-        "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "title": "How To Learn Programming for BEGINNERS! (2022/2023)",
+        "id": "bJzb-RuUcMU",
+        "channel": "CroatCode",
+        "thumbnail": "https://i.ytimg.com/vi/bJzb-RuUcMU/default.jpg",
+        "publish_time": "2018-11-04T01:12:12Z",
+        "video_url": "https://www.youtube.com/watch?v=bJzb-RuUcMU",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
-        "id": "8hly31xKli0",
+        "title": "Introduction to Programming and Computer Science - Full Course",
+        "id": "zOjov-2OZ0E",
         "channel": "freeCodeCamp.org",
-        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
-        "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "thumbnail": "https://i.ytimg.com/vi/zOjov-2OZ0E/default.jpg",
+        "publish_time": "2020-04-21T13:45:02Z",
+        "video_url": "https://www.youtube.com/watch?v=zOjov-2OZ0E",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "The Best Way To Learn Programming",
+        "id": "u1AN5n6jo_w",
+        "channel": "ThePrimeTime",
+        "thumbnail": "https://i.ytimg.com/vi/u1AN5n6jo_w/default.jpg",
+        "publish_time": "2024-03-18T16:37:20Z",
+        "video_url": "https://www.youtube.com/watch?v=u1AN5n6jo_w",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
-        "id": "JJkWemM03Lg",
-        "channel": "Internet Made Coder",
-        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
-        "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+        "title": "before you code, learn how computers work",
+        "id": "97i2BAUw5Xc",
+        "channel": "Low Level",
+        "thumbnail": "https://i.ytimg.com/vi/97i2BAUw5Xc/default.jpg",
+        "publish_time": "2024-02-07T17:17:46Z",
+        "video_url": "https://www.youtube.com/watch?v=97i2BAUw5Xc",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+        "title": "is it possible to make an OS from scratch solo? Terry Davis wrote TempleOS so yes.",
+        "id": "BiUCyhgHf1Q",
+        "channel": "You Suck at Programming",
+        "thumbnail": "https://i.ytimg.com/vi/BiUCyhgHf1Q/default.jpg",
+        "publish_time": "2024-10-29T01:52:03Z",
+        "video_url": "https://www.youtube.com/watch?v=BiUCyhgHf1Q",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "Zig in 100 Seconds",
+        "id": "kxT8-C1vmd4",
+        "channel": "Fireship",
+        "thumbnail": "https://i.ytimg.com/vi/kxT8-C1vmd4/default.jpg",
+        "publish_time": "2023-08-03T14:42:10Z",
+        "video_url": "https://www.youtube.com/watch?v=kxT8-C1vmd4",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   },
@@ -673,76 +817,94 @@
     ],
     "videos": [
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "Introduction To Software Development LifeCycle | What Is Software Development? | Simplilearn",
+        "id": "Fi3_BjVzpqk",
+        "channel": "Simplilearn",
+        "thumbnail": "https://i.ytimg.com/vi/Fi3_BjVzpqk/default.jpg",
+        "publish_time": "2022-09-21T15:30:04Z",
+        "video_url": "https://www.youtube.com/watch?v=Fi3_BjVzpqk",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Hash Tables and Hash Functions",
-        "id": "KyUTuwz_b7Q",
-        "channel": "Computer Science Lessons",
-        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
-        "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "title": "What is the difference between a Software Engineer and a Software Developer",
+        "id": "B4P0nT9u56Q",
+        "channel": "Software Journal",
+        "thumbnail": "https://i.ytimg.com/vi/B4P0nT9u56Q/default.jpg",
+        "publish_time": "2021-05-31T18:47:45Z",
+        "video_url": "https://www.youtube.com/watch?v=B4P0nT9u56Q",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
-        "id": "FsfRsGFHuv4",
-        "channel": "Bro Code",
-        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
-        "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "title": "Software Development Life Cycle: Explained",
+        "id": "SaCYkPD4_K0",
+        "channel": "AltexSoft",
+        "thumbnail": "https://i.ytimg.com/vi/SaCYkPD4_K0/default.jpg",
+        "publish_time": "2023-10-18T13:16:54Z",
+        "video_url": "https://www.youtube.com/watch?v=SaCYkPD4_K0",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures and Algorithms in 15 Minutes",
-        "id": "oz9cEqFynHU",
-        "channel": "Tren Black",
-        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
-        "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "title": "Learn web development as an absolute beginner",
+        "id": "ysEN5RaKOlA",
+        "channel": "Coder Coder",
+        "thumbnail": "https://i.ytimg.com/vi/ysEN5RaKOlA/default.jpg",
+        "publish_time": "2019-11-24T22:38:49Z",
+        "video_url": "https://www.youtube.com/watch?v=ysEN5RaKOlA",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
-        "id": "8hly31xKli0",
-        "channel": "freeCodeCamp.org",
-        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
-        "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "title": "The Complete Web Development Roadmap",
+        "id": "GxmfcnU3feo",
+        "channel": "Programming with Mosh",
+        "thumbnail": "https://i.ytimg.com/vi/GxmfcnU3feo/default.jpg",
+        "publish_time": "2024-07-25T13:00:16Z",
+        "video_url": "https://www.youtube.com/watch?v=GxmfcnU3feo",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "WEB DEVELOPMENT explained in 10 minutes (2020)",
+        "id": "5YDVJaItmaY",
+        "channel": "Aaron Jack",
+        "thumbnail": "https://i.ytimg.com/vi/5YDVJaItmaY/default.jpg",
+        "publish_time": "2020-01-13T17:45:00Z",
+        "video_url": "https://www.youtube.com/watch?v=5YDVJaItmaY",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
-        "id": "JJkWemM03Lg",
-        "channel": "Internet Made Coder",
-        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
-        "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+        "title": "How to build a website in seconds #ai #productivity #aitools #websitebuilder @Framer",
+        "id": "3_pjNppPLMA",
+        "channel": "SetupsAI",
+        "thumbnail": "https://i.ytimg.com/vi/3_pjNppPLMA/default.jpg",
+        "publish_time": "2024-06-20T15:59:31Z",
+        "video_url": "https://www.youtube.com/watch?v=3_pjNppPLMA",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+        "title": "How to Make a Website | Step by Step [2025]",
+        "id": "prLv5uwUtuY",
+        "channel": "Steve Builds Websites",
+        "thumbnail": "https://i.ytimg.com/vi/prLv5uwUtuY/default.jpg",
+        "publish_time": "2024-11-08T14:30:24Z",
+        "video_url": "https://www.youtube.com/watch?v=prLv5uwUtuY",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "The fastest way to build a beautiful website with AI (bolt.new tutorial)",
+        "id": "1MSVWUiNmxs",
+        "channel": "Prompt Warrior",
+        "thumbnail": "https://i.ytimg.com/vi/1MSVWUiNmxs/default.jpg",
+        "publish_time": "2024-10-14T15:00:20Z",
+        "video_url": "https://www.youtube.com/watch?v=1MSVWUiNmxs",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   },
@@ -756,76 +918,94 @@
     ],
     "videos": [
       {
-        "title": "Hash tables in 4 minutes",
-        "id": "knV86FlSXJ8",
-        "channel": "Michael Sambol",
-        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
-        "publish_time": "2022-06-20T16:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+        "title": "AI vs Cyber Security",
+        "id": "ULKC4NISWE4",
+        "channel": "ThePrimeTime",
+        "thumbnail": "https://i.ytimg.com/vi/ULKC4NISWE4/default.jpg",
+        "publish_time": "2024-07-31T15:00:34Z",
+        "video_url": "https://www.youtube.com/watch?v=ULKC4NISWE4",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Hash Tables and Hash Functions",
-        "id": "KyUTuwz_b7Q",
-        "channel": "Computer Science Lessons",
-        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
-        "publish_time": "2017-03-05T12:30:36Z",
-        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+        "title": "DJI Matrice 4 Series\uff5cIntelligent Computing Platform",
+        "id": "oe8bWEPA3kM",
+        "channel": "DJI Tutorials",
+        "thumbnail": "https://i.ytimg.com/vi/oe8bWEPA3kM/default.jpg",
+        "publish_time": "2025-05-27T14:01:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oe8bWEPA3kM",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
-        "id": "FsfRsGFHuv4",
-        "channel": "Bro Code",
-        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
-        "publish_time": "2021-10-20T17:32:01Z",
-        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+        "title": "Super Intelligent AI: 10 Capabilities It Will Have",
+        "id": "3o_wqZx94Bc",
+        "channel": "Future Business Tech",
+        "thumbnail": "https://i.ytimg.com/vi/3o_wqZx94Bc/default.jpg",
+        "publish_time": "2023-07-08T10:00:03Z",
+        "video_url": "https://www.youtube.com/watch?v=3o_wqZx94Bc",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures and Algorithms in 15 Minutes",
-        "id": "oz9cEqFynHU",
-        "channel": "Tren Black",
-        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
-        "publish_time": "2020-12-10T16:10:28Z",
-        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+        "title": "3 Easy-to-Share Arguments for Intelligence Design",
+        "id": "se7ITcY5ams",
+        "channel": "Cross Examined",
+        "thumbnail": "https://i.ytimg.com/vi/se7ITcY5ams/default.jpg",
+        "publish_time": "2022-07-02T14:00:33Z",
+        "video_url": "https://www.youtube.com/watch?v=se7ITcY5ams",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
-        "id": "8hly31xKli0",
-        "channel": "freeCodeCamp.org",
-        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
-        "publish_time": "2021-03-18T19:48:53Z",
-        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+        "title": "Intelligent Design: Crash Course Philosophy #11",
+        "id": "7e9v_fsZB6A",
+        "channel": "CrashCourse",
+        "thumbnail": "https://i.ytimg.com/vi/7e9v_fsZB6A/default.jpg",
+        "publish_time": "2016-04-25T21:00:00Z",
+        "video_url": "https://www.youtube.com/watch?v=7e9v_fsZB6A",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
-        "id": "O9v10jQkm5c",
-        "channel": "Sajjaad Khader",
-        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
-        "publish_time": "2025-03-04T22:00:12Z",
-        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+        "title": "Intelligent Design Expert on the the Big Bang and the James Webb Telescope",
+        "id": "tb1Ubw1Iu5w",
+        "channel": "PowerfulJRE",
+        "thumbnail": "https://i.ytimg.com/vi/tb1Ubw1Iu5w/default.jpg",
+        "publish_time": "2023-07-13T17:07:33Z",
+        "video_url": "https://www.youtube.com/watch?v=tb1Ubw1Iu5w",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
-        "id": "JJkWemM03Lg",
-        "channel": "Internet Made Coder",
-        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
-        "publish_time": "2022-10-15T12:00:19Z",
-        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+        "title": "Artificial intelligence reports from this season | 60 Minutes Full Episodes",
+        "id": "VAzKqh00g3c",
+        "channel": "60 Minutes",
+        "thumbnail": "https://i.ytimg.com/vi/VAzKqh00g3c/default.jpg",
+        "publish_time": "2025-06-07T11:01:01Z",
+        "video_url": "https://www.youtube.com/watch?v=VAzKqh00g3c",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
-        "id": "ZnBF2GeAKbo",
-        "channel": "BBC Ideas",
-        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
-        "publish_time": "2019-09-26T15:00:09Z",
-        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+        "title": "What Is AI? | Artificial Intelligence | What is Artificial Intelligence? | AI In 5 Mins |Simplilearn",
+        "id": "ad79nYk2keg",
+        "channel": "Simplilearn",
+        "thumbnail": "https://i.ytimg.com/vi/ad79nYk2keg/default.jpg",
+        "publish_time": "2019-04-30T14:30:01Z",
+        "video_url": "https://www.youtube.com/watch?v=ad79nYk2keg",
+        "up_vote": 0,
+        "down_vote": 0
       },
       {
-        "title": "Computer Science Basics: Algorithms",
-        "id": "kM9ASKAni_s",
-        "channel": "LearnFree",
-        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
-        "publish_time": "2018-10-03T18:04:53Z",
-        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+        "title": "A.I. Artificial Intelligence - Official\u00ae Trailer [HD]",
+        "id": "_19pRsZRiz4",
+        "channel": "TrailersPlaygroundHD",
+        "thumbnail": "https://i.ytimg.com/vi/_19pRsZRiz4/default.jpg",
+        "publish_time": "2013-05-22T03:40:33Z",
+        "video_url": "https://www.youtube.com/watch?v=_19pRsZRiz4",
+        "up_vote": 0,
+        "down_vote": 0
       }
     ]
   }
