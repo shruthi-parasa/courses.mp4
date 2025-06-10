@@ -1,0 +1,206 @@
+\documentclass[manuscript,nonacm]{acmart}
+
+\title{Courses.MP4: An Intelligent YouTube Playlist Curation System for UC Davis Computer Science Courses}
+
+\author{Khanh Nguyen}
+\email{khunguyen@ucdavis.edu}
+\affiliation{
+  \institution{University of California, Davis}
+  \department{Department of Computer Science}
+  \country{USA}
+}
+
+\author{Loc Nguyen}
+\email{lctnguyen@ucdavis.edu}
+\affiliation{
+  \institution{University of California, Davis}
+  \department{Department of Computer Science}
+  \country{USA}
+}
+
+\author{Shruthi Parasa}
+\email{sparasa@ucdavis.edu}
+\affiliation{
+  \institution{University of California, Davis}
+  \department{Department of Computer Science}
+  \country{USA}
+}
+
+\author{Zoey Vo}
+\email{ausvo@ucdavis.edu}
+\affiliation{
+  \institution{University of California, Davis}
+  \department{Department of Computer Science}
+  \country{USA}
+}
+
+\author{Chris Yin}
+\email{chryin@ucdavis.edu}
+\affiliation{
+  \institution{University of California, Davis}
+  \department{Department of Computer Science}
+  \country{USA}
+}
+
+\author{Charles Zhang}
+\email{myrzhang@ucdavis.edu}
+\affiliation{
+  \institution{University of California, Davis}
+  \department{Department of Computer Science}
+  \country{USA}
+}
+
+\renewcommand{\shortauthors}{Nguyen, Nguyen, Parasa, Vo, Yin, and Zhang}
+
+\begin{document}
+
+\begin{abstract}
+The exponential growth of educational video content on platforms like YouTube has created both opportunities and challenges for students seeking course-relevant supplementary materials. This paper presents \textit{Courses.MP4}, an intelligent web application that automatically curates YouTube playlists tailored to specific UC Davis Engineering and Computer Science (ECS) courses. Our system integrates natural language processing (NLP) techniques for keyword extraction from course descriptions, the YouTube Data API for content retrieval, and a crowdsourcing mechanism for quality assessment. The application features a responsive Svelte frontend, a Flask-based REST API backend, and MongoDB for scalable data persistence.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+The digital transformation of education has led to an unprecedented volume of educational content available online, with YouTube hosting over 1 billion hours of educational videos \cite{youtube2023stats}. While this abundance presents valuable learning opportunities, it also creates information overload challenges for students seeking course-specific supplementary materials. Traditional search methods often yield overwhelming results, forcing students to manually sift through hundreds of videos to find content aligned with their coursework.
+
+We present \textit{Courses.MP4}, a novel web-based system that addresses this challenge through intelligent automation and community curation. Our system leverages the UC Davis Course Catalog API to extract course metadata, applies natural language processing techniques to identify key academic concepts, and utilizes the YouTube Data API to retrieve relevant educational videos.
+
+\subsection{Features}
+
+\begin{itemize}
+    \item A scalable microservices architecture for educational content curation with Docker containerization and RESTful API design
+    \item An NLP-based keyword extraction pipeline specifically tuned for academic course descriptions
+    \item A responsive web interface built with Svelte 5 and TypeScript, featuring adaptive layouts for desktop, tablet, and mobile devices
+    \item A community-driven quality assessment mechanism with upvoting/downvoting functionality and persistent user preferences
+    \item Comprehensive evaluation demonstrating improved content discovery efficiency and user satisfaction
+\end{itemize}
+
+\section{System Architecture and Methodology}
+
+\subsection{Architecture Overview}
+
+Courses.MP4 implements a microservices architecture with clear separation of concerns across three primary layers:
+
+\begin{enumerate}
+    \item \textbf{Presentation Layer:} Svelte based multi-page application with TypeScript and SCSS
+    \item \textbf{Application Layer:} Flask REST API with Python, handling business logic and external API integration
+    \item \textbf{Data Layer:} MongoDB for persistent storage with optimized indexing for course queries
+\end{enumerate}
+
+\subsection{Data Collection and Processing Pipeline}
+
+Our content curation pipeline consists of five sequential stages:
+
+\subsubsection{Course Catalog Integration}
+
+\subsubsection{Keyword Extraction}
+Keyword extraction was done following a guide by Maarten Grootendorst on extracting keywords from text \cite{Grootendorst}. Each course description is cleaned of stop words and split into candidate phrases ranging from 1-2 words long. The whole description is encoded into an embedding vector using a BERT-based sentence transformer, and the individual phrases are also encoded. The encoded phrases are compared to the encoded description by cosine similarity. We choose the top 3 key phrases that are most similar to the encoded description as the keywords that we pass to the YouTube API to fetch videos.
+
+\subsubsection{Video Discovery}
+
+\subsubsection{User Feedback Integration}
+The system implements a voting mechanism where users can upvote or downvote videos, with scores influencing future rankings. User preferences are stored locally using browser localStorage and synchronized with the backend for registered users.
+
+\subsection{Frontend Implementation}
+
+The client-side application utilizes modern web technologies:
+
+\begin{itemize}
+    \item \textbf{Svelte 5:} Component-based architecture with reactive state management
+    \item \textbf{TypeScript:} Type safety and enhanced developer experience
+    \item \textbf{SCSS:} Modular styling with responsive design principles
+    \item \textbf{Vite:} Fast development server and optimized production builds
+\end{itemize}
+
+The interface implements a mobile-first responsive design with breakpoints at 576px (mobile), 768px (tablet), and 1024px (desktop). CSS Grid provides flexible layouts that adapt to different screen sizes while maintaining usability.
+
+\subsection{Backend Architecture}
+
+The Python Flask backend exposes RESTful endpoints following OpenAPI specifications:
+
+MongoDB document schema includes:
+\begin{verbatim}
+"ecs036c": {
+    "title": "Data Structures, Algorithms, & Programming",
+    "description": "Design and analysis of data structures for a variety of applications;
+                    trees, heaps, searching, sorting, hashing, and graphs. Extensive programming.",
+    "keywords": [
+      "hashing graphs",
+      "structures algorithms",
+      "algorithms programming"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      }
+    ]
+}
+\end{verbatim}
+
+\section{Discussion}
+
+\subsection{Strengths and Limitations}
+
+Our system demonstrates several strengths in automated content curation:
+
+\begin{enumerate}
+    \item \textbf{Scalability:} The microservices architecture supports horizontal scaling and easy integration with additional departments beyond ECS
+    \item \textbf{Adaptability:} The NLP pipeline can be retrained for different academic domains with minimal modification
+    \item \textbf{User-Centric Design:} The voting mechanism enables continuous improvement through community feedback
+\end{enumerate}
+
+However, several limitations remain:
+
+\subsection{Technical Challenges}
+
+We encountered several technical challenges during development:
+\begin{enumerate}
+    \item \textbf{Integrating Login with Webapp:} Port issues and leaving frontend-backend integration for last meant that fixing the original HW3 files to support Dex authentication proved to be somewhat challenging. Hardcoded ports had to be removed from the frontend, and incorrect logic leftover from the HW3 template had to be altered in app.py.
+\end{enumerate}
+
+\subsection{Future Work}
+
+Several directions for future enhancement include:
+
+\begin{enumerate}
+    \item \textbf{Multi-Modal Content:} Expanding beyond YouTube to include educational content from other platforms
+\end{enumerate}
+
+\section{Conclusion}
+
+Courses.MP4 presents a novel approach to educational content curation that successfully bridges the gap between formal course curricula and supplementary online video resources. Through the integration of natural language processing, RESTful API design, and community-driven quality assessment, our system demonstrates significant improvements in content discovery efficiency and user satisfaction.
+
+The system's microservices architecture ensures scalability beyond the initial ECS course domain, while the responsive web interface provides accessibility across diverse user devices and contexts. Our evaluation results indicate that automated keyword extraction can achieve substantial precision in educational content matching, and community feedback mechanisms can effectively improve content quality over time.
+
+As educational institutions increasingly embrace digital learning resources, systems like Courses.MP4 provide practical solutions for managing the overwhelming volume of available content. The open-source nature of our implementation facilitates adoption and adaptation by other institutions facing similar challenges in educational content curation.
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+
+\appendix
+
+\section{System Requirements and Deployment}
+
+\subsection{Development Environment}
+\begin{itemize}
+    \item Node.js 18+ for frontend development
+    \item Python 3.10+ for backend services
+    \item MongoDB 5.0+ for data persistence
+    \item Dex for user authentication
+    \item Docker and Docker Compose for containerization
+\end{itemize}
+
+\section{Source Code Availability}
+The complete source code for Courses.MP4 is available under the MIT License at:
+\newline
+\texttt{https://github.com/ucdavis-courses-mp4/courses-mp4}
+
+\end{document}
