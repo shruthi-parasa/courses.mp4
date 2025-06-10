@@ -180,6 +180,145 @@ def remove_user_course():
   else:
     return jsonify({"error": "Fail to remove course"}), 400
 
+#------------------------Voting System------------------------
+
+# An user can't upvote/downvote a video twice
+# Use '/api/user_votes' if needed for UI 
+
+@app.route('/api/vote/<course_code>/<video_id>/upvote', methods=["PUT"])
+def upvote(course_code, video_id):
+  user_data = session['user']
+  username = user_data.get('username', user_data.get('email', 'anonymous'))
+  
+  status_user = db["user-votes"].update_one(
+      {"username": username},
+      {"$addToSet": {"upvote": video_id}}
+  )
+  
+  if status_user.matched_count == 0:
+    return jsonify({"error": "Fail to upvote"}), 400
+  elif status_user.modified_count == 0:
+    return jsonify({"message": "Already upvoted"}), 201
+  else:
+    status_video = db["videos"].update_one(
+      {
+          "code": course_code,
+          "videos.id": video_id
+      },
+      {
+          "$inc": {"videos.$.up_vote": 1}
+      }
+    )
+    
+    if status_video.matched_count:
+      return jsonify({"message": "Upvoted"}), 201
+    else:
+      return jsonify({"error": "Fail to upvote"}), 400
+    
+@app.route('/api/vote/<course_code>/<video_id>/downvote', methods=["PUT"])
+def downvote(course_code, video_id):
+  user_data = session['user']
+  username = user_data.get('username', user_data.get('email', 'anonymous'))
+  
+  status_user = db["user-votes"].update_one(
+      {"username": username},
+      {"$addToSet": {"downvote": video_id}}
+  )
+  
+  if status_user.matched_count == 0:
+    return jsonify({"error": "Fail to downvote"}), 400
+  elif status_user.modified_count == 0:
+    return jsonify({"message": "Already downvoted"}), 201
+  else:
+    status_video = db["videos"].update_one(
+      {
+          "code": course_code,
+          "videos.id": video_id
+      },
+      {
+          "$inc": {"videos.$.down_vote": 1}
+      }
+    )
+    
+    if status_video.matched_count:
+      return jsonify({"message": "Downvoted"}), 201
+    else:
+      return jsonify({"error": "Fail to downvote"}), 400
+    
+@app.route('/api/vote/<course_code>/<video_id>/revert_upvote', methods=["PUT"])
+def revert_upvote(course_code, video_id):
+  user_data = session['user']
+  username = user_data.get('username', user_data.get('email', 'anonymous'))
+  
+  status_user = db["user-votes"].update_one(
+      {"username": username},
+      {"$pull": {"upvote": video_id}}
+  )
+  
+  if status_user.matched_count == 0:
+    return jsonify({"error": "Fail to revert"}), 400
+  elif status_user.modified_count == 0:
+    return jsonify({"message": "Already reverted"}), 201
+  else:
+    status_video = db["videos"].update_one(
+      {
+          "code": course_code,
+          "videos.id": video_id
+      },
+      {
+          "$inc": {"videos.$.up_vote": -1}
+      }
+    )
+    
+    if status_video.matched_count:
+      return jsonify({"message": "Reverted"}), 201
+    else:
+      return jsonify({"error": "Fail to revert"}), 400
+
+@app.route('/api/vote/<course_code>/<video_id>/revert_downvote', methods=["PUT"])
+def revert_downvote(course_code, video_id):
+  user_data = session['user']
+  username = user_data.get('username', user_data.get('email', 'anonymous'))
+  
+  status_user = db["user-votes"].update_one(
+      {"username": username},
+      {"$pull": {"downvote": video_id}}
+  )
+  
+  if status_user.matched_count == 0:
+    return jsonify({"error": "Fail to revert"}), 400
+  elif status_user.modified_count == 0:
+    return jsonify({"message": "Already reverted"}), 201
+  else:
+    status_video = db["videos"].update_one(
+      {
+          "code": course_code,
+          "videos.id": video_id
+      },
+      {
+          "$inc": {"videos.$.down_vote": -1}
+      }
+    )
+    
+    if status_video.matched_count:
+      return jsonify({"message": "Reverted"}), 201
+    else:
+      return jsonify({"error": "Fail to revert"}), 400
+
+# Get an user's lists of upvoted/downvoted videos
+@app.route('/api/user_votes', methods=["GET"])
+def get_user_votes():
+  user_data = session['user']
+  username = user_data.get('username', user_data.get('email', 'anonymous'))
+  
+  entry = db["user-votes"].find_one({"username": username})
+  result = {
+    "upvote": entry["upvote"],
+    "downvote": entry["downvote"]
+  }
+  
+  return jsonify(result)
+
 #------------------------------------------------------------------
 
 @app.route('/get-user')

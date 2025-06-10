@@ -31,7 +31,9 @@ def fetch_videos(query, video_num):
         "channel": item["snippet"]["channelTitle"],
         "thumbnail": item["snippet"]["thumbnails"]["default"]["url"],
         "publish_time": item["snippet"]["publishedAt"],
-        "video_url": f"https://www.youtube.com/watch?v={id}"
+        "video_url": f"https://www.youtube.com/watch?v={id}",
+        "up_vote": 0,
+        "down_vote": 0
       }
       
       result.append(video)
