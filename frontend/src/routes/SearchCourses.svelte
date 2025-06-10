@@ -1,4 +1,5 @@
 <script lang="ts">
+  import {getUser} from '../get_user';
   // Search for Courses page logic will go here
   interface Video {
     title: string;
@@ -24,6 +25,19 @@
   let showCourseViewer: boolean = false;
   let courseInViewer: Course | null = null;
   let selectedVideo: Video | null = null;
+ 
+  
+  //Need to check the available coures against the user's current favorite and added courses
+  //Only show class that aren't already a part of the user's storage
+  import { onMount } from 'svelte';
+  onMount(async () => {
+    
+    let username = await getUser();
+    if (username != null){
+      console.log("User is logged in - ", username);
+    } 
+  });
+
 
   function triggerFavs(code: string) {
     if (favoriteCourses.has(code)) {
@@ -66,6 +80,28 @@
       try {
         favoriteCourses = new Set(JSON.parse(favs));
       } catch {}
+    }
+  }
+
+  async function addCourse(courseInfo: any){
+    let courseCode = courseInfo;
+    console.log("Fuck me - ", courseCode.code);
+    try {
+      const response = await fetch('/api/user/courses/add', {
+        method: 'PUT',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          course: courseCode.code
+        })
+      });
+      
+      const result = await response.json();
+      
+    } catch (err) {
+      console.error('Error adding course:', err);
     }
   }
 
@@ -134,6 +170,7 @@
       <section class="grid">
         {#each filteredCourses as course, i}
           <div class="cell">
+            <button on:click={() => addCourse(course)}>Click To Add To User Courses</button>
             <!--heart button that saves/removes course from favorites in localStorage -->
             <!--stopPropagation prevents the click from triggering the parent card's click -->
             <!-- aria-label helps screen readers tell users what this button does -->

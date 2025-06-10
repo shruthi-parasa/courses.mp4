@@ -84,16 +84,6 @@
       loading = false;
     }
   }
-  async function getUserInfo(){
-    try{
-      const res = await fetch('/get-user');
-      const data = await res.json();    
-      console.log("User information: ", data);
-    }catch (e) {
-      error = e instanceof Error ? e.message : 'An error occurred';
-      loading = false;
-    }
-  }
 
   //Does all information fetching for the user's courses and videos
   //STILL NEED TO DO FRONTEND DESIGN FOR THIS!!
@@ -135,6 +125,38 @@
   }
 
 
+  async function removeCourse(courseCode: any) {
+    loading = true;
+    let message = '';
+    
+    try {
+      const response = await fetch('/api/user/courses/remove', {
+        method: 'PUT',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          course: courseCode
+        })
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        message = result.message;
+        // removes from local array immediately
+        courses = courses.filter(course => course !== courseCode);
+      } else {
+        message = result.error; 
+      }
+    } catch (err) {
+      console.error('Error removing course:', err);
+    } finally {
+      loading = false;
+    }
+  }
+
   //filtering courses based on favorites, so my courses page only shows favorited courses
   $: favoritedCourses = courses.filter(course => favoriteCourses.has(course.code));
 
@@ -155,6 +177,14 @@
     </button>
   </div>
   <div class="content-wrapper">
+    <section>
+      {#each userCourseList as course, i}
+        <div class="cell color {(i % 3) + 1}">
+          <button on:click={() => removeCourse(course)}>Click To Remove From Your View</button>
+          <h3>{course}</h3>
+        </div>
+        {/each}
+    </section>
     {#await getUser()}
     <p>Loading...</p>
     {:then username}
