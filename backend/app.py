@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, session, jsonify, send_from_directory
+from flask import Flask, redirect, url_for, session, jsonify, send_from_directory, request
 from authlib.integrations.flask_client import OAuth
 from authlib.common.security import generate_token
 import os
@@ -58,12 +58,22 @@ def authorize():
 
     user_info = flask_app.parse_id_token(token, nonce=nonce)  # or use .get('userinfo').json()
     session['user'] = user_info
+    
+    # user_data = session['user']
+    # username = user_data.get("username")
+    
+    # entry = db["user-courses"].find_one({"username": username})
+    # if entry is None:
+    #   db["user-courses"].insert_one({"username": username, "courses": []})
+      
     return redirect('/')
 
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect('/')
+  
+#------------------------Course Info and Videos------------------------
 
 # Get a list of all course codes in our system
 @app.route('/api/courses_list', methods=["GET"])
@@ -96,12 +106,81 @@ def get_course_info(course_code):
 @app.route('/api/test_courses', methods=["GET"])
 def get_test_courses():
     curr_dir = os.path.dirname(os.path.abspath(__file__))
-    courses_path = os.path.join(curr_dir, 'data', 'test_course_info.json')
+    courses_path = os.path.join(curr_dir, 'data', 'course_info.json')
     
     with open(courses_path, "r") as file:
         courses = json.load(file)
     
     return jsonify(courses)
+  
+#------------------------User's Courses------------------------
+
+# Fetch an user's favorite courses
+@app.route('/api/user/courses', methods=["GET"])
+def get_user_courses():
+  user_data = session['user']
+  username = user_data.get('username', user_data.get('email', 'anonymous'))
+  
+  entry = db["user-courses"].find_one({"username": username})
+  if entry is None:
+    db["user-courses"].insert_one({"username": username, "courses": []})
+    return jsonify([])
+  
+  courses = entry["courses"]
+  return jsonify(courses)
+
+# Add a new favorite course to user's profile
+# Send this json: {"course": "course_code"}
+@app.route('/api/user/courses/add', methods=["PUT"])
+def add_user_course():
+  user_data = session['user']
+  username = user_data.get('username', user_data.get('email', 'anonymous'))
+  
+  data = request.json
+  course = data.get("course")
+  
+  entry = db["user-courses"].find_one({"username": username})
+  courses = entry["courses"]
+
+  if not (course in courses):
+    courses.append(course)
+    
+  status = db["user-courses"].update_one(
+    {"username": username}, 
+    {"$set": {"courses": courses}}
+  )
+  
+  if status.matched_count:
+    return jsonify({"message": "Course added"}), 201
+  else:
+    return jsonify({"error": "Fail to add course"}), 400
+  
+# Remove a favorite course to user's profile
+# Send this json: {"course": "course_code"}
+@app.route('/api/user/courses/remove', methods=["PUT"])
+def remove_user_course():
+  user_data = session['user']
+  username = user_data.get('username', user_data.get('email', 'anonymous'))
+  
+  data = request.json
+  course = data.get("course")
+  
+  entry = db["user-courses"].find_one({"username": username})
+  courses = entry["courses"]
+
+  courses.remove(course)
+    
+  status = db["user-courses"].update_one(
+    {"username": username}, 
+    {"$set": {"courses": courses}}
+  )
+  
+  if status.matched_count:
+    return jsonify({"message": "Course removed"}), 201
+  else:
+    return jsonify({"error": "Fail to remove course"}), 400
+
+#------------------------------------------------------------------
 
 @app.route('/get-user')
 def get_user():
