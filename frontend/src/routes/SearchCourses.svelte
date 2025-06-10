@@ -24,7 +24,20 @@
   let showCourseViewer: boolean = false;
   let courseInViewer: Course | null = null;
   let selectedVideo: Video | null = null;
- 
+  let userCourses: any[] = [];
+  let allCourses: any[] = [];
+  let filteredCourses: any[] = [];
+
+  $: availableCourses = allCourses.filter(course => !userCourses.includes(course.code));
+
+  // Update your filtering logic to use availableCourses instead of courses
+  $: filteredCourses = availableCourses.filter(course => 
+    course.code.toLowerCase().includes(searchPhrase.toLowerCase()) ||
+    course.title.toLowerCase().includes(searchPhrase.toLowerCase()) ||
+    course.description.toLowerCase().includes(searchPhrase.toLowerCase()) ||
+    course.keywords.some((keyword: string) => keyword.toLowerCase().includes(searchPhrase.toLowerCase()))
+  );
+
   
   //Need to check the available coures against the user's current favorite and added courses
   //Only show class that aren't already a part of the user's storage
@@ -34,6 +47,8 @@
     let username = await getUser();
     if (username != null){
       console.log("User is logged in - ", username);
+      await fetchUserCourses();
+      fetchCourses();
     } 
   });
 
@@ -49,6 +64,16 @@
     localStorage.setItem('favoriteCourses', JSON.stringify(Array.from(favoriteCourses)));
   }
 
+  async function fetchUserCourses(){
+    try{
+      const res = await fetch ('/api/user/courses');
+      const data = await res.json();
+      userCourses = data;
+    } catch(e){
+      console.log("Error occured: ", e);
+    }
+  }
+
   async function fetchCourses() {
     try {
       // Fetch test course data
@@ -57,14 +82,17 @@
       const courseData = await response.json();
       
       // Transform the data into our Course interface format
-      courses = Object.entries(courseData).map(([code, data]: [string, any]) => ({
+      allCourses = Object.entries(courseData).map(([code, data]: [string, any]) => ({
         code,
         title: data.title,
         description: data.description,
         keywords: data.keywords,
         videos: data.videos
       }));
-      
+      console.log("All Courses - ", allCourses);
+      console.log("User Courses - ", userCourses);
+      courses = allCourses.filter(course => !userCourses.includes(course.code));
+      console.log("Filtered Courses - ", courses);
       loading = false;
     } catch (e) {
       error = e instanceof Error ? e.message : 'An error occurred';
@@ -84,7 +112,7 @@
 
   async function addCourse(courseInfo: any){
     let courseCode = courseInfo;
-    console.log("Fuck me - ", courseCode.code);
+    console.log("Course to Add - ", courseCode.code);
     try {
       const response = await fetch('/api/user/courses/add', {
         method: 'PUT',
@@ -98,23 +126,28 @@
       });
       
       const result = await response.json();
+
+      if(response.ok){
+        console.log("You've successfully added a course!");
+        await fetchUserCourses();
+      }
       
     } catch (err) {
       console.error('Error adding course:', err);
     }
   }
 
-  // Load favorites and fetch courses when component mounts
+  // Load favorites when component mounts
   loadFavorites();
-  fetchCourses();
 
   // Filtering courses based on search phrase
-  $: filteredCourses = courses.filter(course => 
-    course.code.toLowerCase().includes(searchPhrase.toLowerCase()) ||
-    course.title.toLowerCase().includes(searchPhrase.toLowerCase()) ||
-    course.description.toLowerCase().includes(searchPhrase.toLowerCase()) ||
-    course.keywords.some(keyword => keyword.toLowerCase().includes(searchPhrase.toLowerCase()))
-  );
+  // *****Updated reactive statements near the top by the variables declarations*****
+  // $: filteredCourses = courses.filter(course => 
+  //   course.code.toLowerCase().includes(searchPhrase.toLowerCase()) ||
+  //   course.title.toLowerCase().includes(searchPhrase.toLowerCase()) ||
+  //   course.description.toLowerCase().includes(searchPhrase.toLowerCase()) ||
+  //   course.keywords.some(keyword => keyword.toLowerCase().includes(searchPhrase.toLowerCase()))
+  // );
 
   function showCourseDetails(course: Course) {
     courseInViewer = course;
