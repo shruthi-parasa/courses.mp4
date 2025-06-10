@@ -39,7 +39,6 @@
     let username = await getUser();
     if (username != null){
       await getUserCourses();
-      console.log("User Retrieved");
       await fetchCourseInfo();
       await getUserVotes();
     } 
@@ -113,7 +112,6 @@
     }));
     
     let filteredCourses = initialFetchCourses.filter(course => userCourseList.includes(course.code));
-    console.log("Filtered courses:", filteredCourses);
     
     allCourses = await Promise.all(
       filteredCourses.map(async (course) => ({
@@ -125,11 +123,8 @@
       }))
     );
     
-    // Update userCourseList with the complete course objects
-    userCourseList = allCourses;
-    
-    console.log("Final courses with videos:", allCourses);
-   
+    // Update userCourseList with the complete course objects - Includes prior info with videos with most up-to-date votes
+    userCourseList = allCourses;   
   } catch (e) {
     error = e instanceof Error ? e.message : 'An error occurred';
     loading = false;
@@ -170,8 +165,8 @@ async function getVideos(courseCode: any) {
     }
   }
 
+  //Issue appered when removing courses after voting implementation - Fixed K. Nguyen
   async function removeCourse(courseCode: any) {
-    loading = true;
     let message = '';
     
     try {
@@ -190,16 +185,21 @@ async function getVideos(courseCode: any) {
       
       if (response.ok) {
         message = result.message;
-        // removes from local array immediately
-        // courses = courses.filter(course => course !== courseCode);
-        await getUserCourses();
+
+        userCourseList = userCourseList.filter(course => 
+          (course.code || course) !== courseCode
+        );
+        
+        if (courseInViewer && courseInViewer.code === courseCode) {
+          closeCourseViewer();
+        }
+
       } else {
-        message = result.error; 
+        message = result.error;
+        console.error('Remove course failed:', message);
       }
     } catch (err) {
       console.error('Error removing course:', err);
-    } finally {
-      loading = false;
     }
   }
 
@@ -236,16 +236,16 @@ async function getVideos(courseCode: any) {
     try{
       const res = await fetch ('/api/user_votes');
       const voteData = await res.json();
-      console.log("User votes: ", voteData);
       userVotes = voteData;
     } catch(e){
       console.log("Error Occurred - ", e);
     }
   }
+
+  //Upvoting Function - Needs full course array and the specific video array
   async function upVote(course: any, video: any) {
   let courseCode = course.code;
   let videoId = video.id;
-  
   try {
     const response = await fetch(`/api/vote/${courseCode}/${videoId}/upvote`, {
       method: 'PUT',
@@ -258,11 +258,15 @@ async function getVideos(courseCode: any) {
     const result = await response.json();
 
     if (response.ok) {
-      console.log("Upvote successful:", result.message);
-      
-      await refreshCourseData(courseCode);
-      
-      alert(result.message);
+      if(result.message === "Already upvoted"){
+        await revertVote(course, video, true);
+      } else{
+        console.log("Upvote successful:", result.message);
+        
+        await refreshCourseData(courseCode);
+        
+        alert(result.message);
+      }
     } else {
       console.error("Upvote failed:", result.error);
       alert(result.error || "Failed to upvote video");
@@ -271,59 +275,101 @@ async function getVideos(courseCode: any) {
     console.log("Error Occurred - ", e);
   }
 }
-
-async function downVote(course: any, video: any) {
-  let courseCode = course.code;
-  let videoId = video.id;
-  
-  try {
-    const response = await fetch(`/api/vote/${courseCode}/${videoId}/downvote`, {
-      method: 'PUT',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
+  //Downvoting Function - Needs full course array and the specific video array
+  async function downVote(course: any, video: any) {
+    let courseCode = course.code;
+    let videoId = video.id;
     
-    const result = await response.json();
-
-    if (response.ok) {
-      console.log("Down vote successful:", result.message);
+    try {
+      const response = await fetch(`/api/vote/${courseCode}/${videoId}/downvote`, {
+        method: 'PUT',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       
-      await refreshCourseData(courseCode);
-      
-      alert(result.message);
-    } else {
-      console.error("Downvote failed:", result.error);
-      alert(result.error || "Failed to downvote video");
-    }
-  } catch (e) {
-    console.log("Error Occurred - ", e);
-  }
-}
+      const result = await response.json();
 
-// refresh data for a course - used primarily for voting
-async function refreshCourseData(courseCode: string) {
-  try {
-    // Get fresh video data for the course
-    const freshVideos = await getVideos(courseCode);
-    
-    // Update userCourseList
-    userCourseList = userCourseList.map(course => {
-      if (course.code === courseCode) {
-        return { ...course, videos: freshVideos };
+      if (response.ok) {
+        if(result.message === "Already downvoted"){
+          await revertVote(course, video, false);
+        } else{
+          console.log("Down vote successful:", result.message);
+          
+          await refreshCourseData(courseCode);
+          
+          alert(result.message);
+        }
+      } else {
+        console.error("Downvote failed:", result.error);
+        alert(result.error || "Failed to downvote video");
       }
-      return course;
-    });
-    
-    // Update courseInViewer if it is the same course
-    if (courseInViewer && courseInViewer.code === courseCode) {
-      courseInViewer = { ...courseInViewer, videos: freshVideos };
+    } catch (e) {
+      console.log("Error Occurred - ", e);
     }
-  } catch (error) {
-    console.error('Error refreshing course data:', error);
   }
-}
+
+  //Main revert vote function, for the boolean - Reverting upvote is true, false for downvote
+  async function revertVote(course: any, video: any, upOrDown: boolean){
+    let courseCode = course.code;
+    let videoId = video.id;
+    let revert = '';
+    try {
+      //Upvote = 0
+      if(upOrDown){
+        revert = "revert_upvote";
+      }
+      //Downvote = 1
+      else{
+        revert = "revert_downvote";
+      }
+      const response = await fetch(`/api/vote/${courseCode}/${videoId}/${revert}`, {
+        method: 'PUT',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      
+      const result = await response.json();
+
+      if (response.ok) {
+        console.log("Revert vote successful:", result.message," - ", revert);
+        
+        await refreshCourseData(courseCode);
+        
+        alert(result.message);
+      } else {
+        console.error("Revert upvote failed:", result.error);
+        alert(result.error || "Failed to revert up vote on video");
+      }
+    } catch (e) {
+      console.log("Error Occurred - ", e);
+    }
+  }
+  // refresh data for a course - made to specifically target re-rendering issues
+  async function refreshCourseData(courseCode: string) {
+    try {
+      // Get fresh video data for the course
+      const freshVideos = await getVideos(courseCode);
+      
+      // Update userCourseList
+      userCourseList = userCourseList.map(course => {
+        if (course.code === courseCode) {
+          return { ...course, videos: freshVideos };
+        }
+        return course;
+      });
+      
+      // Update courseInViewer if it is the same course
+      if (courseInViewer && courseInViewer.code === courseCode) {
+        courseInViewer = { ...courseInViewer, videos: freshVideos };
+      }
+    } catch (error) {
+      console.error('Error refreshing course data:', error);
+    }
+  }
 
 </script>
 
@@ -360,7 +406,7 @@ async function refreshCourseData(courseCode: string) {
         {:else}
           <!--grid layout of course cards from user's course list -->
           <section class="grid">
-            {#each userCourseList as course, i}
+            {#each userCourseList as course}
               <div class="cell">
                 <!--clickable card; view of the course -->
                 <button 
@@ -512,6 +558,7 @@ async function refreshCourseData(courseCode: string) {
                 >
                   👎
                 </button>
+                <!-- Ignore Error squiggles, works fine! - K. Nguyen -->
                 <div>upVote: {video.up_vote}</div>
                 <div>Downvotes: {video.down_vote}</div>
               </div>
