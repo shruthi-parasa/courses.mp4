@@ -16,7 +16,7 @@ db = mongo["database"]
 # Extract keywords for courses
 def process_courses():
   curr_dir = os.path.dirname(os.path.abspath(__file__))
-  file_course_info = os.path.join(curr_dir, 'data', 'test_course_info.json')
+  file_course_info = os.path.join(curr_dir, 'data', 'course_info.json')
   file_course_list = os.path.join(curr_dir, 'data', 'course_list.json')
   
   courses = dict()
@@ -70,7 +70,7 @@ def process_courses():
 # Get videos for all keywords
 def get_videos():
   curr_dir = os.path.dirname(os.path.abspath(__file__))
-  file_path = os.path.join(curr_dir, 'data', 'test_course_info.json')
+  file_path = os.path.join(curr_dir, 'data', 'course_info.json')
   
   with open(file_path, "r") as file:
     courses = json.load(file)
@@ -94,6 +94,6 @@ def get_videos():
   
 
 if __name__ == "__main__":
-  process_courses()
-  get_videos()
+  # process_courses()
+  # get_videos()
   

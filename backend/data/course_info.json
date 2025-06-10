@@ -1,3447 +1,832 @@
 {
-  "ECS 011": {
-    "title": "Artificial Intelligence for All",
-    "description": "Comprehensive introduction to artificial intelligence (AI) and its multifaceted applications. Foundational understanding of modern AI to enable effective communication about its functions, recognition of its applications, and awareness of its core principles. Ethical and societal implications of AI.",
-    "keywords": [
-      "applications foundational",
-      "artificial intelligence",
-      "intelligence ai"
-    ]
-  },
-  "ECS 012": {
-    "title": "Introduction to Media Computation",
-    "description": "Introduction to key computational ideas necessary to understand and produce digital media. Fundamentals of programming are covered as well as analysis of how media are represented and transmitted in digital form. Aimed primarily at non-computer science students.",
-    "keywords": [
-      "computational ideas",
-      "computer science",
-      "science students"
-    ]
-  },
-  "ECS 017": {
-    "title": "Data, Logic, & Computing",
-    "description": "Display, processing, and representation of information and data on a computer. Understanding and analyzing the digital representations of numbers, images, and sounds. Basic computer operations and their logic. Introduction to discrete mathematics in computer science, including propositional logic, proofs by induction, recursions, and counting. Introduction to algorithms. Uses of computers and their influence on society.",
-    "keywords": [
-      "logic computing",
-      "computer science",
-      "mathematics computer"
-    ]
-  },
-  "ECS 020": {
+  "ecs020": {
     "title": "Discrete Mathematics For Computer Science",
     "description": "Discrete mathematics of particular utility to computer science. Proofs by induction. Propositional and first-order logic. Sets, functions, and relations. Big-O and related notations. Recursion and solutions of recurrence relations. Combinatorics. Probability on finite probability spaces. Graph theory.",
     "keywords": [
       "graph theory",
       "discrete mathematics",
       "mathematics computer"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   },
-  "ECS 032A": {
-    "title": "Introduction to Programming",
-    "description": "Introduction to programming and problem solving in Python. Aimed primarily at non-major students.",
-    "keywords": [
-      "python",
-      "python aimed",
-      "solving python"
-    ]
-  },
-  "ECS 032AV": {
-    "title": "Introduction to Programming",
-    "description": "Introduction to programming and problem solving in Python. Aimed primarily at non-major students.",
-    "keywords": [
-      "python",
-      "python aimed",
-      "solving python"
-    ]
-  },
-  "ECS 032B": {
-    "title": "Introduction to Data Structures",
-    "description": "Design and analysis of data structures using Python; trees, heaps, searching, sorting, and graphs.",
-    "keywords": [
-      "python",
-      "python trees",
-      "using python"
-    ]
-  },
-  "ECS 032C": {
-    "title": "Implementation of Data Structures in C",
-    "description": "Programming in the C language. Use of basic UNIX tools. Writing good programs of increased complexity and efficiency. Implementation of data structures in C.",
-    "keywords": [
-      "unix",
-      "basic unix",
-      "unix tools"
-    ]
-  },
-  "ECS 034": {
-    "title": "Software Development in UNIX & C++",
-    "description": "UNIX Operating system tools and programming environment. Methods for debugging and verification. Principles object-oriented programming in C++.",
-    "keywords": [
-      "unix operating",
-      "software development",
-      "development unix"
-    ]
-  },
-  "ECS 036A": {
+  "ecs036a": {
     "title": "Programming & Problem Solving",
     "description": "Computers and computer programming for students with some prior experience, algorithm design, and debugging. Good programming style. Use of basic UNIX tools.",
     "keywords": [
       "programming students",
       "unix tools",
       "computer programming"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   },
-  "ECS 036B": {
+  "ecs036b": {
     "title": "Software Development & Object-Oriented Programming in C++",
     "description": "Object-oriented programming in C++. Basic data structures and their use. Writing good programs of increased complexity and efficiency. Methods for debugging and verification.",
     "keywords": [
       "programming object",
       "programming basic",
       "software development"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   },
-  "ECS 036C": {
+  "ecs036c": {
     "title": "Data Structures, Algorithms, & Programming",
     "description": "Design and analysis of data structures for a variety of applications; trees, heaps, searching, sorting, hashing, and graphs. Extensive programming.",
     "keywords": [
       "hashing graphs",
       "structures algorithms",
       "algorithms programming"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   },
-  "ECS 050": {
+  "ecs050": {
     "title": "Computer Organization & Machine-Dependent Programming",
     "description": "Comparative study of different hardware architectures via programming in the assembly languages of various machines. Role of system software in producing an abstract machine. Introduction to I/O devices and programming.",
     "keywords": [
       "programming comparative",
       "programming assembly",
       "architectures programming"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   },
-  "ECS 088": {
-    "title": "Ethics of Technology",
-    "description": "Foundations of normative ethics for technology, its relationships to moral philosophy and to the law. Technologies and their impacts on the environment and society. Justice, meritocracy, and computer science and engineering. Ethical issues with AI and machine learning.",
-    "keywords": [
-      "law technologies",
-      "technology relationships",
-      "ethics technology"
-    ]
-  },
-  "ECS 089A": {
-    "title": "Special Topics in Computer Science: Computer Science Theory",
-    "description": "Special topics in Computer Science Theory.",
-    "keywords": [
-      "topics computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "ECS 089B": {
-    "title": "Special Topics in Computer Science: Architecture",
-    "description": "Special topics in Architecture.",
-    "keywords": [
-      "science architecture",
-      "topics architecture",
-      "computer science"
-    ]
-  },
-  "ECS 089C": {
-    "title": "Special Topics in Computer Science: Programming Languages & Compilers",
-    "description": "Special topics in Programming Languages & Compilers.",
-    "keywords": [
-      "languages compilers",
-      "programming languages",
-      "computer science"
-    ]
-  },
-  "ECS 089D": {
-    "title": "Special Topics in Computer Science: Operating Systems",
-    "description": "Special topics in Operating Systems.",
-    "keywords": [
-      "computer",
-      "topics computer",
-      "computer science"
-    ]
-  },
-  "ECS 089E": {
-    "title": "Special Topics in Computer Science: Software Engineering",
-    "description": "Special topics in Software Engineering.",
-    "keywords": [
-      "topics software",
-      "software engineering",
-      "computer science"
-    ]
-  },
-  "ECS 089F": {
-    "title": "Special Topics in Computer Science: Databases",
-    "description": "Special topics in Databases.",
-    "keywords": [
-      "topics computer",
-      "science databases",
-      "computer science"
-    ]
-  },
-  "ECS 089G": {
-    "title": "Special Topics in Computer Science: Artificial Intelligence",
-    "description": "Special topics in Artificial Intelligence.",
-    "keywords": [
-      "topics computer",
-      "artificial intelligence",
-      "computer science"
-    ]
-  },
-  "ECS 089H": {
-    "title": "Special Topics in Computer Science: Computer Graphics",
-    "description": "Special topics in Computer Graphics.",
-    "keywords": [
-      "science computer",
-      "computer science",
-      "computer graphics"
-    ]
-  },
-  "ECS 089I": {
-    "title": "Special Topics in Computer Science: Networks",
-    "description": "Special topics in Networks.",
-    "keywords": [
-      "science networks",
-      "topics computer",
-      "computer science"
-    ]
-  },
-  "ECS 089J": {
-    "title": "Special Topics in Computer Science: Computer-Aided Design",
-    "description": "Special topics in Computer-Aided Design.",
-    "keywords": [
-      "topics computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "ECS 089K": {
-    "title": "Special Topics in Computer Science: Scientific Computing",
-    "description": "Special topics in Scientific Computing.",
-    "keywords": [
-      "science scientific",
-      "computer science",
-      "scientific computing"
-    ]
-  },
-  "ECS 089L": {
-    "title": "Special Topics in Computer Science: Computer Science",
-    "description": "Special topics in Computer Science.",
-    "keywords": [
-      "topics computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "ECS 092": {
-    "title": "Internship in Computer Science",
-    "description": "Supervised work experience in computer science.",
-    "keywords": [
-      "experience computer",
-      "computer science",
-      "internship computer"
-    ]
-  },
-  "ECS 098": {
-    "title": "Directed Group Study",
-    "description": "Directed group study.",
-    "keywords": [
-      "study directed",
-      "directed group",
-      "group study"
-    ]
-  },
-  "ECS 098F": {
-    "title": "Student Facilitated Course",
-    "description": "Student facilitated course intended primarily for lower division students.",
-    "keywords": [
-      "students",
-      "student facilitated",
-      "division students"
-    ]
-  },
-  "ECS 099": {
-    "title": "Special Study for Lower Division Students",
-    "description": "Special study for lower division students.",
-    "keywords": [
-      "students special",
-      "division students",
-      "special study"
-    ]
-  },
-  "ECS 111": {
-    "title": "Applied Machine Learning for Non-Majors",
-    "description": "Machine learning methods and their application. Theory, design and evaluation of supervised/unsupervised machine learning algorithms. Practical use of matching learning methods and their challenges.",
-    "keywords": [
-      "learning methods",
-      "machine learning",
-      "learning algorithms"
-    ]
-  },
-  "ECS 113": {
-    "title": "Computer Security for Non-Majors",
-    "description": "Principles, mechanisms, implementation, and sound practices of computer security and data protection. Cryptography, authentication and access control. Internet security. Malicious software. Common vulnerabilities. Practical security in everyday life. Not intended for Computer Science or Computer Science & Engineering majors.",
-    "keywords": [
-      "protection cryptography",
-      "computer security",
-      "internet security"
-    ]
-  },
-  "ECS 115": {
-    "title": "Computer Networks for Non-Majors",
-    "description": "Overview of computer networks, World Wide Web, email, local & wide-area computer networks, TCP/IP protocol suite, network protocols for data transmission, introduction to network programming.",
-    "keywords": [
-      "ip protocol",
-      "web email",
-      "computer networks"
-    ]
-  },
-  "ECS 116": {
-    "title": "Databases for Non-Majors",
-    "description": "Overview of Database Systems, Conceptual Modeling and Design, E/R diagrams, Relational Model, Relational Algebra, SQL, File and Index Structures, Query Evaluation, Transaction Concepts, Concurrency and Recovery, and NoSQL Databases.",
-    "keywords": [
-      "sql file",
-      "database systems",
-      "nosql databases"
-    ]
-  },
-  "ECS 117": {
-    "title": "Algorithms for Data Science",
-    "description": "Algorithms for searching, pattern matching, combinatorial problems, clustering, and time series analysis with practical emphasis.",
-    "keywords": [
-      "matching combinatorial",
-      "data science",
-      "science algorithms"
-    ]
-  },
-  "ECS 119": {
-    "title": "Data Processing Pipelines",
-    "description": "Introduction to software systems for processing large datasets. Hands-on experience with scripting, data streams, distributed computing, and software development and deployment infrastructure.",
-    "keywords": [
-      "introduction software",
-      "computing software",
-      "software development"
-    ]
-  },
-  "ECS 120": {
+  "ecs120": {
     "title": "Theory of Computation",
     "description": "Fundamental ideas in the theory of computation, including formal languages, computability and complexity. Reducibility among computational problems.",
     "keywords": [
       "computational problems",
       "languages computability",
       "theory computation"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   },
-  "ECS 122A": {
-    "title": "Algorithm Design & Analysis",
-    "description": "Complexity of algorithms, bounds on complexity, analysis methods. Searching, sorting, pattern matching, graph algorithms. Algorithm design techniques: divide-conquer, greedy, dynamic programming. Approximation methods. NP-complete problems.",
-    "keywords": [
-      "complexity algorithms",
-      "algorithms algorithm",
-      "graph algorithms"
-    ]
-  },
-  "ECS 122B": {
-    "title": "Algorithm Design & Analysis",
-    "description": "Theory and practice of hard problems, and problems with complex algorithm solutions. NP-completeness, approximation algorithms, randomized algorithms, dynamic programming and branch and bound. Theoretical analysis, implementation and practical evaluations. Examples from parallel, string, graph, and geometric algorithms.",
-    "keywords": [
-      "algorithm design",
-      "approximation algorithms",
-      "geometric algorithms"
-    ]
-  },
-  "ECS 124": {
-    "title": "Theory & Practice of Bioinformatics",
-    "description": "Fundamental biological, mathematical and algorithmic models underlying bioinformatics and systems biology; sequence analysis, database search, genome annotation, clustering and classification, functional gene networks, regulatory network inference, phylogenetic trees, applications of common bioinformatics tools in molecular biology and genetics.",
-    "keywords": [
-      "bioinformatics fundamental",
-      "bioinformatics systems",
-      "bioinformatics tools"
-    ]
-  },
-  "ECS 127": {
-    "title": "Cryptography",
-    "description": "Introduction to the theory and practice of cryptographic techniques used in computer security. Encryption (secret-key and public-key), message authentication, digital signatures, entity authentication, key distribution, and other cryptographic protocols. The social context of cryptography.",
-    "keywords": [
-      "cryptographic techniques",
-      "context cryptography",
-      "cryptographic protocols"
-    ]
-  },
-  "ECS 129": {
-    "title": "Computational Structural Bioinformatics",
-    "description": "Fundamental biological, chemical and algorithmic models underlying computational structural biology; protein structure and nucleic acids structure; comparison of protein structures; protein structure prediction; molecular simulations; databases and online services in computational structural biology.",
-    "keywords": [
-      "bioinformatics",
-      "biology protein",
-      "structural bioinformatics"
-    ]
-  },
-  "ECS 130": {
-    "title": "Scientific Computation",
-    "description": "Matrix-vector approach using MATLAB for floating-point arithmetic, error analysis, data interpolation, least squares data fitting, quadrature, zeros, optimization and matrix eigenvalues and singular values. Parallel computing for matrix operations and essential matrix factorizations.",
-    "keywords": [
-      "computing matrix",
-      "matrix eigenvalues",
-      "matrix factorizations"
-    ]
-  },
-  "ECS 132": {
+  "ecs132": {
     "title": "Probability & Statistical Modeling for Computer Science",
     "description": "Univariate and multivariate distributions. Estimation and model building. Markov/Hidden Markov models. Applications to data mining, networks, security, software engineering and bioinformatics.",
     "keywords": [
       "data mining",
       "computer science",
       "engineering bioinformatics"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   },
-  "ECS 140A": {
-    "title": "Programming Languages",
-    "description": "Syntactic definition of programming languages. Introduction to programming language features including variables, data types, data abstraction, object-orientedness, scoping, parameter disciplines, exception handling. Non-imperative programming languages. Comparative study of several high-level programming languages.",
-    "keywords": [
-      "languages comparative",
-      "programming language",
-      "programming languages"
-    ]
-  },
-  "ECS 140B": {
-    "title": "Programming Languages",
-    "description": "Continuation of programming language principles. Further study of programming language paradigms such as functional and logic; additional programming language paradigms such as concurrent (parallel); key implementation issues for those paradigms; and programming language semantics.",
-    "keywords": [
-      "paradigms programming",
-      "programming languages",
-      "study programming"
-    ]
-  },
-  "ECS 142": {
-    "title": "Compilers",
-    "description": "Principles and techniques of lexical analysis, parsing, semantic analysis, code generation, and code optimization. Implementation of compilers.",
-    "keywords": [
-      "compilers",
-      "implementation compilers",
-      "compilers principles"
-    ]
-  },
-  "ECS 145": {
-    "title": "Scripting Languages & Their Applications",
-    "description": "Goals and philosophy of scripting languages, with Python and R as prime examples. Applications include networking, data analysis and display, and graphical user interfaces (GUIs).",
-    "keywords": [
-      "python prime",
-      "python",
-      "languages python"
-    ]
-  },
-  "ECS 150": {
+  "ecs150": {
     "title": "Operating Systems & System Programming",
     "description": "Basic concepts of operating systems and system programming. Processes and interprocess communication/synchronization; virtual memory, program loading and linking; file and I/O subsystems; utility programs. Study of a real operating system.",
     "keywords": [
       "file subsystems",
       "programming processes",
       "systems programming"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   },
-  "ECS 152A": {
-    "title": "Computer Networks",
-    "description": "Overview of computer networks, TCP/IP protocol suite, computer-networking applications and protocols, transport-layer protocols, network architectures, Internet Protocol (IP), routing, link-layer protocols, local area and wireless networks, medium access control, physical aspects of data transmission, and network-performance analysis.",
-    "keywords": [
-      "internet protocol",
-      "networking applications",
-      "network architectures"
-    ]
-  },
-  "ECS 152B": {
-    "title": "Computer Networks",
-    "description": "TCP/IP protocol suite, computer networking applications, client-server and peer-to-peer architectures, application-layer protocols, transport-layer protocols, transport-layer interfaces, sockets, network programming, remote procedure calls, and network management.",
-    "keywords": [
-      "networks tcp",
-      "computer networks",
-      "networking applications"
-    ]
-  },
-  "ECS 152C": {
-    "title": "Advanced Topics in Computer Networks",
-    "description": "Advanced topics in computer networks, wireless networks, multimedia networking, traffic analysis and modeling,  network design and management, network simulation and performance analysis, and design projects in communication networks.",
-    "keywords": [
-      "network simulation",
-      "multimedia networking",
-      "network design"
-    ]
-  },
-  "ECS 153": {
-    "title": "Computer Security",
-    "description": "Principles, mechanisms, and implementation of computer security and data protection. Policy, encryption and authentication, access control, and integrity models and mechanisms; network security; secure systems; programming and vulnerabilities analysis. Study of an existing operating system.",
-    "keywords": [
-      "data protection",
-      "network security",
-      "computer security"
-    ]
-  },
-  "ECS 154A": {
-    "title": "Computer Architecture",
-    "description": "Introduction to digital design. Interfacing of devices for I/O, memory and memory management. Input/output programming, via wait loops, hardware interrupts and calls to operating system services. Hardware support for operating systems software.",
-    "keywords": [
-      "memory management",
-      "digital design",
-      "computer architecture"
-    ]
-  },
-  "ECS 154B": {
-    "title": "Computer Architecture",
-    "description": "Hardwired and microprogrammed CPU design. Memory hierarchies. Uniprocessor performance analysis under varying program mixes. Introduction to pipelining and multiprocessors.",
-    "keywords": [
-      "computer architecture",
-      "microprogrammed cpu",
-      "cpu design"
-    ]
-  },
-  "ECS 158": {
-    "title": "Programming on Parallel Architectures",
-    "description": "Techniques for software development using the shared-memory and message-passing paradigms, on parallel architectures and networks of workstations. Locks, barriers, and other techniques for synchronization. Introduction to parallel algorithms.",
-    "keywords": [
-      "algorithms",
-      "techniques software",
-      "software development"
-    ]
-  },
-  "ECS 160": {
-    "title": "Software Engineering",
-    "description": "Requirements, specification, design, implementation, testing, and verification of large software systems. Study and use of software engineering methodologies.",
-    "keywords": [
-      "engineering requirements",
-      "engineering methodologies",
-      "software engineering"
-    ]
-  },
-  "ECS 161": {
-    "title": "Modern Programming Tools",
-    "description": "Concepts and practice of collaborative software development using modern software tools.",
-    "keywords": [
-      "programming tools",
-      "software tools",
-      "software development"
-    ]
-  },
-  "ECS 162": {
+  "ecs162": {
     "title": "Web Programming",
     "description": "Technical aspects of building websites, including both server-side and client-side software development.",
     "keywords": [
       "software development",
       "web programming",
       "building websites"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   },
-  "ECS 163": {
-    "title": "Information Visualization",
-    "description": "Exploration and communication of a variety forms of data through visualization. Design principles of human-computer interaction and data visualization techniques. Authentic practices in designing and evaluating interactive visualization systems to combat information overload and engage users in analytic thinking.",
-    "keywords": [
-      "users analytic",
-      "data visualization",
-      "visualization design"
-    ]
-  },
-  "ECS 164": {
-    "title": "Human-Computer Interaction",
-    "description": "Introduction to concepts and practice of modern human-computer interaction design.",
-    "keywords": [
-      "interaction introduction",
-      "computer interaction",
-      "interaction design"
-    ]
-  },
-  "ECS 165A": {
-    "title": "Database Systems",
-    "description": "Database modeling and design (E/R model, relational model), relational algebra, query languages (SQL), file and index structures, query processing, transaction management.",
-    "keywords": [
-      "relational algebra",
-      "database systems",
-      "database modeling"
-    ]
-  },
-  "ECS 165B": {
-    "title": "Database Systems",
-    "description": "Data modeling (object-relational, graph-based, spatiotemporal models). Querying semistructured data (XML). Database theory (normalization, integration, provenance). Database programming (stored procedures, embedded SQL, web programming). Advanced topics (data warehousing, parallel data processing).",
-    "keywords": [
-      "database programming",
-      "xml database",
-      "database theory"
-    ]
-  },
-  "ECS 170": {
+  "ecs170": {
     "title": "Introduction to Artificial Intelligence",
     "description": "Design and implementation of intelligent computer systems. Knowledge representation and organization. Memory and inference. Problem solving. Natural language processing.",
     "keywords": [
       "intelligent computer",
       "intelligence design",
       "artificial intelligence"
-    ]
-  },
-  "ECS 171": {
-    "title": "Machine Learning",
-    "description": "Introduction to machine learning. Supervised & unsupervised learning, including classification, dimensionality reduction, regression & clustering using modern machine learning methods. Applications of machine learning to other fields.",
-    "keywords": [
-      "applications machine",
-      "learning methods",
-      "machine learning"
-    ]
-  },
-  "ECS 172": {
-    "title": "Recommender Systems",
-    "description": "Collaborative filtering and content-based methods for building recommender systems. Statistical, matrix factorization, textual analysis, and nearest-neighbor approaches. Case studies.",
-    "keywords": [
-      "recommender systems",
-      "case studies",
-      "collaborative filtering"
-    ]
-  },
-  "ECS 173": {
-    "title": "Image Processing & Analysis",
-    "description": "Techniques for automated extraction of high-level information from images generated by cameras, three-dimensional surface sensors, and medical devices. Typical applications include detection of objects in various types of images and describing populations of biological specimens appearing in medical imagery.",
-    "keywords": [
-      "image processing",
-      "sensors medical",
-      "medical imagery"
-    ]
-  },
-  "ECS 174": {
-    "title": "Computer Vision",
-    "description": "Computer vision is the study of enabling machines to \"see\" the visual world; e.g., understand images and videos. Explores several fundamental topics in the area, including feature detection, grouping and segmentation, and recognition.",
-    "keywords": [
-      "vision study",
-      "vision computer",
-      "computer vision"
-    ]
-  },
-  "ECS 175": {
-    "title": "Computer Graphics",
-    "description": "Principles of computer graphics, with a focus on interactive systems. Current graphics hardware, elementary operations in two-and three-dimensional space, geometric transformations, camera models and interaction, graphics system design, standard graphics APIs, individual projects.",
-    "keywords": [
-      "computer graphics",
-      "graphics principles",
-      "graphics design"
-    ]
-  },
-  "ECS 177": {
-    "title": "Scientific Visualization",
-    "description": "Computer graphics techniques for generating images of various types of measured or computer-simulated data. Typical applications for these graphics techniques include study of air flows around car bodies, medical data, and molecular structures.",
-    "keywords": [
-      "graphics techniques",
-      "computer graphics",
-      "applications graphics"
-    ]
-  },
-  "ECS 178": {
-    "title": "Geometric Modeling",
-    "description": "Interactive graphics techniques for defining and manipulating geometrical shapes used in computer animation, car body design, aircraft design, and architectural design.",
-    "keywords": [
-      "interactive graphics",
-      "computer animation",
-      "graphics techniques"
-    ]
-  },
-  "ECS 179": {
-    "title": "Gameplay Programming",
-    "description": "Developing gameplay systems in the context of game design and software engineering. Aspects of technical game development that depend on the genre or details of a specific game design, thus making them difficult to abstract and engineer into game engines.",
-    "keywords": [
-      "engineer game",
-      "game design",
-      "game development"
-    ]
-  },
-  "ECS 188": {
-    "title": "Ethics in an Age of Technology",
-    "description": "Foundations of ethics. Views of technology. Technology and human values. Costs and benefits of technology. Character of technological change. Social context of work in computer science and engineering.",
-    "keywords": [
-      "technology character",
-      "technology technology",
-      "technology foundations"
-    ]
-  },
-  "ECS 189A": {
-    "title": "Special Topics in Computer Science: Computer Science Theory",
-    "description": "Special topic in Computer Science Theory.",
-    "keywords": [
-      "topics computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "ECS 189B": {
-    "title": "Special Topics in Computer Science: Architecture",
-    "description": "Special topic in Architecture.",
-    "keywords": [
-      "topic architecture",
-      "science architecture",
-      "computer science"
-    ]
-  },
-  "ECS 189C": {
-    "title": "Special Topics in Computer Science: Programming Languages & Compilers",
-    "description": "Special topic in Programming Languages & Compilers.",
-    "keywords": [
-      "languages compilers",
-      "programming languages",
-      "computer science"
-    ]
-  },
-  "ECS 189D": {
-    "title": "Special Topics in Computer Science: Operating Systems",
-    "description": "Special topic in Operating Systems.",
-    "keywords": [
-      "computer",
-      "topics computer",
-      "computer science"
-    ]
-  },
-  "ECS 189E": {
-    "title": "Special Topics in Computer Science: Software Engineering",
-    "description": "Special topic in software engineering.",
-    "keywords": [
-      "topics computer",
-      "software engineering",
-      "computer science"
-    ]
-  },
-  "ECS 189F": {
-    "title": "Special Topics in Computer Science: Databases",
-    "description": "Special topic Databases.",
-    "keywords": [
-      "topics computer",
-      "science databases",
-      "computer science"
-    ]
-  },
-  "ECS 189G": {
-    "title": "Special Topics in Computer Science: Artificial Intelligence",
-    "description": "Special topic in Artificial Intelligence.",
-    "keywords": [
-      "topics computer",
-      "artificial intelligence",
-      "computer science"
-    ]
-  },
-  "ECS 189H": {
-    "title": "Special Topics in Computer Science: Computer Graphics",
-    "description": "Special topic in Computer Graphics.",
-    "keywords": [
-      "science computer",
-      "computer science",
-      "computer graphics"
-    ]
-  },
-  "ECS 189I": {
-    "title": "Special Topics in Computer Science: Networks",
-    "description": "Special topic in Networks.",
-    "keywords": [
-      "science networks",
-      "topics computer",
-      "computer science"
-    ]
-  },
-  "ECS 189J": {
-    "title": "Special Topics in Computer Science: Computer-Aided Design",
-    "description": "Special topic in Computer-Aided Design.",
-    "keywords": [
-      "topics computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "ECS 189K": {
-    "title": "Special Topics in Computer Science: Scientific Computing",
-    "description": "Special topic in Scientific Computing.",
-    "keywords": [
-      "science scientific",
-      "computer science",
-      "scientific computing"
-    ]
-  },
-  "ECS 189L": {
-    "title": "Special Topics in Computer Science: Computer Science",
-    "description": "Special topic in Computer Science.",
-    "keywords": [
-      "topics computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "ECS 189M": {
-    "title": "Special Topics in Computer Security: Computer Security",
-    "description": "Special topics in Computer Security.",
-    "keywords": [
-      "security special",
-      "security computer",
-      "computer security"
-    ]
-  },
-  "ECS 189N": {
-    "title": "Special Topics in Bioinformatics & Computational Biology",
-    "description": "Special topics in Bioinformatics & Computational Biology.",
-    "keywords": [
-      "computational biology",
-      "topics bioinformatics",
-      "bioinformatics computational"
-    ]
-  },
-  "ECS 190C": {
-    "title": "Research Group Conferences in Computer Science",
-    "description": "Research group conferences.",
-    "keywords": [
-      "science research",
-      "computer science",
-      "conferences computer"
-    ]
-  },
-  "ECS 190X": {
-    "title": "Senior Seminar",
-    "description": "Examination of a special topic in a small group setting.",
-    "keywords": [
-      "seminar",
-      "seminar examination",
-      "senior seminar"
-    ]
-  },
-  "ECS 191": {
-    "title": "Software Design Project",
-    "description": "Teams plan, implement, and evaluate large-scale projects involving computer and computational systems. Project proposed and supervised by a faculty member.",
-    "keywords": [
-      "computer computational",
-      "supervised faculty",
-      "software design"
-    ]
-  },
-  "ECS 192": {
-    "title": "Internship in Computer Science",
-    "description": "Supervised work experience in computer science.",
-    "keywords": [
-      "experience computer",
-      "computer science",
-      "internship computer"
-    ]
-  },
-  "ECS 193A": {
-    "title": "Capstone Project",
-    "description": "Responding to real-life client design challenges, student teams plan, implement, and evaluate large-scale projects involving computer and computational systems. Project supervised by a faculty member. Must take ECS\u00a0193A & ECS\u00a0193B to receive credit.",
-    "keywords": [
-      "challenges student",
-      "supervised faculty",
-      "client design"
-    ]
-  },
-  "ECS 193B": {
-    "title": "Capstone Project",
-    "description": "Responding to real-life client design challenges, student teams plan, implement, and evaluate large-scale projects involving computer and computational systems. Project supervised by a faculty member. Must take ECS\u00a0193A & ECS\u00a0193B to receive credit.",
-    "keywords": [
-      "challenges student",
-      "supervised faculty",
-      "client design"
-    ]
-  },
-  "ECS 197T": {
-    "title": "Tutoring in Computer Science",
-    "description": "Tutoring in computer science courses, especially introductory courses.",
-    "keywords": [
-      "science tutoring",
-      "computer science",
-      "tutoring computer"
-    ]
-  },
-  "ECS 198": {
-    "title": "Directed Group Study",
-    "description": "Directed group study.",
-    "keywords": [
-      "study directed",
-      "directed group",
-      "group study"
-    ]
-  },
-  "ECS 198F": {
-    "title": "Student Facilitated Course",
-    "description": "Student facilitated course intended primarily for upper division students.",
-    "keywords": [
-      "students",
-      "division students",
-      "student facilitated"
-    ]
-  },
-  "ECS 199": {
-    "title": "Special Study for Advanced Undergraduates",
-    "description": "Special study for advanced undergraduates.",
-    "keywords": [
-      "study advanced",
-      "undergraduates special",
-      "advanced undergraduates"
-    ]
-  },
-  "ECS 199FA": {
-    "title": "Student Facilitated Course Development",
-    "description": "Under the supervision of a faculty member, an undergraduate student plans and develops the course they will offer under 098F/198F.",
-    "keywords": [
-      "undergraduate student",
-      "student facilitated",
-      "student plans"
-    ]
-  },
-  "ECS 199FB": {
-    "title": "Student Facilitated Teaching",
-    "description": "STU FAC. Under the supervision of a faculty member, an undergraduate student teaches a course under 098F/198F.",
-    "keywords": [
-      "undergraduate student",
-      "student facilitated",
-      "student teaches"
-    ]
-  },
-  "ECS 201A": {
-    "title": "Advanced Computer Architecture",
-    "description": "Modern research topics and methods in computer architecture. Design implications of memory latency and bandwidth limitations. Performance enhancement via within-processor and between-processor parallelism.",
-    "keywords": [
-      "enhancement processor",
-      "advanced computer",
-      "computer architecture"
-    ]
-  },
-  "ECS 201B": {
-    "title": "High-Performance Uniprocessing",
-    "description": "Maximizing uniprocessor performance. Barriers to high performance; solutions to the problems; historical and current processor designs.",
-    "keywords": [
-      "processor",
-      "maximizing uniprocessor",
-      "processor designs"
-    ]
-  },
-  "ECS 201C": {
-    "title": "Parallel Architectures",
-    "description": "Evolution of parallel architectures from special-purpose machines to commodity servers. Emphasis on recent machines and applications that drive them.",
-    "keywords": [
-      "machines applications",
-      "commodity servers",
-      "architectures evolution"
-    ]
-  },
-  "ECS 203": {
-    "title": "Novel Computing Technologies",
-    "description": "Novel computing technologies that could revolutionize computer architecture. Quantum computing technologies, including algorithms, devices, and fault tolerance. A survey of other unconventional technologies including nanoscale electronics, MEMS devices, biological devices, and nanotechnology.",
-    "keywords": [
-      "novel computing",
-      "nanotechnology",
-      "devices nanotechnology"
-    ]
-  },
-  "ECS 220": {
-    "title": "Theory of Computation",
-    "description": "Time and space complexity classes. Reductions, completeness, and the role of randomness. Logic and undecidability.",
-    "keywords": [
-      "logic undecidability",
-      "space complexity",
-      "theory computation"
-    ]
-  },
-  "ECS 221": {
-    "title": "Computational Methods in Systems & Synthetic Biology",
-    "description": "Computational methods related to systems and synthetic biology. An overview of machine learning techniques related to the analysis of biological data, biological networks. Predictive modeling and simulation of biological systems. Topics on biological circuit construction.",
-    "keywords": [
-      "synthetic biology",
-      "simulation biological",
-      "biology computational"
-    ]
-  },
-  "ECS 222A": {
-    "title": "Design & Analysis of Algorithms",
-    "description": "Techniques for designing efficient algorithms, analyzing their complexity and applying these algorithms to a broad range of applications. Methods for recognizing and dealing with difficult problems.",
-    "keywords": [
-      "efficient algorithms",
-      "applying algorithms",
-      "algorithms techniques"
-    ]
-  },
-  "ECS 222B": {
-    "title": "Advanced Design & Analysis of Algorithms",
-    "description": "Advanced topics in complexity theory. Problem classification. The classes P, NP, P-space, co-NP. Matching and network flow algorithms. Matrix multiplication. Approximation algorithms.",
-    "keywords": [
-      "complexity theory",
-      "approximation algorithms",
-      "algorithms matrix"
-    ]
-  },
-  "ECS 223": {
-    "title": "Parallel Algorithms",
-    "description": "Models of parallel computer systems including PRAMs, loosely coupled systems and interconnection networks. Parallel algorithms for classical problems and general techniques for their design and analysis. Proving lower bounds on parallel computation in several settings.",
-    "keywords": [
-      "algorithms",
-      "algorithms models",
-      "parallel algorithms"
-    ]
-  },
-  "ECS 224": {
-    "title": "String Algorithms & Applications in Computational Biology",
-    "description": "Algorithms that operate on strings. Pattern matching, sets of patterns, regular expression pattern matching, suffix trees and applications, inexact similarity, parametric sequence alignment, applications to DNA sequencing and protein database searching.",
-    "keywords": [
-      "sequencing protein",
-      "dna sequencing",
-      "biology algorithms"
-    ]
-  },
-  "ECS 225": {
-    "title": "Graph Theory",
-    "description": "Fundamental concepts. Planar graphs: Kuratowski's theorem. Packings and coverings. Menger's theorem, representation of cuts, Hamilton graphs, rigid graphs, chordal graphs, graph coloring, graph isomorphism, applications and some algorithms.",
-    "keywords": [
-      "graph coloring",
-      "graph isomorphism",
-      "graph theory"
-    ]
-  },
-  "ECS 226": {
-    "title": "Computational Geometry",
-    "description": "Mathematics of unstructured data. Algorithms for data structures such as Voronoi diagrams, oct-trees, and arrangements. Applications in computer graphics, concentrating on problems in three-dimensions.",
-    "keywords": [
-      "computer graphics",
-      "geometry mathematics",
-      "computational geometry"
-    ]
-  },
-  "ECS 227": {
-    "title": "Modern Cryptography",
-    "description": "Modern cryptography as a discipline emphasizing formal definitions and proofs of security. One-way functions, pseudo-randomness, encryption, digital signatures, zero-knowledge, secure protocols.",
-    "keywords": [
-      "cryptography discipline",
-      "modern cryptography",
-      "cryptography modern"
-    ]
-  },
-  "ECS 228": {
-    "title": "Cryptograpy for E-Commerce",
-    "description": "Cryptographic primitives and protocols of importance to e-commerce, present and future, including content distribution mechanisms, payment mechanisms, pricing mechanisms, anonymity and privacy mechanisms, fair exchange mechanisms.",
-    "keywords": [
-      "cryptographic",
-      "cryptograpy commerce",
-      "commerce cryptographic"
-    ]
-  },
-  "ECS 229": {
-    "title": "Advanced Computational Structural Bioinformatics",
-    "description": "Algorithmic problems in structural biology; protein structure classification; protein structure prediction (including comparative modeling and ab initio protein structure prediction); molecular simulations (molecular dynamics and Monte Carlo simulations).",
-    "keywords": [
-      "biology protein",
-      "structural bioinformatics",
-      "bioinformatics algorithmic"
-    ]
-  },
-  "ECS 230": {
-    "title": "Applied Numerical Linear Algebra",
-    "description": "Numerical linear algebra (NLA) with emphasis on applications in engineered systems; matrix factorizations; perturbation and rounding error analyses of fundamental NLA algorithms.",
-    "keywords": [
-      "linear algebra",
-      "matrix factorizations",
-      "algebra numerical"
-    ]
-  },
-  "ECS 231": {
-    "title": "Large-Scale Scientific Computation",
-    "description": "Algorithms and techniques for large-scale scientific computation, including basics for high performance computing, iterative methods, discrete approximation, fast Fourier transform, Poisson solvers, particle methods, spectral graph partition and its applications.",
-    "keywords": [
-      "computation algorithms",
-      "algorithms techniques",
-      "scientific computation"
-    ]
-  },
-  "ECS 232": {
-    "title": "Theory of Molecular Computation",
-    "description": "Theory of chemical reaction networks, molecular circuits, DNA self-assembly, DNA sequence design and thermodynamic energy models, and connections to the field of distributed computing.",
-    "keywords": [
-      "circuits dna",
-      "molecular circuits",
-      "molecular computation"
-    ]
-  },
-  "ECS 234": {
-    "title": "Computational Functional Genomics",
-    "description": "Bioinformatics methods for analysis and inference of functional relationships among genes using large-scale genomic data, including methods for integration of gene expression, promoter sequence, TF-DNA binding and other data, and approaches in modeling of biological networks.",
-    "keywords": [
-      "bioinformatics",
-      "bioinformatics methods",
-      "genomics bioinformatics"
-    ]
-  },
-  "ECS 235A": {
-    "title": "Computer & Information Security",
-    "description": "Modern topics in computer security, including: protection, access control, operating systems security, network security, applied cryptography, cryptographic protocols, secure programming practices, safe languages, mobile code, malware, privacy and anonymity, and case studies from real-world systems.",
-    "keywords": [
-      "applied cryptography",
-      "network security",
-      "computer security"
-    ]
-  },
-  "ECS 235B": {
-    "title": "Foundations of Computer & Information Security",
-    "description": "Theoretical foundations of methods used to protect data in computer and communication systems. Access control matrix and undecidability of security; policies; Bell-LaPadula, Biba, Chinese Wall models; non-interference and non-deducibility; information flow and the confinement problem.",
-    "keywords": [
-      "security policies",
-      "information security",
-      "security theoretical"
-    ]
-  },
-  "ECS 236": {
-    "title": "Computer Security: Intrusion Detection Based Approach",
-    "description": "Concepts of intrusion detection, anomaly detection based on machine learning, signature-based detection using pattern matching, automated response to attacks using artificial intelligence planning, tracing intruders based on principal component analysis, security policy languages.",
-    "keywords": [
-      "anomaly detection",
-      "computer security",
-      "intrusion detection"
-    ]
-  },
-  "ECS 240": {
-    "title": "Programming Languages",
-    "description": "Advanced topics in programming languages, including formal syntax and semantics, the relation between formal semantics and verification, an introduction to the lambda calculus. Additional topics will include language design principles, alternative programming languages, in-depth semantic theory and models of language implementation.",
-    "keywords": [
-      "calculus additional",
-      "programming languages",
-      "lambda calculus"
-    ]
-  },
-  "ECS 242": {
-    "title": "Translation of Programming Languages",
-    "description": "Lexical analysis, parsing, storage management, symbol table design, semantic analysis and code generation. LR, LALR grammars. Compilercompilers.",
-    "keywords": [
-      "programming languages",
-      "translation programming",
-      "grammars compilercompilers"
-    ]
-  },
-  "ECS 243": {
-    "title": "Code Generation & Optimization",
-    "description": "Compiler optimizations for performance, code size and power reduction. Topics include control- and data-flow analysis, redundancy elimination, loop and cache optimizations, register allocation, local and global instruction scheduling, and modulo scheduling.",
-    "keywords": [
-      "cache optimizations",
-      "optimization compiler",
-      "compiler optimizations"
-    ]
-  },
-  "ECS 244": {
-    "title": "Principles of Concurrent Programming",
-    "description": "Fundamental concepts and applications of concurrent programs; concurrent program verification and derivation; synchronization mechanisms in programming languages; distributed programming techniques; case studies of languages.",
-    "keywords": [
-      "concepts applications",
-      "programming techniques",
-      "programming languages"
-    ]
-  },
-  "ECS 245": {
-    "title": "Analysis of Software Artifacts",
-    "description": "Techniques for the analysis of software artifacts, including source code, build processes, test suites, bug reports and documentation with a special emphasis on software correctness and performance in real-world settings.",
-    "keywords": [
-      "analysis software",
-      "software correctness",
-      "software artifacts"
-    ]
-  },
-  "ECS 247": {
-    "title": "Concurrent Programming Languages",
-    "description": "Language design parameters. Models of parallel machines. Load balancing. Scalability. Portability. Efficiency measures. Design and implementation techniques for several classes of concurrent programming languages (such as object-oriented, functional, logic, and constraint programming languages).",
-    "keywords": [
-      "language design",
-      "constraint programming",
-      "programming languages"
-    ]
-  },
-  "ECS 251": {
-    "title": "Operating Systems",
-    "description": "Models, design, implementation, performance evaluation in operating systems. Algorithms, internal architectures for single processor OS and distributed systems. Concurrency control, recovery, security. OS kernel-level programming. Special topics embedded systems, real-time system, device driver, NPU (Network Processor Unit).",
-    "keywords": [
-      "embedded systems",
-      "network processor",
-      "systems algorithms"
-    ]
-  },
-  "ECS 252": {
-    "title": "Computer Networks",
-    "description": "Internet protocol based computer networks applications, transport, network layer protocols. High speed LAN technologies: Ethernet, Asynchronous Transfer Mode (ATM). Delay models in data networks: analysis of multiaccess techniques in polling, ring, random access networks. Multimedia applications requirements and design.",
-    "keywords": [
-      "networks multimedia",
-      "internet protocol",
-      "technologies ethernet"
-    ]
-  },
-  "ECS 253": {
-    "title": "Network Theory & Applications",
-    "description": "Develops the mathematical theory underlying growth, structure and function of networks with applications to physical, social, biological and engineered systems. Topics include network growth, resilience, epidemiology, phase transitions, software and algorithms, routing and search control, cascading failures.",
-    "keywords": [
-      "software algorithms",
-      "mathematical theory",
-      "network theory"
-    ]
-  },
-  "ECS 255": {
-    "title": "Resource Management in Wireless Communication Networks",
-    "description": "Advanced research issues in wireless communication networks, including multi-user diversity and cross-layer optimization, basic network information theory, MIMO systems and the impact on networks, and dynamics spectrum management.",
-    "keywords": [
-      "issues wireless",
-      "wireless communication",
-      "management wireless"
-    ]
-  },
-  "ECS 256": {
-    "title": "Probability Models for Computer Science",
-    "description": "Probabilistic and statistical models useful in computer/data science. Applications to networks, bioinformatics, database management, machine learning, software engineering and image processing.",
-    "keywords": [
-      "data science",
-      "computer science",
-      "networks bioinformatics"
-    ]
-  },
-  "ECS 257": {
-    "title": "Mobile & Wireless Networks",
-    "description": "Fundamental techniques in design of second generation wireless networks: cellular network and protocols, medium access techniques, handoff control, signaling and mobility management, wireless data works, Internet mobility and Personal Communication Services (PCS). Third generation wideband systems, novel technologies, adhoc networks.",
-    "keywords": [
-      "wireless data",
-      "generation wireless",
-      "wireless networks"
-    ]
-  },
-  "ECS 259": {
-    "title": "Optical Networks",
-    "description": "Optical networks. Enabling technologies. Multiplexing techniques. WDM. Broadcast networks. Wavelength-routed networks. Network architectures. Protocols. Network algorithms. Device-network interface. Optimization problems.",
-    "keywords": [
-      "networks optical",
-      "network algorithms",
-      "optical networks"
-    ]
-  },
-  "ECS 260": {
-    "title": "Software Engineering",
-    "description": "Advanced techniques for domain-specific software reuse.",
-    "keywords": [
-      "engineering advanced",
-      "software reuse",
-      "software engineering"
-    ]
-  },
-  "ECS 261": {
-    "title": "Program Verification",
-    "description": "Methods of proving correctness of programs with respect to formal specifications, with attention to those suited for employing automated deduction.Logic background, symbolic execution, techniques suited to iterative programming, methods from denotational semantics, termination, dynamic logic and proofs of concurrent programs.",
-    "keywords": [
-      "program verification",
-      "verification methods",
-      "logic proofs"
-    ]
-  },
-  "ECS 262": {
-    "title": "Formal Specification",
-    "description": "Formal specification of modules, and its relationship to topdown programming development and verification. Abstract data types, together with methods for specifying them. Implementations and proofs of implementation. Using specifications to reason about programs. Parameterized types. Constructing good formal specifications.",
-    "keywords": [
-      "proofs implementation",
-      "programming development",
-      "implementations proofs"
-    ]
-  },
-  "ECS 265": {
-    "title": "Distributed Database Systems",
-    "description": "Concepts of distributed database systems and architectures, distributed database design, distributed query processing and optimization, transaction management and concurrency control, heterogeneous and multidatabase systems.",
-    "keywords": [
-      "distributed database",
-      "database systems",
-      "database design"
-    ]
-  },
-  "ECS 266": {
-    "title": "Spatial Databases",
-    "description": "Concepts, models, and architectures for spatial databases, spatial access methods, query processing, spatio-temporal data management, moving objects, spatial data mining.",
-    "keywords": [
-      "databases concepts",
-      "databases spatial",
-      "spatial databases"
-    ]
-  },
-  "ECS 267": {
-    "title": "Wide-Area Distributed Information Systems",
-    "description": "Wide-area distributed information systems, data broadcast, multicast, publish/subscribe, service differentiation, information retrieval, Web caching.",
-    "keywords": [
-      "multicast publish",
-      "web caching",
-      "broadcast multicast"
-    ]
-  },
-  "ECS 268": {
-    "title": "Scientific Data & Workflow Management",
-    "description": "Scientific data integration, metadata, knowledge representation, ontologies, scientific workflow design and management.",
-    "keywords": [
-      "ontologies scientific",
-      "scientific data",
-      "scientific workflow"
-    ]
-  },
-  "ECS 269": {
-    "title": "Visual Recognition",
-    "description": "Graduate seminar course on computer vision with an emphasis on object recognition, activity recognition, and scene understanding.",
-    "keywords": [
-      "seminar",
-      "seminar course",
-      "graduate seminar"
-    ]
-  },
-  "ECS 270": {
-    "title": "Artificial Intelligence",
-    "description": "Concepts and techniques underlying the design and implementation of models of human performance on intelligent tasks. Representation of high-level knowledge structures. Models of memory and inference. Natural language and story understanding. Common sense planning and problem solving.",
-    "keywords": [
-      "models memory",
-      "intelligence concepts",
-      "artificial intelligence"
-    ]
-  },
-  "ECS 271": {
-    "title": "Machine Learning & Discovery",
-    "description": "Artificial intelligence techniques for knowledge acquisition by computers. Fundamental problems in machine learning and discovery. Systems that learn from examples, analogies, and solved problems. Systems that discover numerical laws and qualitative relationships. Projects centering on implementation and evaluation.",
-    "keywords": [
-      "acquisition computers",
-      "artificial intelligence",
-      "machine learning"
-    ]
-  },
-  "ECS 272": {
-    "title": "Information Visualization",
-    "description": "Advanced topics in information visualization: perceptually effective display methods, color design and selection, interaction models and techniques, focus-context techniques, distortion methods, large graph visualization techniques, visual data mining methods, and evaluation methods.",
-    "keywords": [
-      "visualization techniques",
-      "graph visualization",
-      "visualization advanced"
-    ]
-  },
-  "ECS 273": {
-    "title": "Visual Analytics",
-    "description": "Analytical reasoning using visual means, data and visual transformations, exploratory visualization, explanatory visualization, interactive intelligent systems, qualitative and quantitative evaluation.",
-    "keywords": [
-      "analytics",
-      "analytics analytical",
-      "visual analytics"
-    ]
-  },
-  "ECS 274": {
-    "title": "Automated Deduction",
-    "description": "Techniques of mechanical theorem proving. Methods based on resolution and termrewriting. Decision procedures. Induction. Applications to program verification, question/answering and plan generation. Study existing mechanical theorem provers.",
-    "keywords": [
-      "mechanical theorem",
-      "theorem proving",
-      "theorem provers"
-    ]
-  },
-  "ECS 275A": {
-    "title": "Advanced Computer Graphics",
-    "description": "Advanced topics in computer graphics. Hidden surface models, rendering of various surface types, subdivision methods, shading techniques, anti-aliasing, modeling techniques.",
-    "keywords": [
-      "graphics advanced",
-      "advanced computer",
-      "computer graphics"
-    ]
-  },
-  "ECS 275B": {
-    "title": "Advanced Computer Graphics",
-    "description": "Advanced topics in computer graphics and geometric modeling. Topics taken from advanced research papers in computer graphics, image synthesis, visualization and geometric modeling. Discussion of current research in the field.",
-    "keywords": [
-      "advanced research",
-      "advanced computer",
-      "computer graphics"
-    ]
-  },
-  "ECS 276": {
-    "title": "Advanced Volume Visualization",
-    "description": "Applications, available tools and techniques, the challenges confronting the field of volume visualization, and some of the advanced topics in the field. Primary emphasis on advanced software and hardware techniques to achieve interactive visualization.",
-    "keywords": [
-      "visualization advanced",
-      "visualization applications",
-      "advanced software"
-    ]
-  },
-  "ECS 277": {
-    "title": "Advanced Visualization",
-    "description": "Visualization of 3D data, including scalar fields, vector fields, and medical data.",
-    "keywords": [
-      "medical data",
-      "visualization 3d",
-      "3d data"
-    ]
-  },
-  "ECS 278": {
-    "title": "Computer-Aided Geometric Design",
-    "description": "Mathematical techniques for the definition and manipulation of curves and surfaces. Bezier curves and surfaces, B-spline curves and surfaces, subdivision surfaces, wavelets. Integration into various computer graphics rendering models, visualization systems and computer-aided design systems.",
-    "keywords": [
-      "graphics rendering",
-      "design mathematical",
-      "mathematical techniques"
-    ]
-  },
-  "ECS 279": {
-    "title": "Computer Animation",
-    "description": "Surveys current research and fundamental techniques that lie behind character animation tools. Emphasis on improving expressive aspects of movement and how physics, motion capture data, the arts and psychology literature, and interactive techniques can be used towards this goal.",
-    "keywords": [
-      "computer animation",
-      "animation surveys",
-      "animation tools"
-    ]
-  },
-  "ECS 280": {
-    "title": "Virtual Reality Technology",
-    "description": "Fundamentals and principles of Virtual Reality (VR) technology. Potential and limits for its useful application. Developing a complete virtual reality application.",
-    "keywords": [
-      "principles virtual",
-      "technology fundamentals",
-      "vr technology"
-    ]
-  },
-  "ECS 281": {
-    "title": "Applied Research Methods for Human-Computer Interaction",
-    "description": "Quantitative methods for studying how people interact with computing and information systems, developing and evaluating systems that are driven by users' needs, constraints and goals involved in human-technology interactions.",
-    "keywords": [
-      "methods studying",
-      "studying people",
-      "research methods"
-    ]
-  },
-  "ECS 282": {
-    "title": "Advanced Natural Language Processing",
-    "description": "Use of deep learning techniques in advanced natural language processing. Practicing advanced learning and inference techniques with large language models.",
-    "keywords": [
-      "language processing",
-      "deep learning",
-      "advanced learning"
-    ]
-  },
-  "ECS 289A": {
-    "title": "Special Topics in Computer Science: Computer Science Theory",
-    "description": "Special topic in Computer Science Theory.",
-    "keywords": [
-      "topics computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "ECS 289B": {
-    "title": "Special Topics in Computer Science: Architecture",
-    "description": "Special topic in Architecture.",
-    "keywords": [
-      "topic architecture",
-      "science architecture",
-      "computer science"
-    ]
-  },
-  "ECS 289C": {
-    "title": "Special Topics in Computer Science: Programming Languages & Compilers",
-    "description": "Special topic in Programming Languages & Compilers.",
-    "keywords": [
-      "languages compilers",
-      "programming languages",
-      "computer science"
-    ]
-  },
-  "ECS 289D": {
-    "title": "Special Topics in Computer Science: Operating Systems",
-    "description": "Special topic in Operating Systems.",
-    "keywords": [
-      "computer",
-      "topics computer",
-      "computer science"
-    ]
-  },
-  "ECS 289E": {
-    "title": "Special Topics in Computer Science: Software Engineering",
-    "description": "Special topic in Software Engineering.",
-    "keywords": [
-      "topics computer",
-      "software engineering",
-      "computer science"
-    ]
-  },
-  "ECS 289F": {
-    "title": "Special Topics in Computer Science: Databases",
-    "description": "Special topic in Databases.",
-    "keywords": [
-      "topics computer",
-      "science databases",
-      "computer science"
-    ]
-  },
-  "ECS 289G": {
-    "title": "Special Topics in Computer Science: Artificial Intelligence",
-    "description": "Special topic in Artificial Intelligence.",
-    "keywords": [
-      "topics computer",
-      "artificial intelligence",
-      "computer science"
-    ]
-  },
-  "ECS 289H": {
-    "title": "Special Topics in Computer Science: Computer Graphics",
-    "description": "Special topic in Computer Graphics.",
-    "keywords": [
-      "science computer",
-      "computer science",
-      "computer graphics"
-    ]
-  },
-  "ECS 289I": {
-    "title": "Special Topics in Computer Science: Networks",
-    "description": "Special topic in Networks.",
-    "keywords": [
-      "science networks",
-      "topics computer",
-      "computer science"
-    ]
-  },
-  "ECS 289J": {
-    "title": "Special Topics in Computer Science: Computer-Aided Design",
-    "description": "Special topic in Computer-Aided Design.",
-    "keywords": [
-      "topics computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "ECS 289K": {
-    "title": "Special Topics in Computer Science: Scientific Computing",
-    "description": "Special topic in Scientific Computing.",
-    "keywords": [
-      "science scientific",
-      "computer science",
-      "scientific computing"
-    ]
-  },
-  "ECS 289L": {
-    "title": "Special Topics in Computer Science: Computer Science",
-    "description": "Special topic in Computer Science.",
-    "keywords": [
-      "topics computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "ECS 289M": {
-    "title": "Special Topics in Computer Science: Security",
-    "description": "Special topic in Security.",
-    "keywords": [
-      "topics computer",
-      "computer science",
-      "science security"
-    ]
-  },
-  "ECS 289N": {
-    "title": "Special Topics in Bioinformatics & Computational Biology",
-    "description": "Special topic in Bioinformatics & Computational Biology.",
-    "keywords": [
-      "topic bioinformatics",
-      "topics bioinformatics",
-      "bioinformatics computational"
-    ]
-  },
-  "ECS 290": {
-    "title": "Seminar in Computer Science",
-    "description": "Participating seminar; discussion and presentation of current research and development in computer science.",
-    "keywords": [
-      "computer science",
-      "seminar discussion",
-      "seminar computer"
-    ]
-  },
-  "ECS 290C": {
-    "title": "Graduate Research Group Conference",
-    "description": "Research problems, progress and techniques in computer science.",
-    "keywords": [
-      "conference research",
-      "computer science",
-      "graduate research"
-    ]
-  },
-  "ECS 293A": {
-    "title": "Research in Computer Science",
-    "description": "Study of research topics in computer science, Ph.D. level research methodologies (experimental, applied and theoretical). Study skills necessary to successfully find/solve significant research problems. Finding and successful interacting with a research advisor. Ethical issues in research/collaborative work.",
-    "keywords": [
-      "research collaborative",
-      "computer science",
-      "research computer"
-    ]
-  },
-  "ECS 293B": {
-    "title": "Research in Computer Science",
-    "description": "Study of Ph.D. level research methodologies (experimental, applied and theoretical), presenting research results for the computer science community. Study skills necessary to successfully find/solve significant research problems.",
-    "keywords": [
-      "research results",
-      "computer science",
-      "research computer"
-    ]
-  },
-  "ECS 298": {
-    "title": "Group Study",
-    "description": "Group study.",
-    "keywords": [
-      "study",
-      "study group",
-      "group study"
-    ]
-  },
-  "ECS 299": {
-    "title": "Research",
-    "description": "Research.",
-    "keywords": [
-      "research research",
-      "research"
-    ]
-  },
-  "ECS 390": {
-    "title": "The Teaching of Computer Science",
-    "description": "Participation as a teaching assistant or associate-in in a designated engineering course. Methods of leading discussion groups or laboratory sections, writing and grading quizzes, use of laboratory equipment, and grading laboratory reports.",
-    "keywords": [
-      "teaching assistant",
-      "computer science",
-      "teaching computer"
-    ]
-  },
-  "ECS 396": {
-    "title": "Teaching Assistant Training Practicum",
-    "description": "Teaching assistant training practicum.",
-    "keywords": [
-      "training practicum",
-      "teaching assistant",
-      "practicum teaching"
-    ]
-  },
-  "EEC 001": {
-    "title": "Introduction to Electrical & Computer Engineering",
-    "description": "Introduction to Electrical & Computer Engineering with focus on sub-disciplines of Electrical & Computer Engineering, engineering design, and problem solving. Microcontrollers, analog circuits, signal processing, and communications links. Application of topics to create a functional device.",
-    "keywords": [
-      "engineering focus",
-      "engineering introduction",
-      "computer engineering"
-    ]
-  },
-  "EEC 007": {
-    "title": "Introduction to Programming & Microcontrollers",
-    "description": "Programming computers using C/C++ languages. Software engineering and object-oriented design. Programming for hardware devices.",
-    "keywords": [
-      "programming hardware",
-      "software engineering",
-      "programming computers"
-    ]
-  },
-  "EEC 010": {
-    "title": "Introduction to Digital & Analog Systems",
-    "description": "Interactive and practical introduction to fundamental concepts of electrical and computer engineering by implementing electronic systems, which can be digitally controlled and interrogated, with a programmable microcontroller with the ability to program the electrical connections between analog and digital components.",
-    "keywords": [
-      "electrical computer",
-      "programmable microcontroller",
-      "computer engineering"
-    ]
-  },
-  "EEC 018": {
-    "title": "Digital Systems I",
-    "description": "Introduction to digital system design including combinational logic design, sequential and asynchronous circuits, computer arithmetic, memory systems and algorithmic state machine design; computer aided design (CAD) methodologies and tools.",
-    "keywords": [
-      "logic design",
-      "digital design",
-      "design computer"
-    ]
-  },
-  "EEC 089A": {
-    "title": "Special Topics in Electromagnetics",
-    "description": "Special topics in Electromagnetics.",
-    "keywords": [
-      "electromagnetics",
-      "topics electromagnetics",
-      "electromagnetics special"
-    ]
-  },
-  "EEC 089B": {
-    "title": "Special Topics in Physical Electronics",
-    "description": "Special topics in Physical Electronics.",
-    "keywords": [
-      "electronics",
-      "physical electronics",
-      "electronics special"
-    ]
-  },
-  "EEC 089C": {
-    "title": "Special Topics in Active & Passive Circuits",
-    "description": "Special topics in Active & Passive Circuits.",
-    "keywords": [
-      "circuits",
-      "topics active",
-      "special topics"
-    ]
-  },
-  "EEC 089D": {
-    "title": "Special Topics in Signals & Systems",
-    "description": "Special topics in Signals & Systems.",
-    "keywords": [
-      "topics signals",
-      "signals systems",
-      "special topics"
-    ]
-  },
-  "EEC 089E": {
-    "title": "Special Topics in Computer Systems & Software",
-    "description": "Special topics in Computer Systems & Software.",
-    "keywords": [
-      "systems software",
-      "computer systems",
-      "topics computer"
-    ]
-  },
-  "EEC 089F": {
-    "title": "Special Topics in Digital System Design",
-    "description": "Special topics in Digital System Design.",
-    "keywords": [
-      "design special",
-      "topics digital",
-      "digital design"
-    ]
-  },
-  "EEC 090C": {
-    "title": "Research Group Conference in Electrical & Computer Engineering",
-    "description": "Research group conferences.",
-    "keywords": [
-      "computer engineering",
-      "conference electrical",
-      "engineering research"
-    ]
-  },
-  "EEC 090X": {
-    "title": "Lower Division Seminar",
-    "description": "Examination of a special topic in a small group setting.",
-    "keywords": [
-      "seminar",
-      "division seminar",
-      "seminar examination"
-    ]
-  },
-  "EEC 092": {
-    "title": "Internship in Electrical & Computer Engineering",
-    "description": "Supervised work experience in Electrical & Computer Engineering.",
-    "keywords": [
-      "internship electrical",
-      "engineering supervised",
-      "computer engineering"
-    ]
-  },
-  "EEC 098": {
-    "title": "Directed Group Study",
-    "description": "Directed group study.",
-    "keywords": [
-      "study directed",
-      "directed group",
-      "group study"
-    ]
-  },
-  "EEC 099": {
-    "title": "Special Study for Lower Division Students",
-    "description": "Special study for lower division students.",
-    "keywords": [
-      "students special",
-      "division students",
-      "special study"
-    ]
-  },
-  "EEC 100": {
-    "title": "Circuits II",
-    "description": "Theory, application, and design of analog circuits. Methods of analysis including frequency response, SPICE simulation, and Laplace transform. Operational amplifiers and design of active filters.",
-    "keywords": [
-      "circuits methods",
-      "operational amplifiers",
-      "amplifiers design"
-    ]
-  },
-  "EEC 105A": {
-    "title": "EE-Emerge 1",
-    "description": "Work in groups to conceive, design and prototype electronic exhibits to promote engineering to the public.",
-    "keywords": [
-      "engineering public",
-      "exhibits promote",
-      "promote engineering"
-    ]
-  },
-  "EEC 105B": {
-    "title": "EE-Emerge 2",
-    "description": "Work in groups to construct electronic exhibits.",
-    "keywords": [
-      "groups construct",
-      "construct electronic",
-      "electronic exhibits"
-    ]
-  },
-  "EEC 105C": {
-    "title": "EE-Emerge 3",
-    "description": "Work in groups to present electronic exhibits to the public.",
-    "keywords": [
-      "work groups",
-      "electronic exhibits",
-      "exhibits public"
-    ]
-  },
-  "EEC 110A": {
-    "title": "Electronic Circuits I",
-    "description": "Use and modeling of nonlinear solid-state electronic devices in basic analog and digital circuits. Introduction to the design of transistor amplifiers and logic gates.",
-    "keywords": [
-      "digital circuits",
-      "transistor amplifiers",
-      "design transistor"
-    ]
-  },
-  "EEC 110B": {
-    "title": "Electronic Circuits II",
-    "description": "Analysis and design of integrated circuits. Single-stage amplifiers, cascaded amplifier stages, differential amplifiers, current sources, frequency response, and return-ratio analysis of feedback amplifiers.",
-    "keywords": [
-      "integrated circuits",
-      "amplifier stages",
-      "differential amplifiers"
-    ]
-  },
-  "EEC 111": {
-    "title": "Digital Electronic Circuits",
-    "description": "MOS device fundamentals, introduction to the design of CMOS logic gates, layout, circuits, and modeling. Examination of voltage transfer characteristics, and propagation delay.",
-    "keywords": [
-      "electronic circuits",
-      "cmos logic",
-      "circuits modeling"
-    ]
-  },
-  "EEC 112": {
-    "title": "Communication Electronics",
-    "description": "Electronic circuits for analog and digital communication, including oscillators, mixers, tuned amplifiers, modulators, demodulators, and phase-locked loops. Circuits for amplitude modulation (AM) and frequency modulation (FM) are emphasized.",
-    "keywords": [
-      "including oscillators",
-      "oscillators mixers",
-      "amplifiers modulators"
-    ]
-  },
-  "EEC 113": {
-    "title": "Power Electronic Circuits",
-    "description": "Electronic circuits for power applications, including linear voltage regulators, switching DC-DC converters, DC-AC converters (inverters) and AC-DC converters (rectifiers). Control loop and stability of circuits.",
-    "keywords": [
-      "power applications",
-      "dc converters",
-      "voltage regulators"
-    ]
-  },
-  "EEC 116": {
-    "title": "VLSI Design",
-    "description": "CMOS devices, layout, circuits, and functional units; VLSI fabrication and design methodologies.",
-    "keywords": [
-      "vlsi design",
-      "cmos devices",
-      "design cmos"
-    ]
-  },
-  "EEC 118": {
-    "title": "Digital Integrated Circuits",
-    "description": "Analysis and design of digital integrated circuits. Emphasis on MOS logic circuit families. Logic gate construction, voltage transfer characteristics, propagation delay, and power consumption. Regenerative circuits, sequential elements, interconnect, RAMs, ROMs, and PLAs.",
-    "keywords": [
-      "logic circuit",
-      "integrated circuits",
-      "circuits analysis"
-    ]
-  },
-  "EEC 119A": {
-    "title": "Integrated Circuit Design Project",
-    "description": "Design course involving architecture, circuit design, physical design, and validation through extensive simulation of a digital or mixed-signal integrated circuit of substantial complexity under given design constraints. Team project that includes a final report.",
-    "keywords": [
-      "design validation",
-      "design project",
-      "design course"
-    ]
-  },
-  "EEC 119B": {
-    "title": "Integrated Circuit Design Project",
-    "description": "Design course involving architecture, circuit design, physical design, and validation through extensive simulation of a digital or mixed-signal integrated circuit of substantial complexity under given design constraints. Team project that includes a final report.",
-    "keywords": [
-      "design validation",
-      "design project",
-      "design course"
-    ]
-  },
-  "EEC 130A": {
-    "title": "Electromagnetics I",
-    "description": "Basics of static electric and magnetic fields and fields in materials. Work and scalar potential. Maxwell's equations in integral and differential form. Plan waves in lossless media. Lossless transmission lines.",
-    "keywords": [
-      "electromagnetics",
-      "maxwell equations",
-      "electromagnetics basics"
-    ]
-  },
-  "EEC 130B": {
-    "title": "Introductory Electromagnetics II",
-    "description": "Plane wave propagation in lossy media, reflections, guided waves, simple modulated waves and dispersion, and basic antennas.",
-    "keywords": [
-      "basic antennas",
-      "introductory electromagnetics",
-      "electromagnetics ii"
-    ]
-  },
-  "EEC 132A": {
-    "title": "RF & Microwaves in Wireless Communication",
-    "description": "Study of Radio Frequency and Microwave theory and practice for design of wireless electronic systems. Transmission lines, microwave integrated circuits, circuit analyis of electromagnetic energy transfer systems, the scattering parameters.",
-    "keywords": [
-      "design wireless",
-      "microwave theory",
-      "microwaves wireless"
-    ]
-  },
-  "EEC 132B": {
-    "title": "RF & Microwaves in Wireless Communication",
-    "description": "Passive RF and microwave device analysis, design, fabrication, and testing for wireless applications. RF and microwave filter and coupler design. Introductory analysis and design of RF and microwave transistor amplifiers.",
-    "keywords": [
-      "microwaves wireless",
-      "microwave transistor",
-      "testing wireless"
-    ]
-  },
-  "EEC 132C": {
-    "title": "RF & Microwaves in Wireless Communications",
-    "description": "RF and microwave amplifier theory and design, including transistor circuit models, stability considerations, noise models and low noise design. Theory and design of microwave transistor oscillators and mixers. Wireless system design and analysis.",
-    "keywords": [
-      "microwave amplifier",
-      "microwaves wireless",
-      "mixers wireless"
-    ]
-  },
-  "EEC 133": {
-    "title": "Electromagnetic Radiation & Antenna Analysis",
-    "description": "Properties of electromagnetic radiation; analysis and design of antennas: ideal, small loop, aperture, and arrays; antenna simulations/measurements.",
-    "keywords": [
-      "design antennas",
-      "antenna analysis",
-      "antenna simulations"
-    ]
-  },
-  "EEC 134A": {
-    "title": "RF/Microwave Systems Design",
-    "description": "Board-level RF design, fabrication, and characterization of an RF/microwave system, including the antenna, RF front-end, baseband, mix-signal circuits, and digital signal processing models.",
-    "keywords": [
-      "antenna rf",
-      "microwave systems",
-      "rf microwave"
-    ]
-  },
-  "EEC 134B": {
-    "title": "RF/Microwave Systems Design",
-    "description": "Board-level RF design, fabrication, and characterization of an RF/microwave system, including the antenna, RF front-end, baseband, mix-signal circuits, and digital signal processing models.",
-    "keywords": [
-      "antenna rf",
-      "microwave systems",
-      "rf microwave"
-    ]
-  },
-  "EEC 135": {
-    "title": "Optoelectronics for High-Speed Data Networking & Computing Systems",
-    "description": "Principles of optical communication systems. Planar dielectric waveguides. Optical fibers. Silicon photonics. Attenuation and dispersion in optical fibers. Optical sources, detectors, transmitters, receivers, modulators, optical amplifiers, and optical multiplexers/demultiplexers. Optics in data centers and computing systems. Design of digital optical communication links.",
-    "keywords": [
-      "optical multiplexers",
-      "silicon photonics",
-      "optical amplifiers"
-    ]
-  },
-  "EEC 136A": {
-    "title": "Electronic Design Project",
-    "description": "Optical, electronic and communication-engineering design of an opto-electronic system operating under performance and economic constraints. Measurement techniques will be designed and implemented, and the system will be characterized.",
-    "keywords": [
-      "communication engineering",
-      "design project",
-      "engineering design"
-    ]
-  },
-  "EEC 136B": {
-    "title": "Electronic Design Project",
-    "description": "Optical, electronic and communication-engineering design of an opto-electronic system operating under performance and economic constraints. Measurement techniques will be designed and implemented, and the system will be characterized.",
-    "keywords": [
-      "communication engineering",
-      "design project",
-      "engineering design"
-    ]
-  },
-  "EEC 140A": {
-    "title": "Principles of Device Physics I",
-    "description": "Semiconductor device fundamentals, equilibrium and non-equilibrium statistical mechanics, conductivity, diffusion, electrons and holes, p-n and Schottky junctions, first-order metal-oxide-semiconductor (MOS) field effect transistors, bipolar junction transistor fundamentals.",
-    "keywords": [
-      "oxide semiconductor",
-      "device physics",
-      "physics semiconductor"
-    ]
-  },
-  "EEC 140AV": {
-    "title": "Principles of Device Physics I",
-    "description": "Semiconductor device fundamentals, equilibrium and non-equilibrium statistical mechanics, conductivity, diffusion, electrons and holes, p-n and Schottky junctions, first-order metal-oxide-semiconductor (MOS) field effect transistors, bipolar junction transistor fundamentals.",
-    "keywords": [
-      "oxide semiconductor",
-      "device physics",
-      "physics semiconductor"
-    ]
-  },
-  "EEC 140B": {
-    "title": "Principles of Device Physics II",
-    "description": "Electrical properties, designs, models and advanced concepts for MOS, Bipolar, and Junction Field-Effect Transistors, including scaling, minority-carrier distributions, non-ideal effects, and device fabrication methods. MESFET and heterojunction bipolar transistors (HBTs). Fundamentals of solar cells, photodetectors, LEDs and semiconductor lasers.",
-    "keywords": [
-      "bipolar transistors",
-      "leds semiconductor",
-      "semiconductor lasers"
-    ]
-  },
-  "EEC 145": {
-    "title": "Electronic Materials",
-    "description": "Electronic and physical properties of materials used in electronics, ICs, optoelectronics and MEMS. Semiconductors, dielectrics, metals, optical materials, organic semiconductive, optical and nonlinear properties, as well as their synthesis and deposition methods.",
-    "keywords": [
-      "electronic materials",
-      "dielectrics metals",
-      "semiconductors dielectrics"
-    ]
-  },
-  "EEC 146A": {
-    "title": "Integrated Circuits Fabrication",
-    "description": "Theoretical and experimental study of basic fabrication processes for metal oxide semiconductor integrated circuits, including oxidation, photolithography, impurity diffusion, metallization, wet chemical etching, and characterization.",
-    "keywords": [
-      "oxide semiconductor",
-      "circuits fabrication",
-      "semiconductor integrated"
-    ]
-  },
-  "EEC 146B": {
-    "title": "Advanced Integrated Circuits Fabrication",
-    "description": "Fabrication processes for CMOS VLSI. Laboratory projects examine deposition of thin films, ion implantation, process simulation, anisotropic plasma etching, sputter metallization, and C-V analysis. Topics include isolation, projection alignment, epilayer growth, thin gate oxidation, and rapid thermal annealing.",
-    "keywords": [
-      "plasma etching",
-      "circuits fabrication",
-      "laboratory projects"
-    ]
-  },
-  "EEC 150": {
-    "title": "Introduction to Signals & Systems",
-    "description": "Characterization and analysis of continuous-time linear systems. Fourier series and transforms with applications. Introduction to communication systems. Transfer functions and block diagrams. Elements of feedback systems. Stability of linear systems.",
-    "keywords": [
-      "transforms applications",
-      "systems characterization",
-      "systems fourier"
-    ]
-  },
-  "EEC 151": {
-    "title": "Digital Signals & Systems",
-    "description": "Characterization and analysis of discrete time systems. Difference equation models. Z-transform analysis methods. Frequency Analysis. Discrete and fast Fourier transforms. Digital Filtering.",
-    "keywords": [
-      "transforms digital",
-      "fourier transforms",
-      "digital filtering"
-    ]
-  },
-  "EEC 152": {
-    "title": "Digital Signal Processing",
-    "description": "Theory and practice of real-time digital signal processing. Fundamentals of real-time systems. Programmable architectures including I/O, memory, peripherals, interrupts, DMA. Interfacing issues with A/D and D/A converters to a programmable DSP. Specification driven design and implementation of simple DSP applications.",
-    "keywords": [
-      "programmable dsp",
-      "converters programmable",
-      "programmable architectures"
-    ]
-  },
-  "EEC 157A": {
-    "title": "Control Systems",
-    "description": "Analysis and design of feedback control systems. Examples are drawn from electrical and mechanical systems as well as other engineering fields. Mathematical modeling of systems, stability criteria, root-locus and frequency domain design methods.",
-    "keywords": [
-      "mathematical modeling",
-      "modeling systems",
-      "engineering fields"
-    ]
-  },
-  "EEC 157AV": {
-    "title": "Control Systems",
-    "description": "Analysis and design of feedback control systems. Examples drawn from electrical and mechanical systems as well as other engineering fields. Mathematical modeling of systems, stability criteria, root-locus and frequency domain design methods.",
-    "keywords": [
-      "mathematical modeling",
-      "modeling systems",
-      "engineering fields"
-    ]
-  },
-  "EEC 157B": {
-    "title": "Control Systems II",
-    "description": "Control system design; transfer-function and state-space methods; sampled-data implementation, digital control. Laboratory includes feedback system experiments and simulation studies.",
-    "keywords": [
-      "laboratory",
-      "simulation studies",
-      "experiments simulation"
-    ]
-  },
-  "EEC 157BY": {
-    "title": "Control Systems II",
-    "description": "Control system design; transfer-function and state-space methods; sampled-data implementation, digital control. Laboratory includes feedback system experiments and simulation studies.",
-    "keywords": [
-      "laboratory",
-      "simulation studies",
-      "experiments simulation"
-    ]
-  },
-  "EEC 160": {
-    "title": "Signal Analysis & Communications",
-    "description": "Signal analysis based on Fourier methods. Fourier series and transforms; time-sampling, convolution, and filtering; spectral density; modulation: carrier-amplitude, carrier-frequency, and pulse-amplitude.",
-    "keywords": [
-      "methods fourier",
-      "fourier series",
-      "fourier methods"
-    ]
-  },
-  "EEC 161": {
-    "title": "Applied Probability for Electrical & Computer Engineers",
-    "description": "Axioms of probability, discrete and continuous random variables, expectation and moments. Transformation of random variables. Joint and conditional densities. Limit theorems, Markov and Poisson processes. Applications in Electrical and Computer Engineering.",
-    "keywords": [
-      "probability electrical",
-      "markov poisson",
-      "theorems markov"
-    ]
-  },
-  "EEC 165": {
-    "title": "Statistical & Digital Communication",
-    "description": "Introduction to random process models of modulated signals and noise, and analysis of receiver performance. Analog and digitally modulated signals. Signal-to-noise ratio, probability of error, matched filters. Intersymbol interference, pulse shaping and equalization. Carrier and clock synchronization.",
-    "keywords": [
-      "digital communication",
-      "statistical digital",
-      "noise analysis"
-    ]
-  },
-  "EEC 170": {
-    "title": "Introduction to Computer Architecture",
-    "description": "Introduces basic aspects of computer architecture, including computer performance measurement, instruction set design, computer arithmetic, pipelined/non-pipelined implementation, and memory hierarchies (cache and virtual memory). Presents a simplified Reduced Instruction Set Computer using logic design methods from the prerequisite course.",
-    "keywords": [
-      "computer arithmetic",
-      "computer architecture",
-      "design computer"
-    ]
-  },
-  "EEC 171": {
-    "title": "Parallel Computer Architecture",
-    "description": "Organization and design of parallel processors including shared-memory multiprocessors, cache coherence, memory consistency, snooping protocols, synchronization, scalable multiprocessors, message passing protocols, distributed shared memory and interconnection networks.",
-    "keywords": [
-      "computer architecture",
-      "multiprocessors cache",
-      "memory multiprocessors"
-    ]
-  },
-  "EEC 172": {
-    "title": "Embedded Systems",
-    "description": "Introduction to embedded-system hardware and software. Topics include: embedded processor and memory architecture; input/output hardware and software, including interrupts and direct memory access; interfacing with sensors and actuators; wired and wireless embedded networking.",
-    "keywords": [
-      "embedded hardware",
-      "embedded processor",
-      "embedded networking"
-    ]
-  },
-  "EEC 173A": {
-    "title": "Computer Networks",
-    "description": "Overview of computer networks, TCP/IP protocol suite, computer-networking applications and protocols, transport-layer protocols, network architectures, Internet Protocol (IP), routing, link-layer protocols, local area and wireless networks, medium access control, physical aspects of data transmission, and network-performance analysis.",
-    "keywords": [
-      "internet protocol",
-      "networking applications",
-      "network architectures"
-    ]
-  },
-  "EEC 173B": {
-    "title": "Advanced Topics in Computer Networks",
-    "description": "Advanced topics in computer networks, wireless networks, multimedia networking, traffic analysis and modeling, network design and management, network simulation and performance analysis, and design projects in communication networks.",
-    "keywords": [
-      "network simulation",
-      "multimedia networking",
-      "network design"
-    ]
-  },
-  "EEC 174AY": {
-    "title": "Applied Machine Learning",
-    "description": "Applied machine learning (ML) and deep learning (DL) in engineering systems. Design and evaluation of components that are critical to artificial intelligence (AI) driven control systems, including but not limited to sensor fusion, feature engineering, computer vision (semantic segmentation, objection detection), ML based classification, and learning-based control systems. Team project including a final presentation and report.",
-    "keywords": [
-      "design evaluation",
-      "engineering computer",
-      "machine learning"
-    ]
-  },
-  "EEC 174BY": {
-    "title": "Applied Machine Learning Senior Design Projects",
-    "description": "Design, development, and evaluation of components that are critical to artificial intelligence (AI) driven control systems. Team project including a final presentation and report. Example design themes include but not limited to self-driving cars, smart healthcare, and precision agriculture.",
-    "keywords": [
-      "design projects",
-      "design development",
-      "machine learning"
-    ]
-  },
-  "EEC 175A": {
-    "title": "Internet of Things",
-    "description": "Introduction to principles, technologies, challenges, and required expertise to build the Internet of Things (IoT) solutions. Sensing, computing, wireless communication, IP communication, and cloud processing for building an IoT solution.",
-    "keywords": [
-      "computing wireless",
-      "technologies challenges",
-      "build internet"
-    ]
-  },
-  "EEC 175B": {
-    "title": "Internet of Things Senior Design Project",
-    "description": "Propose and design a senior IoT design project, using the design principles they have studied in the prerequisite course, Internet of Things.",
-    "keywords": [
-      "design senior",
-      "design project",
-      "studied prerequisite"
-    ]
-  },
-  "EEC 179": {
-    "title": "Applied Machine Learning for Electrical & Computer Engineers",
-    "description": "Fundamental techniques in machine learning for data preparation, preprocessing, classification, and regression. Bringing practical machine learning algorithms to the field and deploying them on real problems in hardware, mobile health, embedded systems, security, and other related topics.",
-    "keywords": [
-      "computer engineers",
-      "machine learning",
-      "learning algorithms"
-    ]
-  },
-  "EEC 180": {
-    "title": "Digital Systems II",
-    "description": "Computer-aided design of digital systems with emphasis on hardware description languages (VHDL), logic synthesis, and field-programmable gate arrays (FPGA). May cover advanced topics in digital system design such as static timing analysis, pipelining, memory system design, testing digital circuits.",
-    "keywords": [
-      "computer aided",
-      "design testing",
-      "logic synthesis"
-    ]
-  },
-  "EEC 181A": {
-    "title": "Digital Systems Design Project",
-    "description": "Digital-system and computer-engineering design course involving architecture, design, implementation and testing of a prototype application-specific processor under given design constraints. Team project includes a final presentation and report.",
-    "keywords": [
-      "computer engineering",
-      "design course",
-      "testing prototype"
-    ]
-  },
-  "EEC 181B": {
-    "title": "Digital Systems Design Project",
-    "description": "Digital-system and computer-engineering design course involving architecture, design, implementation and testing of a prototype application-specific processor under given design constraints. Team project includes a final presentation and report.",
-    "keywords": [
-      "computer engineering",
-      "design course",
-      "testing prototype"
-    ]
-  },
-  "EEC 183": {
-    "title": "Testing & Verification of Digital Systems",
-    "description": "Computer aided-testing and design verification techniques for digital systems; physical fault testing; simulation-based design verification; formal verification; timing analysis.",
-    "keywords": [
-      "testing simulation",
-      "testing verification",
-      "design verification"
-    ]
-  },
-  "EEC 189A": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Computer Science",
-    "description": "Special topics in Computer Science.",
-    "keywords": [
-      "engineering computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "EEC 189B": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Programming Systems",
-    "description": "Special topics in Programming Systems.",
-    "keywords": [
-      "electrical engineering",
-      "engineering computer",
-      "computer science"
-    ]
-  },
-  "EEC 189C": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Digital Systems",
-    "description": "Special topics in Digital Systems.",
-    "keywords": [
-      "electrical engineering",
-      "engineering computer",
-      "computer science"
-    ]
-  },
-  "EEC 189D": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Communications",
-    "description": "Special topics in Communications.",
-    "keywords": [
-      "science communications",
-      "computer science",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189E": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Signal Transmission",
-    "description": "Special topics in Signal Transmission.",
-    "keywords": [
-      "engineering computer",
-      "computer science",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189F": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Digital Communication",
-    "description": "Special topics in Digital Communication.",
-    "keywords": [
-      "electrical engineering",
-      "engineering computer",
-      "computer science"
-    ]
-  },
-  "EEC 189G": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Control Systems",
-    "description": "Special topics in Control Systems.",
-    "keywords": [
-      "engineering computer",
-      "computer science",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189H": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Robotics",
-    "description": "Special topics in Robotics.",
-    "keywords": [
-      "robotics special",
-      "topics robotics",
-      "science robotics"
-    ]
-  },
-  "EEC 189I": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Signal Processing",
-    "description": "Special topics in Signal Processing.",
-    "keywords": [
-      "engineering computer",
-      "computer science",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189J": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Image Processing",
-    "description": "Special topics in Image Processing.",
-    "keywords": [
-      "electrical engineering",
-      "engineering computer",
-      "computer science"
-    ]
-  },
-  "EEC 189K": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: High-Frequency Phenomena & Devices",
-    "description": "Special topics in High-Frequency Phenomena & Devices.",
-    "keywords": [
-      "computer science",
-      "topics electrical",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189L": {
-    "title": "Special Topics in ECS: Solid-State Devices & Physical Electronics",
-    "description": "Special topics in Solid-State Devices & Physical Electronics.",
-    "keywords": [
-      "electronics",
-      "electronics special",
-      "physical electronics"
-    ]
-  },
-  "EEC 189M": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Systems Theory",
-    "description": "Special topics in Systems Theory.",
-    "keywords": [
-      "engineering computer",
-      "electrical engineering",
-      "computer science"
-    ]
-  },
-  "EEC 189N": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Active & Passive Circuits",
-    "description": "Special topics in Active & Passive Circuits.",
-    "keywords": [
-      "engineering computer",
-      "computer science",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189O": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Integrated Circuits",
-    "description": "Special topics in Integrated Circuits.",
-    "keywords": [
-      "engineering computer",
-      "computer science",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189P": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Computer Software",
-    "description": "Special topics in Computer Software.",
-    "keywords": [
-      "science computer",
-      "engineering computer",
-      "computer science"
-    ]
-  },
-  "EEC 189Q": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Computer Engineering",
-    "description": "Special topics in Computer Engineering.",
-    "keywords": [
-      "computer engineering",
-      "engineering computer",
-      "computer science"
-    ]
-  },
-  "EEC 189R": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Microprocessing",
-    "description": "Special topics in Microprocessing.",
-    "keywords": [
-      "science microprocessing",
-      "engineering computer",
-      "computer science"
-    ]
-  },
-  "EEC 189S": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Electronics",
-    "description": "Special topics in Electronics.",
-    "keywords": [
-      "topics electronics",
-      "computer science",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189T": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Electromagnetics",
-    "description": "Special topics in Electromagnetics.",
-    "keywords": [
-      "topics electromagnetics",
-      "science electromagnetics",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189U": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Opto-Electronics",
-    "description": "Special topics in Opto-Electronics.",
-    "keywords": [
-      "engineering computer",
-      "computer science",
-      "electrical engineering"
-    ]
-  },
-  "EEC 189W": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Computer Networks",
-    "description": "Special topics in Computer Networks.",
-    "keywords": [
-      "engineering computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "EEC 190C": {
-    "title": "Research Group Conferences in Electrical & Computer Engineering",
-    "description": "Research group conferences.",
-    "keywords": [
-      "computer engineering",
-      "conferences electrical",
-      "engineering research"
-    ]
-  },
-  "EEC 192": {
-    "title": "Internship in Electrical & Computer Engineering",
-    "description": "Supervised work experience in electrical and computer engineering.",
-    "keywords": [
-      "internship electrical",
-      "engineering supervised",
-      "computer engineering"
-    ]
-  },
-  "EEC 193A": {
-    "title": "Senior Design Project",
-    "description": "Team design project for seniors in Electrical or Computer Engineering. Project involves analysis, design, implementation and evaluation of an Electrical Engineering or Computer Engineering system. Project is supervised by a faculty member.",
-    "keywords": [
-      "seniors electrical",
-      "engineering computer",
-      "project seniors"
-    ]
-  },
-  "EEC 193B": {
-    "title": "Senior Design Project",
-    "description": "Team design project for seniors in Electrical Engineering or Computer Engineering. Project involves analysis, design, implementation and evaluation of an Electrical Engineering or Computer Engineering system. Project supervised by a faculty member.",
-    "keywords": [
-      "seniors electrical",
-      "engineering computer",
-      "project seniors"
-    ]
-  },
-  "EEC 195A": {
-    "title": "Autonomous Vehicle Design Project",
-    "description": "Design and construct an autonomous race car. Work in groups to design, build and test speed control circuits, track sensing circuits, and a steering control loop.",
-    "keywords": [
-      "build test",
-      "car work",
-      "race car"
-    ]
-  },
-  "EEC 195B": {
-    "title": "Autonomous Vehicle Design Project",
-    "description": "Design and construct an autonomous race car. Students work in groups to design, build and test speed control circuits, track sensing circuits, and a steering control loop.",
-    "keywords": [
-      "build test",
-      "race car",
-      "car students"
-    ]
-  },
-  "EEC 196": {
-    "title": "Issues in Engineering Design",
-    "description": "Covers various electrical and computer engineering standards and realistic design constraints including economic, manufacturability, sustainability, ethical, health & safety, environmental, social, and political.",
-    "keywords": [
-      "issues engineering",
-      "engineering design",
-      "computer engineering"
-    ]
-  },
-  "EEC 197T": {
-    "title": "Tutoring in Electrical & Computer Engineering",
-    "description": "Tutoring in Electrical & Computer Engineering courses, especially introductory circuits. For upper division undergraduate students who will provide tutorial assistance.",
-    "keywords": [
-      "engineering courses",
-      "tutoring electrical",
-      "engineering tutoring"
-    ]
-  },
-  "EEC 198": {
-    "title": "Directed Group Study",
-    "description": "Directed group study.",
-    "keywords": [
-      "study directed",
-      "directed group",
-      "group study"
-    ]
-  },
-  "EEC 199": {
-    "title": "Special Study for Advanced Undergraduates",
-    "description": "Special study for advanced undergraduates.",
-    "keywords": [
-      "study advanced",
-      "undergraduates special",
-      "advanced undergraduates"
-    ]
-  },
-  "EEC 200": {
-    "title": "Navigating Graduate School",
-    "description": "Practical and non-technical skills necessary for first-year students in the Electrical & Computer Engineering Graduate Group. Mentorship, time management, research ethics, science communication, intellectual property.",
-    "keywords": [
-      "graduate group",
-      "graduate school",
-      "engineering graduate"
-    ]
-  },
-  "EEC 201": {
-    "title": "Digital Signal Processing",
-    "description": "Theory and design of digital filters. Classification of digital filters, linear phase systems, all-pass functions, FIR and IIR filter design methods and optimality measures, numerically robust structures for digital filters.",
-    "keywords": [
-      "design digital",
-      "filter design",
-      "digital filters"
-    ]
-  },
-  "EEC 205": {
-    "title": "Computational Methods in Biomedical Imaging",
-    "description": "Analytic tomographic reconstruction from projections in 2D and 3D; model-based image reconstruction methods; maximum likelihood and Bayesian methods; applications to CT, PET, and SPECT.",
-    "keywords": [
-      "biomedical",
-      "methods biomedical",
-      "biomedical imaging"
-    ]
-  },
-  "EEC 206": {
-    "title": "Digital Image Processing",
-    "description": "Two-dimensional systems theory, image perception, sampling and quantization, transform theory and applications, enhancement, filtering and restoration, image analysis, and image processing systems.",
-    "keywords": [
-      "analysis image",
-      "image processing",
-      "image analysis"
-    ]
-  },
-  "EEC 210": {
-    "title": "MOS Analog Circuit Design",
-    "description": "Analysis and design of MOS amplifiers, bias circuits, voltage references and other analog circuits. Stability and compensation of feedback amplifiers. Introduction to noise analysis in MOS circuits.",
-    "keywords": [
-      "noise analysis",
-      "feedback amplifiers",
-      "circuit design"
-    ]
-  },
-  "EEC 211": {
-    "title": "Advanced Analog Circuit Design",
-    "description": "Noise and distortion in electronic circuits and systems. Application to communication circuits. Specific applications include mixers, low-noise amplifiers, power amplifiers, phase-locked loops, oscillators and receiver architectures.",
-    "keywords": [
-      "include mixers",
-      "power amplifiers",
-      "noise amplifiers"
-    ]
-  },
-  "EEC 212": {
-    "title": "Analog MOS IC Design for Signal Processing",
-    "description": "Analysis and design of analog MOS integrated circuits. Passive components, Single-ended and fully differential op amps, Sampled-data and continuous-time filters.",
-    "keywords": [
-      "ic design",
-      "amps sampled",
-      "integrated circuits"
-    ]
-  },
-  "EEC 213": {
-    "title": "Data-Conversion Techniques & Circuits",
-    "description": "Digital-to-analog and analog-to-digital conversion; component characteristics and matching; sample-and-hold, comparator, amplifier, and reference circuits.",
-    "keywords": [
-      "amplifier reference",
-      "circuits digital",
-      "comparator amplifier"
-    ]
-  },
-  "EEC 214": {
-    "title": "Integrated Circuit Design for Power Electronics",
-    "description": "IC design for power electronics. Linear and switching regulation. Integrated power management. DC/DC and AC/DC conversion. Applications in portable electronics and wireless sensors.",
-    "keywords": [
-      "power electronics",
-      "electronics wireless",
-      "circuit design"
-    ]
-  },
-  "EEC 215": {
-    "title": "Circuits for Digital Communications",
-    "description": "Analog, digital, and mixed-signal CMOS implementations of communication-circuit blocks: gain control, adaptive equalizers, sampling detectors, clock recovery.",
-    "keywords": [
-      "signal cmos",
-      "digital communications",
-      "circuits digital"
-    ]
-  },
-  "EEC 216": {
-    "title": "Low Power Digital Integrated Circuit Design",
-    "description": "Integrated circuit design for low power and energy consumption. Low power architectures, logic styles and circuit design. Variable supply and threshold voltages. Leakage management. Power estimation. Energy sources, power electronics, and energy recovery. Applications in portable electronics and sensors. Thermodynamic limits.",
-    "keywords": [
-      "circuit design",
-      "sensors thermodynamic",
-      "thermodynamic limits"
-    ]
-  },
-  "EEC 221": {
-    "title": "Radio Frequency & Microwave Filter Design",
-    "description": "Design of radio frequency and microwave filters including filter specification and approximation theory. Passive LC filter design covers doubly-terminated reactance two-port synthesis and coupling matrix based synthesis. Active filter design includes sensitivity, op-amp building blocks, and cascade filter design.",
-    "keywords": [
-      "frequency microwave",
-      "microwave filter",
-      "microwave filters"
-    ]
-  },
-  "EEC 222": {
-    "title": "RF IC Design",
-    "description": "Radio frequency (RF) solid-state devices, RF device modeling and design rules; non-linear RF circuit design techniques; use of non-linear computer-aided (CAD) tools; RF power amplifier design.",
-    "keywords": [
-      "circuit design",
-      "design radio",
-      "amplifier design"
-    ]
-  },
-  "EEC 223": {
-    "title": "RF Integrated Circuits for Wireless Communications",
-    "description": "Integrated RF front end circuit design of receivers and synthesizers for wireless communications, such as LNA, mixers, PLL; noise and linearity analysis and specifications; theory and working mechanism of synthesizers and phase noise analysis.",
-    "keywords": [
-      "circuits wireless",
-      "wireless communications",
-      "synthesizers wireless"
-    ]
-  },
-  "EEC 224": {
-    "title": "Terahertz & mm-Wave Integrated Circuit Design",
-    "description": "Fundamental theory of RF transmitter and receiver, including noise analysis, transceiver architectures, and antenna arrays. Fundamental limitations, theory and design of amplifiers, oscillators and signal sources at THz and mm-wave frequencies.",
-    "keywords": [
-      "rf transmitter",
-      "architectures antenna",
-      "design amplifiers"
-    ]
-  },
-  "EEC 228": {
-    "title": "Advanced Microwave Circuit & Device Design Techniques",
-    "description": "Theory, design, fabrication, analysis of advanced microwave circuits and devices. Wideband transformers, stripline/microstripline broadband couplers. Lumped and distributed filter synthesis. Broadband matching theory applied to microwave devices. Wideband and low noise FET/HEMT amplifiers. Advanced microwave oscillator theory. Phase noise analysis.",
-    "keywords": [
-      "microwave oscillator",
-      "microwave circuits",
-      "advanced microwave"
-    ]
-  },
-  "EEC 229": {
-    "title": "RF-MEMS & Adaptive Wireless Frontends",
-    "description": "Focuses on the modeling, design, fabrication, and characterization of RF-MEMS while providing a thorough introduction to the technology with an emphasis on how it will benefit the design of adaptive RF/microwave wireless systems.",
-    "keywords": [
-      "rf microwave",
-      "adaptive wireless",
-      "microwave wireless"
-    ]
-  },
-  "EEC 230": {
-    "title": "Electromagnetics",
-    "description": "Maxwell's equations, plane waves, reflection and refraction, complex waves, waveguides, resonant cavities, and basic antennas.",
-    "keywords": [
-      "waveguides resonant",
-      "electromagnetics",
-      "electromagnetics maxwell"
-    ]
-  },
-  "EEC 231A": {
-    "title": "Plasma Physics & Controlled Fusion I",
-    "description": "Equilibrium plasma properties; single particle motion; fluid equations; waves & instabilities in a fluid plasma; plasma kinetic theory & transport coefficients; linear & nonlinear Vlasov theory; fluctuations, correlations & radiation; inertial & magnetic confinement systems in controlled fusion.",
-    "keywords": [
-      "plasma plasma",
-      "plasma properties",
-      "plasma physics"
-    ]
-  },
-  "EEC 231B": {
-    "title": "Plasma Physics & Controlled Fusion II",
-    "description": "Equilibrium plasma properties; single particle motion; fluid equations; waves & instabilities in a fluid plasma; plasma kinetic theory & transport coefficients; linear & nonlinear Vlasov theory; fluctuations, correlations & radiation; inertial & magnetic confinement systems in controlled fusion.",
-    "keywords": [
-      "plasma plasma",
-      "plasma properties",
-      "plasma physics"
-    ]
-  },
-  "EEC 231C": {
-    "title": "Plasma Physics & Controlled Fusion III",
-    "description": "Equilibrium plasma properties; single particle motion; fluid equations; waves & instabilities in a fluid plasma; plasma kinetic theory & transport coefficients; linear & nonlinear Vlasov theory; fluctuations, correlations & radiation; inertial & magnetic confinement systems in controlled fusion.",
-    "keywords": [
-      "plasma plasma",
-      "plasma properties",
-      "plasma physics"
-    ]
-  },
-  "EEC 232A": {
-    "title": "Advanced Applied Electromagnetics I",
-    "description": "The exact formulation of applied electromagnetic problems using Green's functions. Applications of these techniques to transmission circuits.",
-    "keywords": [
-      "electromagnetic problems",
-      "applied electromagnetic",
-      "applied electromagnetics"
-    ]
-  },
-  "EEC 232B": {
-    "title": "Advanced Applied Electromagnetics II",
-    "description": "An advanced treatment of electromagnetics with applications to passive microwave devices and antennas.",
-    "keywords": [
-      "electromagnetics applications",
-      "microwave devices",
-      "electromagnetics ii"
-    ]
-  },
-  "EEC 234A": {
-    "title": "Physics & Technology of Microwave Vacuum Electron Beam Devices I",
-    "description": "Physics & technology of electron beam emission, flow and transport, electron gun design, space charge waves & klystrons with applications to accelerator systems, RF power sources for radar & communication systems, thermionic energy conversion, and electric space propulsion. Recent advances in materials & manufacturing technologies are also reviewed.",
-    "keywords": [
-      "technology electron",
-      "technology microwave",
-      "physics technology"
-    ]
-  },
-  "EEC 234AV": {
-    "title": "Physics & Technology of Microwave Vacuum Electron Beam Devices I",
-    "description": "Physics & technology of electron beam emission, flow and transport, electron gun design, space charge waves & klystrons with applications to accelerator systems, RF power sources for radar & communication systems, thermionic energy conversion, and electric space propulsion. Recent advances in materials & manufacturing technologies also reviewed.",
-    "keywords": [
-      "technology electron",
-      "technology microwave",
-      "physics technology"
-    ]
-  },
-  "EEC 234B": {
-    "title": "Physics & Technology of Microwave Vacuum Electron Beam Devices II",
-    "description": "Theory, modeling, & experimental design of traveling wave tubes, backward wave oscillators, and extended interaction oscillators employed in satellite commutations, plasma imaging, and underground imaging systems.",
-    "keywords": [
-      "plasma imaging",
-      "technology microwave",
-      "physics technology"
-    ]
-  },
-  "EEC 234BV": {
-    "title": "Physics & Technology of Microwave Vacuum Electron Beam Devices II",
-    "description": "Theory, modeling, & experimental design of traveling wave tubes, backward wave oscillators, and extended interaction oscillators employed in satellite commutations, plasma imaging, and underground imaging systems.",
-    "keywords": [
-      "plasma imaging",
-      "technology microwave",
-      "physics technology"
-    ]
-  },
-  "EEC 234C": {
-    "title": "Physics & Technology of Microwave Vacuum Electron Beam Devices III",
-    "description": "Physics & technology of gyrotrons, gyro-amplifiers, free electron lasers, magnetrons, cross-field amplifiers, and relativistic devices employed in plasma fusion reactors, microwave heating, and high power microwave applications.",
-    "keywords": [
-      "physics technology",
-      "fusion reactors",
-      "lasers magnetrons"
-    ]
-  },
-  "EEC 234CV": {
-    "title": "Physics and Technology of Microwave Vacuum Electron Beam Devices III",
-    "description": "Physics & technology of gyrotrons, gyro-amplifiers, free electron lasers, magnetrons, cross-field amplifiers, and relativistic devices employed in plasma fusion reactors, microwave heating, and high power microwave applications.",
-    "keywords": [
-      "physics technology",
-      "fusion reactors",
-      "lasers magnetrons"
-    ]
-  },
-  "EEC 235": {
-    "title": "Photonics",
-    "description": "Optical propagation of electromagnetic waves and beams in photonic components and the design of such devices using numerical techniques.",
-    "keywords": [
-      "numerical techniques",
-      "photonics",
-      "photonics optical"
-    ]
-  },
-  "EEC 236": {
-    "title": "Nonlinear Optical Applications",
-    "description": "Nonlinear optical interactions in optical communication, optical information processing and integrated optics. Basic concepts underlying optical nonlinear interactions in materials and guided media.",
-    "keywords": [
-      "optical nonlinear",
-      "optical applications",
-      "nonlinear optical"
-    ]
-  },
-  "EEC 237A": {
-    "title": "Lasers",
-    "description": "Theoretical and practical description of lasers. Theory of population inversion, amplification and oscillation using semiclassical oscillator model and rate equations. Description and design of real laser system.",
-    "keywords": [
-      "description lasers",
-      "lasers theory",
-      "lasers theoretical"
-    ]
-  },
-  "EEC 237B": {
-    "title": "Laser Physics II",
-    "description": "Oscillation threshold. Coupled cavity/atomic rate equations, Linear pulse propagation; dispersion, broadening, compression. Nonlinear pulse propagation. Energy extraction. Optical beams, resonators, eigenmodes, axial/transverse modes. Paraxial ray optics, resonator stability, ABCD matrices. Laser dynamics; transients, spiking, Q-switching, active and passive modelocking.",
-    "keywords": [
-      "matrices laser",
-      "laser dynamics",
-      "laser physics"
-    ]
-  },
-  "EEC 238": {
-    "title": "Semiconductor Lasers & Photonic Integration",
-    "description": "Understanding of fundamental optical transitions in semiconductors and quantum-confined systems are applied to diode & unipolar lasers and selected photonic devices. The importance of radiative and non-radiative recombination, simulated emission, excitons in quantum wells, and strained quantum layers are considered. Photonic integrated circuits based on active (with optical gain) and passive (without optical gain).",
-    "keywords": [
-      "transitions semiconductors",
-      "semiconductors quantum",
-      "semiconductor lasers"
-    ]
-  },
-  "EEC 239A": {
-    "title": "Optical Communication Technologies  for High-Speed Data Networking",
-    "description": "Enabling technologies for optical fiber communication and data center networks. Physical layer issues for component and system technologies in high-speed data optical communications. High-capacity data multiplexing technologies including wavelength-division-multiplexing, time-division-multiplexing, and advanced coherent modulation. Optical signal transmission, optical amplification, and optical switching for telecom and data center networks.",
-    "keywords": [
-      "optical communication",
-      "optical communications",
-      "technologies optical"
-    ]
-  },
-  "EEC 239B": {
-    "title": "High-Capacity Optical Data Systems & Networks",
-    "description": "High-capacity optical data systems and networks, built-on modern optical communication technologies. Technologies behind data center networking, software defined networking, and RF-optical networking. Physical layer issues in light of networking architectures and protocols. Optical communications systems design and integration. Systems technologies and higher-level network architecture, case studies. WDM, TDM, and EON networking, optical and wireless access technologies based on PON and ROF.",
-    "keywords": [
-      "networking optical",
-      "optical networking",
-      "networking architectures"
-    ]
-  },
-  "EEC 240": {
-    "title": "Semiconductor Device Physics",
-    "description": "Physical principles, characteristics and models of various semiconductor materials and devices, including: P-N junction, metal- semiconductor diodes, junction, and insulated-gate field effect transistors.  Elements of basic design exercises to explore circuit design, RF phenomenon, optoelectronics, solid-state devices, materials, and large-scale integration.",
-    "keywords": [
-      "semiconductor diodes",
-      "device physics",
-      "semiconductor materials"
-    ]
-  },
-  "EEC 242": {
-    "title": "Advanced Nanostructured Devices",
-    "description": "Physics of nano-structured materials and device operation. Overview of new devices enabled by nanotechnology; fabrication and characterization methods; applications of nano-structures and devices.",
-    "keywords": [
-      "nanotechnology",
-      "enabled nanotechnology",
-      "nanotechnology fabrication"
-    ]
-  },
-  "EEC 243": {
-    "title": "Optical Imaging & Microscopy",
-    "description": "Theory and techniques of optical imaging & microscopy. Fourier optics; light propagation & light detection; imaging contrast mechanisms; optical & microscopy techniques.",
-    "keywords": [
-      "imaging microscopy",
-      "microscopy theory",
-      "optical microscopy"
-    ]
-  },
-  "EEC 244": {
-    "title": "Introduction to Neuroengineering",
-    "description": "Survey of neuroengineering field from engineering and biological perspectives; micro-/nano-fabrication technology; optical and electrical techniques to monitor and modulate neural activity; computational tools and control systems; prosthetics and human machine interfaces; human performance and rehabilitation; cognitive neuroengineering; neuroethics; extensive proposal development to merge aforementioned themes into a multidisciplinary project.",
-    "keywords": [
-      "survey neuroengineering",
-      "neuroengineering survey",
-      "neuroengineering neuroethics"
-    ]
-  },
-  "EEC 245": {
-    "title": "Micro- & Nano-Technology in Life Sciences",
-    "description": "Survey of biodevice design from engineering and biological perspectives; micro-/nano-fabrication techniques; surface science and mass transport; essential biological processes and models; proposal development skills on merging aforementioned themes.",
-    "keywords": [
-      "survey biodevice",
-      "biodevice",
-      "biodevice design"
-    ]
-  },
-  "EEC 246": {
-    "title": "Advanced Projects in IC Fabrication",
-    "description": "Individualized projects in the fabrication of analog or digital integrated electronic or optoelectronic circuits.",
-    "keywords": [
-      "optoelectronic",
-      "electronic optoelectronic",
-      "optoelectronic circuits"
-    ]
-  },
-  "EEC 248": {
-    "title": "Photovoltaics & Solar Cells",
-    "description": "Physics and application of photovoltaics and solar cells, including design, fabrication technology, and grid incorporation. Mono and microcrystalline silicon devices; thin-film technologies, heterojunction and organic-semiconductor technologies. Collectors, electrical inverters and infrastructure issues. Challenges and concerns.",
-    "keywords": [
-      "photovoltaics",
-      "application photovoltaics",
-      "photovoltaics solar"
-    ]
-  },
-  "EEC 249": {
-    "title": "Nanofabrication",
-    "description": "Theory and practice of nanofabrication (top-down and bottom-up approaches), used for producing integrated circuits, electronic devices, sensors, and microstructures. Process development and characterization.",
-    "keywords": [
-      "practice nanofabrication",
-      "nanofabrication approaches",
-      "nanofabrication theory"
-    ]
-  },
-  "EEC 250": {
-    "title": "Linear Systems & Signals",
-    "description": "Mathematical description of systems. Selected topics in linear algebra. Solution of the state equations and an analysis of stability, controllability, observability, realizations, state feedback and state estimation. Discrete-time signals and systems, and the Z-transform.",
-    "keywords": [
-      "mathematical description",
-      "algebra solution",
-      "linear algebra"
-    ]
-  },
-  "EEC 251": {
-    "title": "Nonlinear Systems",
-    "description": "Nonlinear differential equations, second-order systems, approximation methods, bifurcations, Lyapunov stability, absolute stability, Popov criterion, circle criterion, sliding-mode control, feedback linearization techniques.",
-    "keywords": [
-      "differential equations",
-      "nonlinear systems",
-      "nonlinear differential"
-    ]
-  },
-  "EEC 252": {
-    "title": "Multivariable Control System Design",
-    "description": "Review of single-loop feedback design. Stability, performance and robustness of multi-input multi-output control systems. H-infinity design. Frequency response methods. Optimization-based design. Algebraic design methods for uncertain systems.",
-    "keywords": [
-      "design algebraic",
-      "optimization based",
-      "methods optimization"
-    ]
-  },
-  "EEC 254": {
-    "title": "Optimization",
-    "description": "Understanding, analyzing, and solving constrained convex optimization problems arising in cutting-edge engineering and science fields, including machine learning, signal processing, networks, control, transportation, and circuit design. Convexity theory and the algorithmic approaches for convex optimization problem.",
-    "keywords": [
-      "optimization problems",
-      "convexity theory",
-      "convex optimization"
-    ]
-  },
-  "EEC 255": {
-    "title": "Robotic Systems",
-    "description": "Introduction to robotic systems. Mechanical manipulators, kinematics, manipulator positioning and path planning. Dynamics of manipulators. Robot motion programming and control algorithm design.",
-    "keywords": [
-      "introduction robotic",
-      "robot motion",
-      "manipulators robot"
-    ]
-  },
-  "EEC 256": {
-    "title": "Reinforcement Learning",
-    "description": "Reinforcement Learning (RL) is the subset of machine learning, the core of artificial intelligence. Topics include fundamentals of RL, bandit problems, Markov decision processes, and dynamic programming.",
-    "keywords": [
-      "reinforcement learning",
-      "artificial intelligence",
-      "machine learning"
-    ]
-  },
-  "EEC 260": {
-    "title": "Random Signals & Noise",
-    "description": "Random processes as probabilistic models for signals and noise. Probability and random variables, Convergence and limit theorems, Specification of random processes, Markov Chains, Wiener process and white Gaussian noise, Poisson process and shot noise, Processing and frequency analysis of random signals.",
-    "keywords": [
-      "probabilistic models",
-      "random variables",
-      "noise probability"
-    ]
-  },
-  "EEC 261": {
-    "title": "Signal Processing for Communications",
-    "description": "Signal processing in wireless and wireline communication systems. Characterization and distortion of wireless and wireline channels. Channel equalization and maximum likelihood sequence estimation. Channel precoding and pre-equalization. OFDM and transmit diversity. Array processing.",
-    "keywords": [
-      "distortion wireless",
-      "wireless wireline",
-      "processing wireless"
-    ]
-  },
-  "EEC 262": {
-    "title": "Multi-access Communications Theory",
-    "description": "Maximum stable throughput of Poisson collision channels. Classic collision resolution algorithms. Carrier sensing multiple access and its performance analysis. System stability analysis. Joint design of the physical/medium access control layers. Capacity region of multi-access channels. Multi-access with correlated sources.",
-    "keywords": [
-      "communications theory",
-      "resolution algorithms",
-      "collision resolution"
-    ]
-  },
-  "EEC 263": {
-    "title": "Optimal & Adaptive Filtering",
-    "description": "Geometric formulation of least-squares estimation problems. Theory and applications of optimum Wiener and Kalman filtering. MAP and maximum likelihood estimation of hidden Markov models, Viterbi algorithm. Adaptive filtering algorithms, properties and applications.",
-    "keywords": [
-      "markov models",
-      "algorithms properties",
-      "filtering algorithms"
-    ]
-  },
-  "EEC 264": {
-    "title": "Estimation & Detection of Signals in Noise",
-    "description": "Introduction to parameter estimation and detections of signals in noise. Bayes and Neyman-Pearson likelihood-ratio tests for signal detection. Maximum-likelihood parameter estimation. Detection of known and Gaussian signals in white or colored noise. Applications to communications, radar, signal processing.",
-    "keywords": [
-      "noise applications",
-      "signal processing",
-      "signal detection"
-    ]
-  },
-  "EEC 265": {
-    "title": "Principles of Digital Communications",
-    "description": "Introduction to digital communications. Coding for analog sources. Characterization of signals and systems. Modulation and demodulation for the additive Gaussian channel. Digital signaling over bandwidth-constrained linear filter channels and over fading multipath channels. Spread spectrum signals.",
-    "keywords": [
-      "digital signaling",
-      "communications coding",
-      "digital communications"
-    ]
-  },
-  "EEC 266": {
-    "title": "Information Theory & Coding",
-    "description": "Topics include Entropy, Relatively Entropy, Mutual Information; Asymptotic Equipartition Property; Entropy Rates of Stochastic Process; Data Compression; Channel Capacity; Differential Entropy; Gaussian Channel; Rate Distortion Theory; Network Information Theory.",
-    "keywords": [
-      "entropy gaussian",
-      "information theory",
-      "theory coding"
-    ]
-  },
-  "EEC 267": {
-    "title": "Mobile Communications",
-    "description": "Time-varying multi-path fading channel models and receiver performance in fading channels; multiple access techniques and multiple access receivers design and performance; optimum design and the capacity of wireless channels.",
-    "keywords": [
-      "mobile communications",
-      "capacity wireless",
-      "wireless channels"
-    ]
-  },
-  "EEC 269A": {
-    "title": "Error Correcting Codes: Algebraic Approach",
-    "description": "Introduction to theory and practice of block codes, linear block codes, cyclic codes, decoding algorithms, and coding techniques.",
-    "keywords": [
-      "algebraic approach",
-      "algorithms coding",
-      "codes algebraic"
-    ]
-  },
-  "EEC 269B": {
-    "title": "Error Correcting Codes: Probabilistic Approach",
-    "description": "Probabilistic approach to construct and decode error-correcting codes, coded communication systems, low-density parity-check (LDPC) codes, polar codes, fountain codes, decoding algorithms.",
-    "keywords": [
-      "decoding algorithms",
-      "codes decoding",
-      "correcting codes"
-    ]
-  },
-  "EEC 270": {
-    "title": "Computer Architecture",
-    "description": "Introduction to modern techniques for high-performance single and multiple processor systems. Topics include advanced pipeline design, advanced memory hierarchy design, optimizing pipeline and memory use, and memory sharing among multiprocessors. Case studies of recent single and multiple processor systems.",
-    "keywords": [
-      "multiprocessors case",
-      "advanced memory",
-      "computer architecture"
-    ]
-  },
-  "EEC 272": {
-    "title": "High-Performance Computer Architecture",
-    "description": "Designing and analysis of high performance computer architecture with emphasis on vector processing, on-chip interconnect networks, chip-level multiprocessors, memory and storage subsystem design and impact of technological advances on computer architecture.",
-    "keywords": [
-      "performance computer",
-      "advances computer",
-      "computer architecture"
-    ]
-  },
-  "EEC 273": {
-    "title": "Networking Architecture & Resource Management",
-    "description": "Design & implementation principles of networking architecture and protocols. Internet, data center, and telephony case studies. Topics: Internet data & control planes; application & services; resource management; Quality of Service (QoS) provisioning; traffic engineering; performance evaluation, software-defined networks, & future research issues.",
-    "keywords": [
-      "internet data",
-      "protocols internet",
-      "networking architecture"
-    ]
-  },
-  "EEC 275": {
-    "title": "Introduction to Hardware Security",
-    "description": "Hardware Security. Cryptographic processing and the analysis of its overhead, physical attacks, side-channel attacks and counter measures, physically unclonable functions, hardware-based random number generators, watermarking of Intellectual Property blocks, field-programmable gate array security, printed circuit board security, passive and active metering for prevention of piracy, and access control.",
-    "keywords": [
-      "hardware security",
-      "cryptographic processing",
-      "security cryptographic"
-    ]
-  },
-  "EEC 279": {
-    "title": "Modern Parallel Computing",
-    "description": "Exploration of the architecture of modern parallel computers, their programming models, and their programming systems.",
-    "keywords": [
-      "parallel computing",
-      "computers programming",
-      "computing exploration"
-    ]
-  },
-  "EEC 281": {
-    "title": "VLSI Digital Signal Processing",
-    "description": "Digital signal processors, building blocks, and algorithms. Design and implementation of processor algorithms, architectures, control, functional units, and circuit topologies for increased performance and reduced circuit size and power dissipation.",
-    "keywords": [
-      "signal processors",
-      "algorithms architectures",
-      "processor algorithms"
-    ]
-  },
-  "EEC 283": {
-    "title": "Advanced Design Verification of Digital Systems",
-    "description": "Design verification techniques for digital systems; simulation-based design verification techniques; formal verification techniques, including equivalence checking, model checking, and theorem proving; timing analysis and verification; application of design cerification techniques to microprocessors.",
-    "keywords": [
-      "verification techniques",
-      "verification application",
-      "design verification"
-    ]
-  },
-  "EEC 284": {
-    "title": "Design & Optimization of Embedded Computing Systems",
-    "description": "Introduction to design and optimization of digital computing systems for embedded applications. Topics include combinatorial optimization techniques, performance and energy optimization in embedded systems, compilation and architecture-specific mapping, programmable and reconfigurable platforms; design automation and algorithmic improvements to design process.",
-    "keywords": [
-      "design automation",
-      "combinatorial optimization",
-      "embedded computing"
-    ]
-  },
-  "EEC 286": {
-    "title": "Introduction to Digital System Testing",
-    "description": "Review of several current techniques used to detect physical faults in both combinational and sequential circuits. Topics include fault modeling, fault simulation, test generation, compression techniques, and testing architectures.",
-    "keywords": [
-      "fault simulation",
-      "digital testing",
-      "testing architectures"
-    ]
-  },
-  "EEC 289A": {
-    "title": "Special Topics in Electrical & Computer Engineering: Computer Science",
-    "description": "Special topics in Computer Science.",
-    "keywords": [
-      "engineering computer",
-      "computer engineering",
-      "computer science"
-    ]
-  },
-  "EEC 289B": {
-    "title": "Special Topics in Electrical & Computer Engineering: Programming Systems",
-    "description": "Special topics in Programming Systems.",
-    "keywords": [
-      "programming systems",
-      "engineering programming",
-      "computer engineering"
-    ]
-  },
-  "EEC 289C": {
-    "title": "Special Topics in Electrical & Computer Engineering: Digital Systems",
-    "description": "Special topics in Digital Systems.",
-    "keywords": [
-      "digital systems",
-      "engineering digital",
-      "computer engineering"
-    ]
-  },
-  "EEC 289D": {
-    "title": "Special Topics in Electrical & Computer Engineering: Digital Systems",
-    "description": "Special topics in Digital Systems.",
-    "keywords": [
-      "digital systems",
-      "engineering digital",
-      "computer engineering"
-    ]
-  },
-  "EEC 289E": {
-    "title": "Special Topics in Electrical & Computer Engineering: Signal Transmission",
-    "description": "Special topics in Signal Transmission.",
-    "keywords": [
-      "electrical computer",
-      "topics electrical",
-      "engineering signal"
-    ]
-  },
-  "EEC 289F": {
-    "title": "Special Topics in Electrical & Computer Engineering: Digital Communication",
-    "description": "Special topics in Digital Communication.",
-    "keywords": [
-      "digital communication",
-      "computer engineering",
-      "engineering digital"
-    ]
-  },
-  "EEC 289G": {
-    "title": "Special Topics in Electrical & Computer Engineering: Control Systems",
-    "description": "Special topics in Control Systems.",
-    "keywords": [
-      "topics electrical",
-      "electrical computer",
-      "computer engineering"
-    ]
-  },
-  "EEC 289H": {
-    "title": "Special Topics in Electrical & Computer Engineering: Robotics",
-    "description": "Special topics in Robotics.",
-    "keywords": [
-      "robotics special",
-      "topics robotics",
-      "engineering robotics"
-    ]
-  },
-  "EEC 289I": {
-    "title": "Special Topics in Electrical & Computer Engineering: Signal Processing",
-    "description": "Special topics in Signal Processing.",
-    "keywords": [
-      "topics electrical",
-      "signal processing",
-      "engineering signal"
-    ]
-  },
-  "EEC 289J": {
-    "title": "Special Topics in Electrical & Computer Engineering: Image Processing",
-    "description": "Special topics in Image Processing.",
-    "keywords": [
-      "engineering image",
-      "computer engineering",
-      "image processing"
-    ]
-  },
-  "EEC 289K": {
-    "title": "Special Topics in Electrical & Computer Engineering: High Frequency Phenomena & Devices",
-    "description": "Special topics in High Frequency Phenomena & Devices.",
-    "keywords": [
-      "computer engineering",
-      "electrical computer",
-      "topics electrical"
-    ]
-  },
-  "EEC 289L": {
-    "title": "Special Topics in Electrical & Computer Engineering: Solid-State Devices & Physical Electronics",
-    "description": "Special topics in Solid-State Devices & Physical Electronics.",
-    "keywords": [
-      "topics electrical",
-      "electrical computer",
-      "computer engineering"
-    ]
-  },
-  "EEC 289M": {
-    "title": "Special Topics in Electrical & Computer Engineering: Systems Theory",
-    "description": "Special topics in Systems Theory.",
-    "keywords": [
-      "engineering systems",
-      "computer engineering",
-      "systems theory"
-    ]
-  },
-  "EEC 289N": {
-    "title": "Special Topics in Electrical & Computer Engineering: Active & Passive Circuits",
-    "description": "Special topics in Active & Passive Circuits.",
-    "keywords": [
-      "electrical computer",
-      "computer engineering",
-      "topics electrical"
-    ]
-  },
-  "EEC 289O": {
-    "title": "Special Topics in Electrical & Computer Engineering: Integrated Circuits",
-    "description": "Special topics in Integrated Circuits.",
-    "keywords": [
-      "electrical computer",
-      "computer engineering",
-      "integrated circuits"
-    ]
-  },
-  "EEC 289P": {
-    "title": "Special Topics in Electrical & Computer Engineering: Computer Software",
-    "description": "Special topics in Computer Software.",
-    "keywords": [
-      "computer software",
-      "computer engineering",
-      "engineering computer"
-    ]
-  },
-  "EEC 289Q": {
-    "title": "Special Topics in Electrical & Computer Engineering: Computer Engineering",
-    "description": "Special topics in Computer Engineering.",
-    "keywords": [
-      "topics computer",
-      "engineering computer",
-      "computer engineering"
-    ]
-  },
-  "EEC 289R": {
-    "title": "Special Topics in Electrical & Computer Engineering: Microprocessing",
-    "description": "Special topics in Microprocessing.",
-    "keywords": [
-      "computer engineering",
-      "microprocessing special",
-      "engineering microprocessing"
-    ]
-  },
-  "EEC 289S": {
-    "title": "Special Topics in Electrical & Computer Engineering: Electronics",
-    "description": "Special topics in Electronics.",
-    "keywords": [
-      "computer engineering",
-      "engineering electronics",
-      "topics electronics"
-    ]
-  },
-  "EEC 289T": {
-    "title": "Special Topics in Electrical & Computer Engineering: Electromagnetics",
-    "description": "Special topics in Electromagnetics.",
-    "keywords": [
-      "electromagnetics special",
-      "topics electromagnetics",
-      "engineering electromagnetics"
-    ]
-  },
-  "EEC 289U": {
-    "title": "Special Topics in Electrical & Computer Engineering: Optoelectronics",
-    "description": "Special topics in Optoelectronics.",
-    "keywords": [
-      "optoelectronics special",
-      "topics optoelectronics",
-      "engineering optoelectronics"
-    ]
-  },
-  "EEC 289W": {
-    "title": "Special Topics in Electrical Engineering & Computer Science: Computer Networks",
-    "description": "Special topics in Computer Networks.",
-    "keywords": [
-      "engineering computer",
-      "science computer",
-      "computer science"
-    ]
-  },
-  "EEC 290": {
-    "title": "Seminar in Electrical & Computer Engineering",
-    "description": "Discussion and presentation of current research and development in Electrical & Computer Engineering.",
-    "keywords": [
-      "computer engineering",
-      "engineering discussion",
-      "seminar electrical"
-    ]
-  },
-  "EEC 290C": {
-    "title": "Graduate Research Group Conference in Electrical & Computer Engineering",
-    "description": "Research problems, progress, and techniques in electrical and computer engineering.",
-    "keywords": [
-      "computer engineering",
-      "engineering research",
-      "graduate research"
-    ]
-  },
-  "EEC 290P": {
-    "title": "Capstone Project For MS Plan II",
-    "description": "Conducting research projects in electrical and computer engineering. Communicating research results in written reports and oral presentations. Systemic project implementation to answer a comprehensive scientific or technical question in the area of electrical and computer engineering.",
-    "keywords": [
-      "computer engineering",
-      "communicating research",
-      "research results"
-    ]
-  },
-  "EEC 291": {
-    "title": "Solid-State Circuit Research Laboratory Seminar",
-    "description": "Lectures on solid-state circuit and system design by various visiting experts in the field.",
-    "keywords": [
-      "visiting experts",
-      "laboratory seminar",
-      "seminar lectures"
-    ]
-  },
-  "EEC 292": {
-    "title": "Seminar in Solid-State Technology",
-    "description": "Lectures on solid-state technology by various visiting experts in the field.",
-    "keywords": [
-      "seminar",
-      "visiting experts",
-      "technology lectures"
-    ]
-  },
-  "EEC 293": {
-    "title": "Computer Engineering Research Seminar",
-    "description": "Lectures, tutorials and seminars on topics in computer engineering.",
-    "keywords": [
-      "tutorials seminars",
-      "lectures tutorials",
-      "seminar lectures"
-    ]
-  },
-  "EEC 294": {
-    "title": "Communications, Signal & Image Processing Seminar",
-    "description": "Communications, signal and image processing, video engineering and computer vision.",
-    "keywords": [
-      "video engineering",
-      "processing seminar",
-      "seminar communications"
-    ]
-  },
-  "EEC 295": {
-    "title": "Systems, Control & Robotics Seminar",
-    "description": "Seminars on current research in systems and control by faculty and visiting experts. Technical presentations and lectures on current topics in robotics research and robotics technology.",
-    "keywords": [
-      "research robotics",
-      "robotics research",
-      "robotics seminar"
-    ]
-  },
-  "EEC 296": {
-    "title": "Photonics Research Seminar",
-    "description": "Lectures on photonics and related areas by faculty and visiting experts.",
-    "keywords": [
-      "faculty visiting",
-      "lectures photonics",
-      "seminar lectures"
-    ]
-  },
-  "EEC 298": {
-    "title": "Group Study",
-    "description": "Group study.",
-    "keywords": [
-      "study",
-      "study group",
-      "group study"
-    ]
-  },
-  "EEC 299": {
-    "title": "Research",
-    "description": "Research.",
-    "keywords": [
-      "research research",
-      "research"
-    ]
-  },
-  "EEC 390": {
-    "title": "The Teaching of Electrical Engineering",
-    "description": "Participation as a teaching assistant or associate-in in a designated engineering course. Methods of leading discussion groups or laboratory sections, writing and grading quizzes, use of laboratory equipment, and grading laboratory reports.",
-    "keywords": [
-      "engineering course",
-      "teaching assistant",
-      "teaching electrical"
-    ]
-  },
-  "EEC 396": {
-    "title": "Teaching Assistant Training Practicum",
-    "description": "Teaching Assistant training.",
-    "keywords": [
-      "assistant training",
-      "practicum teaching",
-      "teaching assistant"
+    ],
+    "videos": [
+      {
+        "title": "Hash tables in 4 minutes",
+        "id": "knV86FlSXJ8",
+        "channel": "Michael Sambol",
+        "thumbnail": "https://i.ytimg.com/vi/knV86FlSXJ8/default.jpg",
+        "publish_time": "2022-06-20T16:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=knV86FlSXJ8"
+      },
+      {
+        "title": "Hash Tables and Hash Functions",
+        "id": "KyUTuwz_b7Q",
+        "channel": "Computer Science Lessons",
+        "thumbnail": "https://i.ytimg.com/vi/KyUTuwz_b7Q/default.jpg",
+        "publish_time": "2017-03-05T12:30:36Z",
+        "video_url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q"
+      },
+      {
+        "title": "Learn Hash Tables in 13 minutes #\ufe0f\u20e3",
+        "id": "FsfRsGFHuv4",
+        "channel": "Bro Code",
+        "thumbnail": "https://i.ytimg.com/vi/FsfRsGFHuv4/default.jpg",
+        "publish_time": "2021-10-20T17:32:01Z",
+        "video_url": "https://www.youtube.com/watch?v=FsfRsGFHuv4"
+      },
+      {
+        "title": "Data Structures and Algorithms in 15 Minutes",
+        "id": "oz9cEqFynHU",
+        "channel": "Tren Black",
+        "thumbnail": "https://i.ytimg.com/vi/oz9cEqFynHU/default.jpg",
+        "publish_time": "2020-12-10T16:10:28Z",
+        "video_url": "https://www.youtube.com/watch?v=oz9cEqFynHU"
+      },
+      {
+        "title": "Algorithms and Data Structures Tutorial - Full Course for Beginners",
+        "id": "8hly31xKli0",
+        "channel": "freeCodeCamp.org",
+        "thumbnail": "https://i.ytimg.com/vi/8hly31xKli0/default.jpg",
+        "publish_time": "2021-03-18T19:48:53Z",
+        "video_url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      {
+        "title": "Data Structures Explained for Beginners - How I Wish I was Taught",
+        "id": "O9v10jQkm5c",
+        "channel": "Sajjaad Khader",
+        "thumbnail": "https://i.ytimg.com/vi/O9v10jQkm5c/default.jpg",
+        "publish_time": "2025-03-04T22:00:12Z",
+        "video_url": "https://www.youtube.com/watch?v=O9v10jQkm5c"
+      },
+      {
+        "title": "Algorithms Explained for Beginners - How I Wish I Was Taught",
+        "id": "JJkWemM03Lg",
+        "channel": "Internet Made Coder",
+        "thumbnail": "https://i.ytimg.com/vi/JJkWemM03Lg/default.jpg",
+        "publish_time": "2022-10-15T12:00:19Z",
+        "video_url": "https://www.youtube.com/watch?v=JJkWemM03Lg"
+      },
+      {
+        "title": "What exactly is an algorithm? Algorithms explained | BBC Ideas",
+        "id": "ZnBF2GeAKbo",
+        "channel": "BBC Ideas",
+        "thumbnail": "https://i.ytimg.com/vi/ZnBF2GeAKbo/default.jpg",
+        "publish_time": "2019-09-26T15:00:09Z",
+        "video_url": "https://www.youtube.com/watch?v=ZnBF2GeAKbo"
+      },
+      {
+        "title": "Computer Science Basics: Algorithms",
+        "id": "kM9ASKAni_s",
+        "channel": "LearnFree",
+        "thumbnail": "https://i.ytimg.com/vi/kM9ASKAni_s/default.jpg",
+        "publish_time": "2018-10-03T18:04:53Z",
+        "video_url": "https://www.youtube.com/watch?v=kM9ASKAni_s"
+      }
     ]
   }
 }
