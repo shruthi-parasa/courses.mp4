@@ -7,15 +7,15 @@
   let apiKey: string = '';
   let currentPage = 'landing';
 
-  onMount(async () => {
-    try {
-      const res = await fetch('/api/key');
-      const data = await res.json();
-      apiKey = data.apiKey;
-    } catch (error) {
-      console.error('Failed to fetch API key:', error);
-    }
-  });
+  // onMount(async () => {
+  //   try {
+  //     const res = await fetch('/api/key');
+  //     const data = await res.json();
+  //     apiKey = data.apiKey;
+  //   } catch (error) {
+  //     console.error('Failed to fetch API key:', error);
+  //   }
+  // });
 
   function navigateTo(page: string) {
     currentPage = page;
@@ -40,7 +40,6 @@
       <SearchCourses />
     {/if}
   </div>
-
   <footer class="site-footer">
     <div class="footer-content">
       <div class="logo">Courses.MP4</div>
