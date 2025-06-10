@@ -11,6 +11,27 @@
   
   let userCourseList: any[] = [];
 
+  interface Video {
+    title: string;
+    id: string;
+    channel: string;
+    thumbnail: string;
+    video_url: string;
+  }
+
+  interface Course {
+    code: string;
+    title: string;
+    description: string;
+    keywords: string[];
+    videos: Video[];
+  }
+
+  let showCourseViewer: boolean = false;
+  let courseInViewer: Course | null = null;
+  let selectedVideo: Video | null = null;
+
+
   //login and logout functions manual for now, will change after implementing dex
   function handleLogin() {
     window.location.href = '/login';
@@ -35,6 +56,7 @@
     }
   }
 
+  //Fetch function does not work - Commented out in case original coder wants to fix - K. Nguyen
   // async function fetchCourses() {
   //   loading = true;
   //   try {
@@ -75,10 +97,18 @@
   });
   async function fetchAllCourses() {
     try{
-      const res = await fetch('/api/courses_list');
-      const data = await res.json();
-      console.log("Getting all courses...", data);
-      allCourses = data;
+      const res = await fetch('/api/test_courses');
+      const courseData = await res.json();
+      allCourses = Object.entries(courseData).map(([code, data]: [string, any]) => ({
+        code,
+        title: data.title,
+        description: data.description,
+        keywords: data.keywords,
+        videos: data.videos
+      }));      
+      
+      console.log("Getting all courses...", allCourses);
+
     } catch (e) {
       error = e instanceof Error ? e.message : 'An error occurred';
       loading = false;
@@ -100,25 +130,9 @@
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      
       courses = await response.json();
-      console.log("User Courses ", courses);
-      userCourseList = courses;
-      for(let i = 0; i<userCourseList.length;i++){
-        const findAvailCourse = allCourses.find(course => course === userCourseList[i]);
-        if(findAvailCourse){
-          console.log("Class is within domain of user-courses (MongoDB) ", findAvailCourse);
-          const videoRes = await fetch(`/api/videos/${findAvailCourse}`,{
-            method: 'GET',
-            credentials: 'include',
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          });
-          let videos = await videoRes.json();
-          console.log("Videos for ", findAvailCourse, " - ", videos);
-        }
-      }
+      let filteredUserCourses = allCourses.filter(course => courses.includes(course.code));
+      userCourseList = filteredUserCourses;
     } catch (e) {
       console.error('Error fetching courses:', e);
     }
@@ -146,7 +160,8 @@
       if (response.ok) {
         message = result.message;
         // removes from local array immediately
-        courses = courses.filter(course => course !== courseCode);
+        // courses = courses.filter(course => course !== courseCode);
+        await getUserCourses();
       } else {
         message = result.error; 
       }
@@ -157,8 +172,31 @@
     }
   }
 
+  function showCourseDetails(course: Course) {
+    courseInViewer = course;
+    selectedVideo = null;
+    showCourseViewer = true;
+  }
+
+  function closeCourseViewer() {
+    courseInViewer = null;
+    selectedVideo = null;
+    showCourseViewer = false;
+  }
+
+  function playVideo(video: Video) {
+    selectedVideo = video;
+  }
+
+  function handleKeydown(event: KeyboardEvent, callback: () => void) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      callback();
+    }
+  }
+
   //filtering courses based on favorites, so my courses page only shows favorited courses
-  $: favoritedCourses = courses.filter(course => favoriteCourses.has(course.code));
+  // $: favoritedCourses = courses.filter(course => favoriteCourses.has(course.code));
 
   //trigger the sidepanel for the account info
   function toggleSidepanel() {
@@ -188,10 +226,18 @@
       {#each userCourseList as course, i}
         <!--card showing info for one course-->
         <div class="my-courses-card color-{(i % 3) + 1}">
+          <button 
+            class="course-btn"
+            on:click={() => showCourseDetails(course)}
+            >
+          {#if course.videos && course.videos.length > 0}
+            <img class="landing-thumb" src={`https://i.ytimg.com/vi/${course.videos[0].id}/hqdefault.jpg`} alt={course.videos[0].title} />
+          {/if}
           <h3 class="course-code">{course.code ? course.code : course}</h3>
           {#if course.title}
             <p class="course-title">{course.title}</p>
           {/if}
+          </button>
           <button class="remove-course-btn" on:click={() => removeCourse(course.code ? course.code : course)}>
             Remove Course
           </button>
@@ -213,7 +259,7 @@
     {:else if error}
       <!--problem getting the courses-->
       <div class="error">Error: {error}</div>
-    {:else if favoritedCourses.length === 0}
+    <!-- {:else if favoritedCourses.length === 0} -->
       <!--hasnt favorited any courses yet-->
       <div class="no-courses">You have not favorited any courses yet.</div>
     {:else}
@@ -261,95 +307,79 @@
     {/await}
   </div>
 </main>
-</div>
 
-  <!-- <section class="grid">
-    {#each courses as course}
+  <!--popup that shows when you click a course - only visible if a course is selected -->
+  {#if showCourseViewer && courseInViewer}
+    <!--role="button" and tabindex="0" make this div keyboard-focusable -->
     <div 
-      class = "cell {course.color}"
-      on:click={() => searchForCourse(course)}>
-      <h3>{course.code}</h3>
-      <p>{course.name}</p>
-    </div>
-    {/each}
-    <div class="cell color-1">
-      <h3>ECS 162</h3>
-      <p>Web Programming</p>
-    </div>
-    <div class="cell color-2">
-      <h3>ECS 150</h3>
-      <p>Operating Systems</p>
-    </div>
-    <div class="cell color-3">
-      <h3>MAT 108</h3>
-      <p>Intro to Abstract Math</p>
-    </div>
-    <div class="cell color-1">
-      <h3>PHY 9A</h3>
-      <p>Classical Physics</p>
-    </div>
-    <div class="cell color-2">
-      <h3>CHE 2A</h3>
-      <p>General Chemistry</p>
-    </div>
-    <div class="cell color-3">
-      <h3>BIS 2A</h3>
-      <p>Intro Biology</p>
-    </div>
-    <div class="cell color-1">
-      <h3>ECN 1A</h3>
-      <p>Microeconomics</p>
-    </div>
-    <div class="cell color-2">
-      <h3>PSC 1</h3>
-      <p>General Psychology</p>
-    </div>
-    <div class="cell color-3">
-      <h3>MUS 10</h3>
-      <p>Music Theory</p>
-    </div>
-  </section>
-</main>
-</div>
+      class="course-viewer" 
+      on:click={closeCourseViewer}
+      role="button"
+      tabindex="0"
+      on:keydown={(e) => handleKeydown(e, closeCourseViewer)}
+      aria-label="Close course details"
+    >
+      <!--stopPropagation here prevents clicks inside from closing the popup -->
+      <div class="course-viewer-content" on:click|stopPropagation
+      role="button"
+      tabindex="0"
+      on:keydown={(e) => handleKeydown(e, closeCourseViewer)}
+      aria-label="Close course details"
+      >
+        <!--x button in top right to close popup -->
+        <button class="close-viewer-btn" on:click={closeCourseViewer}>×</button>
 
-{#if showModal && selectedCourse}
-  <div class="modal-overlay" on:click={closeModal}>
-    <div class="modal-content" on:click|stopPropagation>
-      <div class="modal-header">
-        <h2>{selectedCourse.code}: {selectedCourse.name}</h2>
-        <button class="close-button" on:click={closeModal}>&times;</button>
-      </div>
-      <div class="modal-body">
-        {#if selectedCourse.data && Array.isArray(selectedCourse.data)}
-          <div class="vid-grid">
-            {#each selectedCourse.data as video}
-              <div class="vid-card">
-                <div class="vid-thumbnail">
-                  <img src={video.thumbnail} alt={video.title} />
-                  <div class="play-overlay">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="vid-info">
-                  <h3 class="vid-title">{@html video.title}</h3>
-                  <p class="vid-channel">{video.channel}</p>
-                  <p class="vid-date">{new Date(video.publish_time).toLocaleDateString()}</p>
-                  <a href={video.video_url} target="_blank" class="watch-button">
-                    Watch Video
-                  </a>
-                </div>
+        <div class="viewer-header-card">
+          <div class="viewer-code">{courseInViewer.code}</div>
+          <div class="viewer-title">{courseInViewer.title}</div>
+          <div class="viewer-description">{courseInViewer.description}</div>
+        </div>
+        
+        <!--section for youtube videos related to the course -->
+        <div class="videos-section">
+          <!--shows the currently playing video if one is selected -->
+          <!--iframe embeds youtube video player; allow="" lists permitted features -->
+          {#if selectedVideo}
+            <div class="video-player">
+              <iframe
+                width="100%"
+                height="400"
+                src={`https://www.youtube.com/embed/${selectedVideo.id}`}
+                title={selectedVideo.title}
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="video-info">
+                <h5>{selectedVideo.title}</h5>
+                <p class="channel">{selectedVideo.channel}</p>
               </div>
+            </div>
+          {/if}
+
+          <!--grid of video thumbnails;clicking one makes it play above -->
+          <h4>Related Videos</h4>
+          <div class="videos-grid">
+            {#each courseInViewer.videos as video}
+              <button 
+                class="video-card"
+                on:click={() => playVideo(video)}
+              >
+                <!--gets video thumbnail from youtube using video ID -->
+                <img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} />
+                <div class="video-info">
+                  <h5>{video.title}</h5>
+                  <p class="channel">{video.channel}</p>
+                </div>
+              </button>
             {/each}
           </div>
-        {:else}
-          <p>Loading course details...</p>
-        {/if}
+        </div>
       </div>
     </div>
-  </div>
-{/if} -->
+    {/if}
+</div>
+
 
 <!-- All styling is now handled by app.scss -->
  
