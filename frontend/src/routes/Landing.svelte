@@ -1,50 +1,84 @@
 <script lang="ts">
   // Landing page logic will go here
-  
-  
-  let search = '';
-  // manually added courses for display/testing purposes
-  let courses = [
-    {
-      name: 'ANT 122B: Anthropology of Capitalism',
-      image: '', // Placeholder for now
-      duration: '11h 20m',
-      created: '2 months ago',
-      tags: ['ANT', 'Upper Division'],
-      saves: 23
-    },
-    {
-      name: 'DES 001: Intro to Design',
-      image: '',
-      duration: '70h 45m',
-      created: '2 months ago',
-      tags: ['Design', 'Prerequisites'],
-      saves: 12
-    },
-    {
-      name: 'ECS 132: Statistical Modeling',
-      image: '',
-      duration: '18h 20m',
-      created: '2 months ago',
-      tags: ['Data Science', 'Computer Science'],
-      saves: 12
-    },
-    {
-      name: 'COM 001: Public Speaking',
-      image: '',
-      duration: '11h 20m',
-      created: '2 months ago',
-      tags: ['Communication', 'General Education'],
-      saves: 3
+  import { onMount } from 'svelte';
+
+  //replicates the SearchCourses.svelte interface
+  interface Video {
+    title: string;
+    id: string;
+    channel: string;
+    thumbnail: string;
+    video_url: string;
+  }
+
+  interface Course {
+    code: string;
+    title: string;
+    description: string;
+    keywords: string[];
+    videos: Video[];
+  }
+
+  let courses: Course[] = [];
+  let loading = true;
+  let error: string | null = null;
+  let selectedCourse: Course | null = null;
+  let showViewer: boolean = false;
+  let selectedVideo: Video | null = null;
+
+  //fetch 3 courses with video data for landing page to highlight the landing page
+  async function fetchLandingCourses() {
+    try {
+      const response = await fetch('/api/test_courses');
+      if (!response.ok) throw new Error('Failed to fetch courses');
+      const courseData = await response.json();
+      //first three courses for display
+      courses = Object.entries(courseData).slice(0, 3).map(([code, data]: [string, any]) => ({
+        code,
+        title: data.title,
+        description: data.description,
+        keywords: data.keywords,
+        videos: data.videos
+      }));
+      loading = false;
+    } catch (e) {
+      error = e instanceof Error ? e.message : 'An error occurred';
+      loading = false;
     }
-  ];
-  $: filteredCourses = courses.filter(course => course.name.toLowerCase().includes(search.toLowerCase()));
+  }
+
+  onMount(() => {
+    fetchLandingCourses();
+  });
+
+  //opens the course viewer modal when a course card is clicked
+  //sets the selected course, clears any previously selected video, and shows the viewer overlay
+  function openViewer(course: Course) {
+    selectedCourse = course;
+    selectedVideo = null; 
+    showViewer = true;
+  }
+
+  //closes the course viewer modal
+  //clears the selected course and video, and hides the viewer overlay
+  function closeViewer() {
+    selectedCourse = null;
+    selectedVideo = null;
+    showViewer = false;
+  }
+
+  //sets the currently selected video to play in the video player
+  //called when clicking a video thumbnail in the course viewer
+  function playVideo(video: Video) {
+    selectedVideo = video;
+  }
 </script>
 
+<div class="landing-page">
 <main>
   <header>
     <h1>Courses.MP4</h1>
-    <h2>Discover curated Youtube playlists for courses offered at University of California, Davis.</h2>
+    <h2>Discover curated Youtube videos for courses offered at University of California, Davis.</h2>
   </header>
   <!-- 
   <section class="grid">
@@ -60,7 +94,7 @@
       <h3>About</h3>
       <p>Learn more about Courses.MP4 and our mission</p>
     </div> -->
-  <section class="search-bar">
+  <!-- <section class="search-bar">
     <div class="search-input">
       <input
         type="text"
@@ -69,29 +103,92 @@
       />
       <button>Search</button>
     </div>
-  </section>
-  <section class="course-list">
-    {#each filteredCourses as course}
-      <div class="course-card">
-        <div class="course-image">
-          {#if course.image} <!--for when we have images to add-->
-            <img src={course.image} alt="Course image" />
-          {:else} <!--placeholder for when we don't have images to add-->
-            <div class="image-placeholder"></div>
+  </section> -->
+
+
+  <!--below code similar to search courses/course catalog page code-->
+  <section class="course-list landing-grid">
+    {#if loading}
+      <div>Loading...</div>
+    {:else if error}
+      <div class="error">{error}</div>
+    {:else}
+      {#each courses as course}
+        <div class="landing-card" on:click={() => openViewer(course)} tabindex="0" role="button">
+          {#if course.videos && course.videos.length > 0}
+            <img class="landing-thumb" src={`https://i.ytimg.com/vi/${course.videos[0].id}/hqdefault.jpg`} alt={course.videos[0].title} />
           {/if}
+          <div class="landing-keywords">
+            {#each course.keywords.slice(0, 2) as keyword}
+              <span class="landing-keyword-tag">{keyword}</span>
+            {/each}
+          </div>
+          <div class="landing-title-row">
+            <span class="landing-code landing-code-black">{course.code}</span>
+          </div>
+          <div class="landing-title">{course.title}</div>
         </div>
-        <div class="course-tags"> 
-          {#each course.tags as tag} <!--tags extracted from the manually added courses-->
-            <span class="tag">{tag}</span> 
-          {/each}
+      {/each}
+    {/if}
+  </section>
+
+  {#if showViewer && selectedCourse}
+    <div 
+      class="course-viewer" 
+      on:click={closeViewer}
+      role="button"
+      tabindex="0"
+      aria-label="Close course details"
+    >
+      <div class="course-viewer-content" on:click|stopPropagation
+        role="button"
+        tabindex="0"
+        aria-label="Close course details"
+      >
+        <button class="close-viewer-btn" on:click={closeViewer}>×</button>
+        <div class="viewer-header-card">
+          <div class="viewer-code">{selectedCourse.code}</div>
+          <div class="viewer-title">{selectedCourse.title}</div>
+          <div class="viewer-description">{selectedCourse.description}</div>
         </div>
-        <div class="course-title">{course.name}</div>
-        <div class="course-data"> <!--duration, created, and saves for now, can add more data later-->
-          {course.duration} · {course.created} · <span class="star">⭐ {course.saves}</span>
+        <div class="videos-section">
+          {#if selectedVideo}
+            <div class="video-player">
+              <iframe
+                width="100%"
+                height="400"
+                src={`https://www.youtube.com/embed/${selectedVideo.id}`}
+                title={selectedVideo.title}
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="video-info">
+                <h5>{selectedVideo.title}</h5>
+                <p class="channel">{selectedVideo.channel}</p>
+              </div>
+            </div>
+          {/if}
+          <h4>Related Videos</h4>
+          <div class="videos-grid">
+            {#each selectedCourse.videos as video}
+              <button 
+                class="video-card"
+                on:click={() => playVideo(video)}
+              >
+                <img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} />
+                <div class="video-info">
+                  <h5>{video.title}</h5>
+                  <p class="channel">{video.channel}</p>
+                </div>
+              </button>
+            {/each}
+          </div>
         </div>
       </div>
-    {/each}
-  </section>
+    </div>
+  {/if}
 </main>
+</div>
 
 <!-- All styling is handled by app.scss -->

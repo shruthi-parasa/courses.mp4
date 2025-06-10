@@ -16,7 +16,6 @@
     keywords: string[];
     videos: Video[];
   }
-
   let courses: Course[] = [];
   let loading = true;
   let error: string | null = null;
@@ -147,6 +146,7 @@
     <!--page title at the top -->
     <header>
       <h1>Course Catalog</h1>
+      <h2>Search for Computer Science Courses at UC Davis.</h2>
     </header>
 
     <!--search box that filters courses as you type using the bind:value -->
@@ -170,11 +170,10 @@
       <section class="grid">
         {#each filteredCourses as course, i}
           <div class="cell">
-            <button on:click={() => addCourse(course)}>Click To Add To User Courses</button>
             <!--heart button that saves/removes course from favorites in localStorage -->
             <!--stopPropagation prevents the click from triggering the parent card's click -->
             <!-- aria-label helps screen readers tell users what this button does -->
-            <div 
+            <!-- <div 
               class="favorite-btn" 
               class:favorited={favoriteCourses.has(course.code)}
               on:click|stopPropagation={() => triggerFavs(course.code)}
@@ -184,16 +183,21 @@
               aria-label="Favorite course"
             >
               {favoriteCourses.has(course.code) ? '❤️' : '🤍'}
-            </div>
+            </div> -->
 
             <!--clickable card; view of the course -->
             <button 
               class="course-btn"
               on:click={() => showCourseDetails(course)}
             >
-              <h3 class="course-code">{course.code}</h3>
-              <p>{course.title}</p>
+            <!--thumbnail image on course card like in landing page-->
+            {#if course.videos && course.videos.length > 0}
+              <img class="landing-thumb" src={`https://i.ytimg.com/vi/${course.videos[0].id}/hqdefault.jpg`} alt={course.videos[0].title} />
+            {/if}
+            <h3 class="course-code">{course.code}</h3>
+            <p>{course.title}</p>
             </button>
+            <button class="add-course-btn" on:click={() => addCourse(course)}>Add to Your Courses</button>
           </div>
         {/each}
       </section>
@@ -221,9 +225,11 @@
         <!--x button in top right to close popup -->
         <button class="close-viewer-btn" on:click={closeCourseViewer}>×</button>
 
-        <h2>{courseInViewer.code}</h2>
-        <h3>{courseInViewer.title}</h3>
-        <p class="description">{courseInViewer.description}</p>
+        <div class="viewer-header-card">
+          <div class="viewer-code">{courseInViewer.code}</div>
+          <div class="viewer-title">{courseInViewer.title}</div>
+          <div class="viewer-description">{courseInViewer.description}</div>
+        </div>
         
         <!--section for youtube videos related to the course -->
         <div class="videos-section">

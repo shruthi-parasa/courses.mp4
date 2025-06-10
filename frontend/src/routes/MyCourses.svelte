@@ -86,7 +86,7 @@
   }
 
   //Does all information fetching for the user's courses and videos
-  //STILL NEED TO DO FRONTEND DESIGN FOR THIS!!
+  //STILL NEED TO DO FRONTEND DESIGN FOR THIS!! -> DONE check app.scss for styling
     async function getUserCourses() {
     try {
       const response = await fetch('/api/user/courses', {
@@ -166,37 +166,55 @@
   }
 </script>
 
+<!--holds everything for the my courses page-->
 <div class="my-courses-page">
 <main>
+  <!--page title at top-->
   <header>
     <h1>My Courses</h1>
   </header>
+
+  <!--open account settings-->
   <div class="account-btn-row">
     <button class="account-btn" on:click={toggleSidepanel}>
       Account
     </button>
   </div>
+
+  <!--all the main content-->
   <div class="content-wrapper">
-    <section>
+    <!--courses the user has added in a grid-->
+    <section class="my-courses-grid">
       {#each userCourseList as course, i}
-        <div class="cell color {(i % 3) + 1}">
-          <button on:click={() => removeCourse(course)}>Click To Remove From Your View</button>
-          <h3>{course}</h3>
+        <!--card showing info for one course-->
+        <div class="my-courses-card color-{(i % 3) + 1}">
+          <h3 class="course-code">{course.code ? course.code : course}</h3>
+          {#if course.title}
+            <p class="course-title">{course.title}</p>
+          {/if}
+          <button class="remove-course-btn" on:click={() => removeCourse(course.code ? course.code : course)}>
+            Remove Course
+          </button>
         </div>
-        {/each}
+      {/each}
     </section>
+
+    <!--is user logged in? and shows different things based on that-->
     {#await getUser()}
     <p>Loading...</p>
     {:then username}
     {#if typeof username !== "undefined"}
     {:else if username == null}
+      <!--tells user they need to login to see their courses-->
       <div class="login-prompt left-align">Please log in to view your courses.</div>
     {:else if loading}
+      <!--courses are being loaded-->
       <div class="loading">Loading your courses...</div>
     {:else if error}
+      <!--problem getting the courses-->
       <div class="error">Error: {error}</div>
     {:else if favoritedCourses.length === 0}
-      <!--no courses msg-->
+      <!--hasnt favorited any courses yet-->
       <div class="no-courses">You have not favorited any courses yet.</div>
     {:else}
       <!-- <section class="grid">
@@ -208,14 +226,20 @@
         {/each}
       </section> -->
     {/if}
+
+    <!--panel that slides in from side for account stuff-->
     {#if showSidepanel}
       <aside class="sidepanel">
+        <!--top part of sidepanel with title and close button-->
         <div class="sidepanel-header">
           <h2>Account</h2>
           <button class="close-btn" on:click={toggleSidepanel}>×</button>
         </div>
+
+        <!--main part of sidepanel with account options-->
         <div class="sidepanel-content">
           {#if username != null}
+            <!--logout button when user is logged in-->
             <div class="account-info">
               <h3>Hello</h3>       
               <button class="logout-btn" on:click={handleLogout}>
@@ -223,6 +247,7 @@
               </button>
             </div>
           {:else}
+            <!--login button when user is not logged in-->
             <div class="login-section">
               <button class="login-btn" on:click={handleLogin}>
                 Login
@@ -327,3 +352,4 @@
 {/if} -->
 
 <!-- All styling is now handled by app.scss -->
+ 
