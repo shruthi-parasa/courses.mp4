@@ -1,6 +1,7 @@
 <script lang="ts">
   // My Courses page logic will go here
   import {getUser} from '../get_user';
+  import { onMount } from 'svelte';
   let showSidepanel = false;
   // let isLoggedIn = false; // TODO: need to change this after implementing dex
   let courses: { code: string; title: string; description: string }[] = [];
@@ -10,6 +11,8 @@
   let allCourses: any[] = [];
   
   let userCourseList: any[] = [];
+
+  let userVotes: any[] = [];
 
   interface Video {
     title: string;
@@ -31,13 +34,23 @@
   let courseInViewer: Course | null = null;
   let selectedVideo: Video | null = null;
 
+  onMount(async () => {
+    loadFavorites();
+    let username = await getUser();
+    if (username != null){
+      await getUserCourses();
+      console.log("User Retrieved");
+      await fetchCourseInfo();
+      await getUserVotes();
+    } 
+  });
   //login and logout functions manual for now, will change after implementing dex
   function handleLogin() {
     window.location.href = '/login';
     //isLoggedIn = true;
     //load favorites from local storage and fetch courses
-    loadFavorites();
-    fetchAllCourses();
+    // loadFavorites();
+    // fetchAllCourses();
   }
 
   function handleLogout() {
@@ -55,36 +68,84 @@
     }
   }
 
-  import { onMount } from 'svelte';
-  onMount(() => {
-    loadFavorites();
-    fetchAllCourses();
-    let username = getUser();
-    if (username != null){
-      getUserCourses();
-    } 
-  });
-  
-  async function fetchAllCourses() {
-    try{
-      const res = await fetch('/api/test_courses');
-      const courseData = await res.json();
-      allCourses = Object.entries(courseData).map(([code, data]: [string, any]) => ({
-        code,
-        title: data.title,
-        description: data.description,
-        keywords: data.keywords,
-        videos: data.videos
-      }));      
+  //Fetch function does not work - Commented out in case original coder wants to fix - K. Nguyen
+  // async function fetchCourses() {
+  //   loading = true;
+  //   try {
+  //     //fetch the course codes from the backend
+  //     const response = await fetch('/api/courses_list');
+  //     if (!response.ok) throw new Error('Failed to fetch courses');
+  //     const courseCodes = await response.json();
       
-      console.log("Getting all courses...", allCourses);
+  //     //fetch the details for each course
+  //     const courseDetails = await Promise.all(
+  //       courseCodes.map(async (code: string) => {
+  //         const detailResponse = await fetch(`/api/courses/${code}`);
+  //         if (!detailResponse.ok) throw new Error(`Failed to fetch details for ${code}`);
+  //         const details = await detailResponse.json();
+  //         return {
+  //           code,
+  //           title: details.title,
+  //           description: details.description
+  //         };
+  //       })
+  //     );
+      
+  //     courses = courseDetails;
+  //     loading = false;
+  //   } catch (e) {
+  //     error = e instanceof Error ? e.message : 'An error occurred';
+  //     loading = false;
+  //   }
+  // }
 
-    } catch (e) {
-      error = e instanceof Error ? e.message : 'An error occurred';
-      loading = false;
-    }
+  async function fetchCourseInfo() {
+  try {
+    // Get Title, Description, and Keywords from test_courses
+    const res = await fetch('/api/test_courses');
+    const courseData = await res.json();      
+   
+    let initialFetchCourses = Object.entries(courseData).map(([code, data]: [string, any]) => ({
+      code,
+      title: data.title,
+      description: data.description,
+      keywords: data.keywords
+    }));
+    
+    let filteredCourses = initialFetchCourses.filter(course => userCourseList.includes(course.code));
+    console.log("Filtered courses:", filteredCourses);
+    
+    allCourses = await Promise.all(
+      filteredCourses.map(async (course) => ({
+        code: course.code,
+        title: course.title,
+        description: course.description,
+        keywords: course.keywords,
+        videos: await getVideos(course.code)
+      }))
+    );
+    
+    // Update userCourseList with the complete course objects
+    userCourseList = allCourses;
+    
+    console.log("Final courses with videos:", allCourses);
+   
+  } catch (e) {
+    error = e instanceof Error ? e.message : 'An error occurred';
+    loading = false;
   }
+}
 
+async function getVideos(courseCode: any) {
+  try {
+    const videoRes = await fetch(`/api/videos/${courseCode}`);
+    const videoData = await videoRes.json();
+    return videoData;
+  } catch(e) {
+    console.log("Error occurred ", e);
+    return []; 
+  }
+}
   //Does all information fetching for the user's courses and videos
   async function getUserCourses() {
     try {
@@ -100,8 +161,8 @@
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       courses = await response.json();
-      let filteredUserCourses = allCourses.filter(course => courses.includes(course.code));
-      userCourseList = filteredUserCourses;
+      console.log("User courses - ", courses);
+      userCourseList = courses;
       loading = false;
     } catch (e) {
       console.error('Error fetching courses:', e);
@@ -169,6 +230,101 @@
   function toggleSidepanel() {
     showSidepanel = !showSidepanel;
   }
+
+  //------------VOTING SYSTEM----------------------
+  async function getUserVotes(){
+    try{
+      const res = await fetch ('/api/user_votes');
+      const voteData = await res.json();
+      console.log("User votes: ", voteData);
+      userVotes = voteData;
+    } catch(e){
+      console.log("Error Occurred - ", e);
+    }
+  }
+  async function upVote(course: any, video: any) {
+  let courseCode = course.code;
+  let videoId = video.id;
+  
+  try {
+    const response = await fetch(`/api/vote/${courseCode}/${videoId}/upvote`, {
+      method: 'PUT',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    
+    const result = await response.json();
+
+    if (response.ok) {
+      console.log("Upvote successful:", result.message);
+      
+      await refreshCourseData(courseCode);
+      
+      alert(result.message);
+    } else {
+      console.error("Upvote failed:", result.error);
+      alert(result.error || "Failed to upvote video");
+    }
+  } catch (e) {
+    console.log("Error Occurred - ", e);
+  }
+}
+
+async function downVote(course: any, video: any) {
+  let courseCode = course.code;
+  let videoId = video.id;
+  
+  try {
+    const response = await fetch(`/api/vote/${courseCode}/${videoId}/downvote`, {
+      method: 'PUT',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    
+    const result = await response.json();
+
+    if (response.ok) {
+      console.log("Down vote successful:", result.message);
+      
+      await refreshCourseData(courseCode);
+      
+      alert(result.message);
+    } else {
+      console.error("Downvote failed:", result.error);
+      alert(result.error || "Failed to downvote video");
+    }
+  } catch (e) {
+    console.log("Error Occurred - ", e);
+  }
+}
+
+// refresh data for a course - used primarily for voting
+async function refreshCourseData(courseCode: string) {
+  try {
+    // Get fresh video data for the course
+    const freshVideos = await getVideos(courseCode);
+    
+    // Update userCourseList
+    userCourseList = userCourseList.map(course => {
+      if (course.code === courseCode) {
+        return { ...course, videos: freshVideos };
+      }
+      return course;
+    });
+    
+    // Update courseInViewer if it is the same course
+    if (courseInViewer && courseInViewer.code === courseCode) {
+      courseInViewer = { ...courseInViewer, videos: freshVideos };
+    }
+  } catch (error) {
+    console.error('Error refreshing course data:', error);
+  }
+}
+
 </script>
 
 <!--main container that holds everything -->
@@ -257,7 +413,9 @@
             {#if username != null}
               <!--logout button when user is logged in-->
               <div class="account-info">
-                <h3>Hello</h3>       
+                <h3>
+                  Welcome Back {username}!
+                </h3>       
                 <button class="logout-btn" on:click={handleLogout}>
                   Logout
                 </button>
@@ -330,17 +488,33 @@
           <h4>Related Videos</h4>
           <div class="videos-grid">
             {#each courseInViewer.videos as video}
-              <button 
-                class="video-card"
-                on:click={() => playVideo(video)}
-              >
-                <!--gets video thumbnail from youtube using video ID -->
-                <img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} />
-                <div class="video-info">
-                  <h5>{video.title}</h5>
-                  <p class="channel">{video.channel}</p>
-                </div>
-              </button>
+              <div class="video-card-container">
+                <button 
+                  class="video-card"
+                  on:click={() => playVideo(video)}
+                >
+                  <img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} />
+                  <div class="video-info">
+                    <h5>{video.title}</h5>
+                    <p class="channel">{video.channel}</p>
+                  </div>
+                </button>
+                <!-- Add upvote button for each video in the grid -->
+                <button 
+                  class="upvote-btn-small" 
+                  on:click|stopPropagation={() => upVote(courseInViewer, video)}
+                >
+                  👍
+                </button>
+                <button 
+                  class="downvote-btn-small" 
+                  on:click|stopPropagation={() => downVote(courseInViewer, video)}
+                >
+                  👎
+                </button>
+                <div>upVote: {video.up_vote}</div>
+                <div>Downvotes: {video.down_vote}</div>
+              </div>
             {/each}
           </div>
         </div>
