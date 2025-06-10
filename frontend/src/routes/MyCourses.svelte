@@ -31,7 +31,6 @@
   let courseInViewer: Course | null = null;
   let selectedVideo: Video | null = null;
 
-
   //login and logout functions manual for now, will change after implementing dex
   function handleLogin() {
     window.location.href = '/login';
@@ -56,36 +55,6 @@
     }
   }
 
-  //Fetch function does not work - Commented out in case original coder wants to fix - K. Nguyen
-  // async function fetchCourses() {
-  //   loading = true;
-  //   try {
-  //     //fetch the course codes from the backend
-  //     const response = await fetch('/api/courses_list');
-  //     if (!response.ok) throw new Error('Failed to fetch courses');
-  //     const courseCodes = await response.json();
-      
-  //     //fetch the details for each course
-  //     const courseDetails = await Promise.all(
-  //       courseCodes.map(async (code: string) => {
-  //         const detailResponse = await fetch(`/api/courses/${code}`);
-  //         if (!detailResponse.ok) throw new Error(`Failed to fetch details for ${code}`);
-  //         const details = await detailResponse.json();
-  //         return {
-  //           code,
-  //           title: details.title,
-  //           description: details.description
-  //         };
-  //       })
-  //     );
-      
-  //     courses = courseDetails;
-  //     loading = false;
-  //   } catch (e) {
-  //     error = e instanceof Error ? e.message : 'An error occurred';
-  //     loading = false;
-  //   }
-  // }
   import { onMount } from 'svelte';
   onMount(() => {
     loadFavorites();
@@ -95,6 +64,7 @@
       getUserCourses();
     } 
   });
+  
   async function fetchAllCourses() {
     try{
       const res = await fetch('/api/test_courses');
@@ -116,8 +86,7 @@
   }
 
   //Does all information fetching for the user's courses and videos
-  //STILL NEED TO DO FRONTEND DESIGN FOR THIS!! -> DONE check app.scss for styling
-    async function getUserCourses() {
+  async function getUserCourses() {
     try {
       const response = await fetch('/api/user/courses', {
         method: 'GET',
@@ -133,11 +102,12 @@
       courses = await response.json();
       let filteredUserCourses = allCourses.filter(course => courses.includes(course.code));
       userCourseList = filteredUserCourses;
+      loading = false;
     } catch (e) {
       console.error('Error fetching courses:', e);
+      loading = false;
     }
   }
-
 
   async function removeCourse(courseCode: any) {
     loading = true;
@@ -195,118 +165,117 @@
     }
   }
 
-  //filtering courses based on favorites, so my courses page only shows favorited courses
-  // $: favoritedCourses = courses.filter(course => favoriteCourses.has(course.code));
-
   //trigger the sidepanel for the account info
   function toggleSidepanel() {
     showSidepanel = !showSidepanel;
   }
 </script>
 
-<!--holds everything for the my courses page-->
+<!--main container that holds everything -->
 <div class="my-courses-page">
-<main>
-  <!--page title at top-->
-  <header>
-    <h1>My Courses</h1>
-  </header>
+  <main>
+    <!--page title at the top -->
+    <header>
+      <h1>My Courses</h1>
+      <h2>Your enrolled Computer Science courses at UC Davis.</h2>
+    </header>
 
-  <!--open account settings-->
-  <div class="account-btn-row">
-    <button class="account-btn" on:click={toggleSidepanel}>
-      Account
-    </button>
-  </div>
+    <!--open account settings-->
+    <div class="account-btn-row">
+      <button class="account-btn" on:click={toggleSidepanel}>
+        Account
+      </button>
+    </div>
 
-  <!--all the main content-->
-  <div class="content-wrapper">
-    <!--courses the user has added in a grid-->
-    <section class="my-courses-grid">
-      {#each userCourseList as course, i}
-        <!--card showing info for one course-->
-        <div class="my-courses-card color-{(i % 3) + 1}">
-          <button 
-            class="course-btn"
-            on:click={() => showCourseDetails(course)}
-            >
-          {#if course.videos && course.videos.length > 0}
-            <img class="landing-thumb" src={`https://i.ytimg.com/vi/${course.videos[0].id}/hqdefault.jpg`} alt={course.videos[0].title} />
-          {/if}
-          <h3 class="course-code">{course.code ? course.code : course}</h3>
-          {#if course.title}
-            <p class="course-title">{course.title}</p>
-          {/if}
-          </button>
-          <button class="remove-course-btn" on:click={() => removeCourse(course.code ? course.code : course)}>
-            Remove Course
-          </button>
-        </div>
-      {/each}
-    </section>
-
-    <!--is user logged in? and shows different things based on that-->
+    <!--loading while fetching courses, or error if something went wrong -->
     {#await getUser()}
-    <p>Loading...</p>
+      <div class="loading">Loading...</div>
     {:then username}
-    {#if typeof username !== "undefined"}
-    {:else if username == null}
-      <!--tells user they need to login to see their courses-->
-      <div class="login-prompt left-align">Please log in to view your courses.</div>
-    {:else if loading}
-      <!--courses are being loaded-->
-      <div class="loading">Loading your courses...</div>
-    {:else if error}
-      <!--problem getting the courses-->
-      <div class="error">Error: {error}</div>
-    <!-- {:else if favoritedCourses.length === 0} -->
-      <!--hasnt favorited any courses yet-->
-      <div class="no-courses">You have not favorited any courses yet.</div>
-    {:else}
-      <!-- <section class="grid">
-        {#each favoritedCourses as course, i}
-          <div class="cell color-{(i % 3) + 1}">
-            <h3>{course.code}</h3>
-            <p>{course.title}</p>
+      {#if typeof username !== "undefined"}
+        {#if loading}
+          <!--courses are being loaded-->
+          <div class="loading">Loading your courses...</div>
+        {:else if error}
+          <!--problem getting the courses-->
+          <div class="error">Error: {error}</div>
+        {:else if userCourseList.length === 0}
+          <!--hasn't added any courses yet-->
+          <div class="no-courses">You have not added any courses yet.</div>
+        {:else}
+          <!--grid layout of course cards from user's course list -->
+          <section class="grid">
+            {#each userCourseList as course, i}
+              <div class="cell">
+                <!--clickable card; view of the course -->
+                <button 
+                  class="course-btn"
+                  on:click={() => showCourseDetails(course)}
+                >
+                  <!--thumbnail image on course card-->
+                  {#if course.videos && course.videos.length > 0}
+                    <img class="landing-thumb" src={`https://i.ytimg.com/vi/${course.videos[0].id}/hqdefault.jpg`} alt={course.videos[0].title} />
+                  {/if}
+                  
+                  <!--keywords section-->
+                  <div class="landing-keywords">
+                    {#each course.keywords?.slice(0, 1) as keyword}
+                      <span class="landing-keyword-tag">{keyword}</span>
+                    {/each}
+                  </div>
+                  
+                  <!--course code and title-->
+                  <div class="landing-title-row">
+                    <span class="landing-code landing-code-black">{course.code}</span>
+                  </div>
+                  <div class="landing-title">{course.title}</div>
+                </button>
+                
+                <!--remove course button-->
+                <button class="remove-course-btn" on:click={() => removeCourse(course.code ? course.code : course)}>
+                  Remove Course
+                </button>
+              </div>
+            {/each}
+          </section>
+        {/if}
+      {:else if username == null}
+        <!--tells user they need to login to see their courses-->
+        <div class="login-prompt">Please log in to view your courses.</div>
+      {/if}
+
+      <!--panel that slides in from side for account stuff-->
+      {#if showSidepanel}
+        <aside class="sidepanel">
+          <!--top part of sidepanel with title and close button-->
+          <div class="sidepanel-header">
+            <h2>Account</h2>
+            <button class="close-btn" on:click={toggleSidepanel}>×</button>
           </div>
-        {/each}
-      </section> -->
-    {/if}
 
-    <!--panel that slides in from side for account stuff-->
-    {#if showSidepanel}
-      <aside class="sidepanel">
-        <!--top part of sidepanel with title and close button-->
-        <div class="sidepanel-header">
-          <h2>Account</h2>
-          <button class="close-btn" on:click={toggleSidepanel}>×</button>
-        </div>
-
-        <!--main part of sidepanel with account options-->
-        <div class="sidepanel-content">
-          {#if username != null}
-            <!--logout button when user is logged in-->
-            <div class="account-info">
-              <h3>Hello</h3>       
-              <button class="logout-btn" on:click={handleLogout}>
-                Logout
-              </button>
-            </div>
-          {:else}
-            <!--login button when user is not logged in-->
-            <div class="login-section">
-              <button class="login-btn" on:click={handleLogin}>
-                Login
-              </button>
-              <p class="login-note">Sign in to access your courses and progress!</p>
-            </div>
-          {/if}
-        </div>
-      </aside>
-    {/if}
+          <!--main part of sidepanel with account options-->
+          <div class="sidepanel-content">
+            {#if username != null}
+              <!--logout button when user is logged in-->
+              <div class="account-info">
+                <h3>Hello</h3>       
+                <button class="logout-btn" on:click={handleLogout}>
+                  Logout
+                </button>
+              </div>
+            {:else}
+              <!--login button when user is not logged in-->
+              <div class="login-section">
+                <button class="login-btn" on:click={handleLogin}>
+                  Login
+                </button>
+                <p class="login-note">Sign in to access your courses and progress!</p>
+              </div>
+            {/if}
+          </div>
+        </aside>
+      {/if}
     {/await}
-  </div>
-</main>
+  </main>
 
   <!--popup that shows when you click a course - only visible if a course is selected -->
   {#if showCourseViewer && courseInViewer}
@@ -377,9 +346,5 @@
         </div>
       </div>
     </div>
-    {/if}
+  {/if}
 </div>
-
-
-<!-- All styling is now handled by app.scss -->
- 
