@@ -93,11 +93,14 @@ Courses.MP4 implements a microservices architecture with clear separation of con
 Our content curation pipeline consists of five sequential stages:
 
 \subsubsection{Course Catalog Integration}
+Due to the complexity of using UC Davis's official API to retrieve information on courses, we decided to scrape the information from the html file. Through this, we retrieved all the ECS courses, including their title and description.
 
 \subsubsection{Keyword Extraction}
 Keyword extraction was done following a guide by Maarten Grootendorst on extracting keywords from text \cite{Grootendorst}. Each course description is cleaned of stop words and split into candidate phrases ranging from 1-2 words long. The whole description is encoded into an embedding vector using a BERT-based sentence transformer, and the individual phrases are also encoded. The encoded phrases are compared to the encoded description by cosine similarity. We choose the top 3 key phrases that are most similar to the encoded description as the keywords that we pass to the YouTube API to fetch videos.
 
 \subsubsection{Video Discovery}
+We used the Youtube V3 Data API, and used the extracted keyword to create a query to find videos relating to those keywords.
+
 
 \subsubsection{User Feedback Integration}
 The system implements a voting mechanism where users can upvote or downvote videos, with scores influencing future rankings. User preferences are stored locally using browser localStorage and synchronized with the backend for registered users.
@@ -120,6 +123,7 @@ The interface implements a mobile-first responsive design with breakpoints at 57
 The Python Flask backend exposes RESTful endpoints following OpenAPI specifications:
 
 MongoDB document schema includes:
+\\
 \begin{verbatim}
 "ecs036c": {
     "title": "Data Structures, Algorithms, & Programming",
@@ -162,6 +166,11 @@ However, several limitations remain:
 We encountered several technical challenges during development:
 \begin{enumerate}
     \item \textbf{Integrating Login with Webapp:} Port issues and leaving frontend-backend integration for last meant that fixing the original HW3 files to support Dex authentication proved to be somewhat challenging. Hardcoded ports had to be removed from the frontend, and incorrect logic leftover from the HW3 template had to be altered in app.py.
+    \item \textbf{APIs:}
+    \begin{itemize}
+        \item UC Davis Course API - We originally planned to use the UCD Course API, but it required authentication. We used a html scraper instead
+        \item Youtube V3 Data API - The API limits video fetching 100 videos per day
+    \end{itemize}
 \end{enumerate}
 
 \subsection{Future Work}
