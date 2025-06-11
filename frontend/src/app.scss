@@ -627,38 +627,10 @@ header {
 // RESPONSIVE MEDIA QUERIES
 // ============================================================================
 
-// Tablet styles (between 768px and 1024px)
-@media screen and (max-width: 1024px) {
+// Tablet styles (1024px and below)
+@media screen and (max-width: 1200px) {
   .grid {
     max-width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    
-    &.grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  .cell {
-    min-height: 130px;
-    
-    h3 {
-      font-size: 1.3rem;
-    }
-    
-    p {
-      font-size: 0.9rem;
-    }
-  }
-  
-  .videos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
-
-// Small tablet styles (between 576px and 768px)
-@media screen and (max-width: 768px) {
-  .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     
@@ -678,6 +650,10 @@ header {
     h3 {
       font-size: 1.2rem;
     }
+    
+    p {
+      font-size: 0.9rem;
+    }
   }
   
   h1 {
@@ -693,7 +669,7 @@ header {
   }
   
   .videos-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
   
@@ -706,8 +682,8 @@ header {
   }
 }
 
-// Mobile styles (below 576px)
-@media screen and (max-width: 576px) {
+// Mobile styles (768px and below)
+@media screen and (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
     
@@ -753,6 +729,20 @@ header {
         gap: 0.5rem;
       }
     }
+  }
+  
+  .videos-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .course-viewer-content {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+  
+  .video-player iframe {
+    min-height: 180px;
+    max-height: 220px;
   }
 }
 
@@ -1061,26 +1051,9 @@ header {
     transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
     margin-top: 0.5rem;
     outline: none;
-  }
-
-  .add-course-btn:hover, .add-course-btn:focus {
+  }  .add-course-btn:hover, .add-course-btn:focus {
     background: linear-gradient(90deg, #9e7be0 0%, #7c6dd5 100%);
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 4px 16px rgba(124, 109, 213, 0.25);
-  }
-
-  @media (max-width: 600px) {
-    .course-viewer-content {
-      padding: 1.2rem 0.5rem 1.2rem 0.5rem;
-    }
-    
-    .video-player iframe {
-      min-height: 180px;
-      max-height: 220px;
-    }
-    
-    .videos-grid {
-      grid-template-columns: 1fr;
-    }
   }
 }
