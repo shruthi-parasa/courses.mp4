@@ -31,9 +31,6 @@
   let filteredCourses: any[] = [];
   let isLoggedIn = false;
 
-  // User vote tracking
-  let userVotes: { upvote: string[], downvote: string[] } = { upvote: [], downvote: [] };
-
   $: availableCourses = allCourses.filter(course => !userCourses.includes(course.code));
 
   // Update your filtering logic to use availableCourses instead of courses
@@ -52,9 +49,6 @@
     isLoggedIn = !!username;
     await fetchUserCourses();
     fetchCourses();
-    if (isLoggedIn) {
-      await getUserVotes();
-    }
   });
 
 
@@ -177,167 +171,7 @@
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       callback();
-    }
-  }  // Voting functions (copied from MyCourses.svelte)
-  async function upVote(course: Course, video: Video) {
-    let courseCode = course.code;
-    let videoId = video.id;
-    
-    // Check if user is logged in
-    if (!isLoggedIn) {
-      alert('Please log in to vote on videos.');
-      return;
-    }
-    
-    try {
-      // If already upvoted, revert the upvote
-      if (isUpvoted(videoId)) {
-        await revertVote(course, video, true);
-        return;
-      }
-      
-      // If downvoted, revert the downvote first
-      if (isDownvoted(videoId)) {
-        await revertVote(course, video, false);
-      }
-      
-      const response = await fetch(`/api/vote/${courseCode}/${videoId}/upvote`, {
-        method: 'PUT',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      
-      const result = await response.json();
-      
-      if (response.ok) {
-        console.log("Upvote successful:", result.message);
-        await refreshCourseData(courseCode);
-      } else {
-        console.error("Upvote failed:", result.error);
-      }
-    } catch (e) {
-      console.log("Error Occurred - ", e);
-    }
-  }  async function downVote(course: Course, video: Video) {
-    let courseCode = course.code;
-    let videoId = video.id;
-    
-    // Check if user is logged in
-    if (!isLoggedIn) {
-      alert('Please log in to vote on videos.');
-      return;
-    }
-    
-    try {
-      // If already downvoted, revert the downvote
-      if (isDownvoted(videoId)) {
-        await revertVote(course, video, false);
-        return;
-      }
-      
-      // If upvoted, revert the upvote first
-      if (isUpvoted(videoId)) {
-        await revertVote(course, video, true);
-      }
-      
-      const response = await fetch(`/api/vote/${courseCode}/${videoId}/downvote`, {
-        method: 'PUT',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      
-      const result = await response.json();
-      
-      if (response.ok) {
-        console.log("Down vote successful:", result.message);
-        await refreshCourseData(courseCode);
-      } else {
-        console.error("Downvote failed:", result.error);
-      }
-    } catch (e) {
-      console.log("Error Occurred - ", e);
-    }
-  }
-
-  async function revertVote(course: Course, video: Video, upOrDown: boolean){
-    let courseCode = course.code;
-    let videoId = video.id;
-    let revert = '';
-    try {
-      if(upOrDown){
-        revert = "revert_upvote";
-      } else{
-        revert = "revert_downvote";
-      }
-      const response = await fetch(`/api/vote/${courseCode}/${videoId}/${revert}`, {
-        method: 'PUT',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      
-      const result = await response.json();      if (response.ok) {
-        console.log("Revert vote successful:", result.message," - ", revert);
-        await refreshCourseData(courseCode);
-      } else {
-        console.error("Revert vote failed:", result.error);
-      }
-    } catch (e) {
-      console.log("Error Occurred - ", e);
-    }
-  }  async function refreshCourseData(courseCode: string) {
-    try {
-      // Get fresh video data for the course
-      const response = await fetch(`/api/videos/${courseCode}`);
-      if (!response.ok) throw new Error('Failed to fetch videos');
-      const freshVideos = await response.json();
-      
-      // Update courseInViewer if it is the same course
-      if (courseInViewer && courseInViewer.code === courseCode) {
-        courseInViewer = { ...courseInViewer, videos: freshVideos };
-      }
-      
-      // Update allCourses to keep data consistent
-      allCourses = allCourses.map(course => {
-        if (course.code === courseCode) {
-          return { ...course, videos: freshVideos };
-        }
-        return course;
-      });
-
-      // Refresh user votes to update UI state
-      if (isLoggedIn) {
-        await getUserVotes();
-      }
-    } catch (error) {
-      console.error('Error refreshing course data:', error);
-    }
-  }
-
-  // Get user votes from backend
-  async function getUserVotes() {
-    try {
-      const res = await fetch('/api/user_votes');
-      const voteData = await res.json();
-      userVotes = voteData;
-    } catch(e) {
-      console.log("Error Occurred - ", e);
-    }
-  }
-
-  // Helper functions to check vote state
-  function isUpvoted(videoId: string): boolean {
-    return userVotes.upvote?.includes(videoId) || false;
-  }
-
-  function isDownvoted(videoId: string): boolean {
-    return userVotes.downvote?.includes(videoId) || false;
-  }
+    }  }
 </script>
 
 <!--main container that holds everything -->
@@ -451,26 +285,11 @@
                   on:click={() => playVideo(video)}
                 >
                   <!--gets video thumbnail from youtube using video ID -->
-                  <img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} />
-                  <div class="video-info">
+                  <img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} />                  <div class="video-info">
                     <h5>{video.title}</h5>
                     <p class="channel">{video.channel}</p>
-                  </div>                </button>                <div class="vote-controls-centered">
-                  <button 
-                    class="upvote-btn-small {isUpvoted(video.id) ? 'voted' : ''}" 
-                    on:click|stopPropagation={() => upVote(courseInViewer, video)}
-                  >
-                    👍
-                  </button>
-                  <div class="vote-count">{video.up_vote}</div>
-                  <button 
-                    class="downvote-btn-small {isDownvoted(video.id) ? 'voted' : ''}" 
-                    on:click|stopPropagation={() => downVote(courseInViewer, video)}
-                  >
-                    👎
-                  </button>
-                  <div class="vote-count">{video.down_vote}</div>
-                </div>
+                  </div>
+                </button>
               </div>
             {/each}
           </div>
