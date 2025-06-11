@@ -188,7 +188,7 @@
       <div class="search-input">
         <input 
           type="text" 
-          placeholder="Search for courses (e.g. ECS 162)" 
+          placeholder="Search for courses (e.g. ECS162)" 
           bind:value={searchPhrase}
         />
       </div>

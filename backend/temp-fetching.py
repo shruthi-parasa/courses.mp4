@@ -1,6 +1,9 @@
 import os
 import json
 from pymongo import MongoClient
+from dotenv import load_dotenv
+
+load_dotenv()
 
 mongo = MongoClient(os.getenv("MONGO_URI"))
 db = mongo["database"]
