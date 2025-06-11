@@ -59,14 +59,21 @@ def authorize():
     user_info = flask_app.parse_id_token(token, nonce=nonce)  # or use .get('userinfo').json()
     session['user'] = user_info
     
-    # user_data = session['user']
-    # username = user_data.get("username")
+    # Initialize user database entries if they don't exist
+    user_data = session['user']
+    username = user_data.get('username', user_data.get('email', 'anonymous'))
     
-    # entry = db["user-courses"].find_one({"username": username})
-    # if entry is None:
-    #   db["user-courses"].insert_one({"username": username, "courses": []})
+    # Initialize user-courses collection entry
+    entry = db["user-courses"].find_one({"username": username})
+    if entry is None:
+        db["user-courses"].insert_one({"username": username, "courses": []})
+    
+    # Initialize user-votes collection entry  
+    vote_entry = db["user-votes"].find_one({"username": username})
+    if vote_entry is None:
+        db["user-votes"].insert_one({"username": username, "upvote": [], "downvote": []})
       
-    return redirect('/')
+    return redirect('/my-courses')
 
 @app.route('/logout')
 def logout():

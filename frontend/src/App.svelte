@@ -7,6 +7,20 @@
   let apiKey: string = '';
   let currentPage = 'landing';
 
+  onMount(() => {
+    // Check the current URL path and set the appropriate page
+    const path = window.location.pathname;
+    
+    if (path === '/my-courses') {
+      currentPage = 'my-courses';
+    } else if (path === '/search' || path === '/course-catalog') {
+      currentPage = 'search';
+    } else {
+      // Default to landing page for root '/' or any other path
+      currentPage = 'landing';
+    }
+  });
+
   // onMount(async () => {
   //   try {
   //     const res = await fetch('/api/key');
@@ -19,6 +33,17 @@
 
   function navigateTo(page: string) {
     currentPage = page;
+    
+    // Update the URL to match the current page (optional, for better UX)
+    let newPath = '/';
+    if (page === 'my-courses') {
+      newPath = '/my-courses';
+    } else if (page === 'search') {
+      newPath = '/search';
+    }
+    
+    // Update URL without triggering a page reload
+    window.history.pushState({}, '', newPath);
   }
 </script>
 
