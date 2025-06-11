@@ -62,7 +62,7 @@ The exponential growth of educational video content on platforms like YouTube ha
 
 \section{Introduction}
 
-The digital transformation of education has led to an unprecedented volume of educational content available online, with YouTube hosting over 1 billion hours of educational videos \cite{youtube2023stats}. While this abundance presents valuable learning opportunities, it also creates information overload challenges for students seeking course-specific supplementary materials. Traditional search methods often yield overwhelming results, forcing students to manually sift through hundreds of videos to find content aligned with their coursework.
+The digital transformation of education has led to an unprecedented volume of educational content available online. While this abundance presents valuable learning opportunities, it also creates information overload challenges for students seeking course-specific supplementary materials. Traditional search methods often yield overwhelming results, forcing students to manually sift through hundreds of videos to find content aligned with their coursework.
 
 We present \textit{Courses.MP4}, a novel web-based system that addresses this challenge through intelligent automation and community curation. Our system leverages the UC Davis Course Catalog API to extract course metadata, applies natural language processing techniques to identify key academic concepts, and utilizes the YouTube Data API to retrieve relevant educational videos.
 
@@ -113,10 +113,9 @@ The client-side application utilizes modern web technologies:
     \item \textbf{Svelte 5:} Component-based architecture with reactive state management
     \item \textbf{TypeScript:} Type safety and enhanced developer experience
     \item \textbf{SCSS:} Modular styling with responsive design principles
-    \item \textbf{Vite:} Fast development server and optimized production builds
 \end{itemize}
 
-The interface implements a responsive design for the mobile phone with break points of 576px (mobile), 768px (tablet) and 1024px (desktop). CSS Grid provides flexible layouts that adapt to different screen sizes while maintaining usability.
+The interface uses a responsive design with breakpoints defined as follows: mobile devices have widths less than 768px, tablets range between 768px and 1199px, and desktops are 1200px and above. CSS Grid provides flexible layouts that adapt to different screen sizes while maintaining usability.
 The front-end was developed with a strong emphasis on user experience, usability, and visual consistency. The application employs a card-based layout for all pages, ensuring course information is presented in a clear and accessible manner. 
 Furthermore, to maintain a cohesive user experience, global and page-specific styles were modularized using SCSS, with close attention to consistent color palette, spacing, and typography.
 Throughout the development process, we used feedback from our team members to improve user experience, including improvements to card alignment, responsive breakpoints, and handling edge cases such as really long course titles or tags.
@@ -124,10 +123,9 @@ Through this process, we were able to create a user-friendly and visually appeal
 
 \subsection{Backend Architecture}
 
-The Python Flask backend exposes RESTful endpoints following OpenAPI specifications:
-
+The Python Flask backend exposes RESTful endpoints for CRUD operations\\
+\newline
 MongoDB document schema includes:
-\\
 \begin{verbatim}
 "ecs036c": {
     "title": "Data Structures, Algorithms, & Programming",
@@ -163,13 +161,11 @@ Our system demonstrates several strengths in automated content curation:
     \item \textbf{User-Centric Design:} The voting mechanism enables continuous improvement through community feedback
 \end{enumerate}
 
-However, several limitations remain:
-
 \subsection{Technical Challenges}
 
 We encountered several technical challenges during development:
 \begin{enumerate}
-    \item \textbf{Integrating Login with Webapp:} Port issues and leaving frontend-backend integration for last meant that fixing the original HW3 files to support Dex authentication proved to be somewhat challenging. Hardcoded ports had to be removed from the frontend, and incorrect logic leftover from the HW3 template had to be altered in app.py.
+    \item \textbf{Integrating Login with Webapp:} Delaying frontend-backend integration and encountering port conflicts made adapting the original HW3 files to support Dex authentication particularly challenging. We had to remove hardcoded ports from the frontend and revise outdated logic inherited from the HW3 template in app.py.
     \item \textbf{APIs:}
     \begin{itemize}
         \item UC Davis Course API - We originally planned to use the UCD Course API, but it required authentication. We used a html scraper instead
@@ -193,10 +189,8 @@ The system's microservices architecture ensures scalability beyond the initial E
 
 As educational institutions increasingly embrace digital learning resources, systems like Courses.MP4 provide practical solutions for managing the overwhelming volume of available content. The open-source nature of our implementation facilitates adoption and adaptation by other institutions facing similar challenges in educational content curation.
 
-
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
-
 
 \appendix
 
@@ -209,6 +203,7 @@ As educational institutions increasingly embrace digital learning resources, sys
     \item MongoDB 5.0+ for data persistence
     \item Dex for user authentication
     \item Docker and Docker Compose for containerization
+    \item Vite: Fast development server and optimized production builds
 \end{itemize}
 
 \section{Source Code Availability}
