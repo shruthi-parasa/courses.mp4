@@ -12,14 +12,15 @@
   
   let userCourseList: any[] = [];
 
-  let userVotes: any[] = [];
-
+  let userVotes: { upvote: string[], downvote: string[] } = { upvote: [], downvote: [] };
   interface Video {
     title: string;
     id: string;
     channel: string;
     thumbnail: string;
     video_url: string;
+    up_vote: number;
+    down_vote: number;
   }
 
   interface Course {
@@ -34,9 +35,11 @@
   let courseInViewer: Course | null = null;
   let selectedVideo: Video | null = null;
 
+  let username: string | null = null;
+
   onMount(async () => {
     loadFavorites();
-    let username = await getUser();
+    username = await getUser();
     if (username != null){
       await getUserCourses();
       await fetchCourseInfo();
@@ -240,13 +243,29 @@ async function getVideos(courseCode: any) {
     } catch(e){
       console.log("Error Occurred - ", e);
     }
-  }
-
-  //Upvoting Function - Needs full course array and the specific video array
+  }  //Upvoting Function - Needs full course array and the specific video array
   async function upVote(course: any, video: any) {
   let courseCode = course.code;
   let videoId = video.id;
+  
+  // Check if user is logged in
+  if (username === null) {
+    alert('Please log in to vote on videos.');
+    return;
+  }
+  
   try {
+    // If already upvoted, revert the upvote
+    if (isUpvoted(videoId)) {
+      await revertVote(course, video, true);
+      return;
+    }
+    
+    // If downvoted, revert the downvote first
+    if (isDownvoted(videoId)) {
+      await revertVote(course, video, false);
+    }
+    
     const response = await fetch(`/api/vote/${courseCode}/${videoId}/upvote`, {
       method: 'PUT',
       credentials: 'include',
@@ -256,31 +275,39 @@ async function getVideos(courseCode: any) {
     });
     
     const result = await response.json();
-
+    
     if (response.ok) {
-      if(result.message === "Already upvoted"){
-        await revertVote(course, video, true);
-      } else{
-        console.log("Upvote successful:", result.message);
-        
-        await refreshCourseData(courseCode);
-        
-        alert(result.message);
-      }
+      console.log("Upvote successful:", result.message);
+      await refreshCourseData(courseCode);
     } else {
       console.error("Upvote failed:", result.error);
-      alert(result.error || "Failed to upvote video");
     }
   } catch (e) {
     console.log("Error Occurred - ", e);
   }
-}
-  //Downvoting Function - Needs full course array and the specific video array
+}  //Downvoting Function - Needs full course array and the specific video array
   async function downVote(course: any, video: any) {
     let courseCode = course.code;
     let videoId = video.id;
     
+    // Check if user is logged in
+    if (username === null) {
+      alert('Please log in to vote on videos.');
+      return;
+    }
+    
     try {
+      // If already downvoted, revert the downvote
+      if (isDownvoted(videoId)) {
+        await revertVote(course, video, false);
+        return;
+      }
+      
+      // If upvoted, revert the upvote first
+      if (isUpvoted(videoId)) {
+        await revertVote(course, video, true);
+      }
+      
       const response = await fetch(`/api/vote/${courseCode}/${videoId}/downvote`, {
         method: 'PUT',
         credentials: 'include',
@@ -290,20 +317,12 @@ async function getVideos(courseCode: any) {
       });
       
       const result = await response.json();
-
+      
       if (response.ok) {
-        if(result.message === "Already downvoted"){
-          await revertVote(course, video, false);
-        } else{
-          console.log("Down vote successful:", result.message);
-          
-          await refreshCourseData(courseCode);
-          
-          alert(result.message);
-        }
+        console.log("Down vote successful:", result.message);
+        await refreshCourseData(courseCode);
       } else {
         console.error("Downvote failed:", result.error);
-        alert(result.error || "Failed to downvote video");
       }
     } catch (e) {
       console.log("Error Occurred - ", e);
@@ -332,23 +351,17 @@ async function getVideos(courseCode: any) {
         }
       });
       
-      const result = await response.json();
-
-      if (response.ok) {
+      const result = await response.json();      if (response.ok) {
         console.log("Revert vote successful:", result.message," - ", revert);
         
         await refreshCourseData(courseCode);
-        
-        alert(result.message);
       } else {
         console.error("Revert upvote failed:", result.error);
-        alert(result.error || "Failed to revert up vote on video");
       }
     } catch (e) {
       console.log("Error Occurred - ", e);
     }
-  }
-  // refresh data for a course - made to specifically target re-rendering issues
+  }  // refresh data for a course - made to specifically target re-rendering issues
   async function refreshCourseData(courseCode: string) {
     try {
       // Get fresh video data for the course
@@ -366,9 +379,21 @@ async function getVideos(courseCode: any) {
       if (courseInViewer && courseInViewer.code === courseCode) {
         courseInViewer = { ...courseInViewer, videos: freshVideos };
       }
+
+      // Refresh user votes to update UI state
+      await getUserVotes();
     } catch (error) {
       console.error('Error refreshing course data:', error);
     }
+  }
+
+  // Helper functions to check vote state
+  function isUpvoted(videoId: string): boolean {
+    return userVotes.upvote?.includes(videoId) || false;
+  }
+
+  function isDownvoted(videoId: string): boolean {
+    return userVotes.downvote?.includes(videoId) || false;
   }
 
 </script>
@@ -390,95 +415,73 @@ async function getVideos(courseCode: any) {
     </div>
 
     <!--loading while fetching courses, or error if something went wrong -->
-    {#await getUser()}
-      <div class="loading">Loading...</div>
-    {:then username}
-      {#if typeof username !== "undefined"}
-        {#if loading}
-          <!--courses are being loaded-->
-          <div class="loading">Loading your courses...</div>
-        {:else if error}
-          <!--problem getting the courses-->
-          <div class="error">Error: {error}</div>
-        {:else if userCourseList.length === 0}
-          <!--hasn't added any courses yet-->
-          <div class="no-courses">You have not added any courses yet.</div>
-        {:else}
-          <!--grid layout of course cards from user's course list -->
-          <section class="grid">
-            {#each userCourseList as course}
-              <div class="cell">
-                <!--clickable card; view of the course -->
-                <button 
-                  class="course-btn"
-                  on:click={() => showCourseDetails(course)}
-                >
-                  <!--thumbnail image on course card-->
-                  {#if course.videos && course.videos.length > 0}
-                    <img class="landing-thumb" src={`https://i.ytimg.com/vi/${course.videos[0].id}/hqdefault.jpg`} alt={course.videos[0].title} />
-                  {/if}
-                  
-                  <!--keywords section-->
-                  <div class="landing-keywords">
-                    {#each course.keywords?.slice(0, 1) as keyword}
-                      <span class="landing-keyword-tag">{keyword}</span>
-                    {/each}
-                  </div>
-                  
-                  <!--course code and title-->
-                  <div class="landing-title-row">
-                    <span class="landing-code landing-code-black">{course.code}</span>
-                  </div>
-                  <div class="landing-title">{course.title}</div>
-                </button>
-                
-                <!--remove course button-->
-                <button class="remove-course-btn" on:click={() => removeCourse(course.code ? course.code : course)}>
-                  Remove Course
-                </button>
-              </div>
-            {/each}
-          </section>
-        {/if}
-      {:else if username == null}
-        <!--tells user they need to login to see their courses-->
-        <div class="login-prompt">Please log in to view your courses.</div>
+    {#if username !== null}
+      {#if loading}
+        <div class="loading">Loading your courses...</div>
+      {:else if error}
+        <div class="error">Error: {error}</div>
+      {:else if userCourseList.length === 0}
+        <div class="no-courses">You have not added any courses yet.</div>
+      {:else}
+        <section class="grid">
+          {#each userCourseList as course}
+            <div class="cell">
+              <button 
+                class="course-btn"
+                on:click={() => showCourseDetails(course)}
+              >
+                {#if course.videos && course.videos.length > 0}
+                  <img class="landing-thumb" src={`https://i.ytimg.com/vi/${course.videos[0].id}/hqdefault.jpg`} alt={course.videos[0].title} />
+                {/if}
+                <div class="landing-keywords">
+                  {#each course.keywords?.slice(0, 2) as keyword}
+                    <span class="landing-keyword-tag">{keyword}</span>
+                  {/each}
+                </div>
+                <div class="landing-title-row">
+                  <span class="landing-code landing-code-black">{course.code}</span>
+                </div>
+                <div class="landing-title">{course.title}</div>
+              </button>
+              <button class="remove-course-btn" on:click={() => removeCourse(course.code ? course.code : course)}>
+                Remove Course
+              </button>
+            </div>
+          {/each}
+        </section>
       {/if}
+    {:else}
+      <div class="login-prompt">Please log in to view your courses.</div>
+    {/if}
 
-      <!--panel that slides in from side for account stuff-->
-      {#if showSidepanel}
-        <aside class="sidepanel">
-          <!--top part of sidepanel with title and close button-->
-          <div class="sidepanel-header">
-            <h2>Account</h2>
-            <button class="close-btn" on:click={toggleSidepanel}>×</button>
-          </div>
-
-          <!--main part of sidepanel with account options-->
-          <div class="sidepanel-content">
-            {#if username != null}
-              <!--logout button when user is logged in-->
-              <div class="account-info">
-                <h3>
-                  Welcome Back {username}!
-                </h3>       
-                <button class="logout-btn" on:click={handleLogout}>
-                  Logout
-                </button>
-              </div>
-            {:else}
-              <!--login button when user is not logged in-->
-              <div class="login-section">
-                <button class="login-btn" on:click={handleLogin}>
-                  Login
-                </button>
-                <p class="login-note">Sign in to access your courses and progress!</p>
-              </div>
-            {/if}
-          </div>
-        </aside>
-      {/if}
-    {/await}
+    <!--panel that slides in from side for account stuff-->
+    {#if showSidepanel}
+      <aside class="sidepanel">
+        <div class="sidepanel-header">
+          <h2>Account</h2>
+          <button class="close-btn" on:click={toggleSidepanel}>×</button>
+        </div>
+        <div class="sidepanel-content">
+          {#if username !== null}
+            <div class="account-info">
+              <h3>
+                Welcome Back {username}!
+              </h3>       
+              <button class="logout-btn" on:click={handleLogout}>
+                Logout
+              </button>
+            </div>
+          {:else}
+            <div class="login-section">
+              <button class="login-btn" on:click={handleLogin}>
+                Login
+              </button>
+              <p class="login-note">Sign in to access your courses and progress!</p>
+            </div>
+          {/if}
+        </div>
+      </aside>
+    {/if}
   </main>
 
   <!--popup that shows when you click a course - only visible if a course is selected -->
@@ -543,24 +546,22 @@ async function getVideos(courseCode: any) {
                   <div class="video-info">
                     <h5>{video.title}</h5>
                     <p class="channel">{video.channel}</p>
-                  </div>
-                </button>
-                <!-- Add upvote button for each video in the grid -->
-                <button 
-                  class="upvote-btn-small" 
-                  on:click|stopPropagation={() => upVote(courseInViewer, video)}
-                >
-                  👍
-                </button>
-                <button 
-                  class="downvote-btn-small" 
-                  on:click|stopPropagation={() => downVote(courseInViewer, video)}
-                >
-                  👎
-                </button>
-                <!-- Ignore Error squiggles, works fine! - K. Nguyen -->
-                <div>upVote: {video.up_vote}</div>
-                <div>Downvotes: {video.down_vote}</div>
+                  </div>                </button>                <div class="vote-controls-centered">
+                  <button 
+                    class="upvote-btn-small {isUpvoted(video.id) ? 'voted' : ''}" 
+                    on:click|stopPropagation={() => upVote(courseInViewer, video)}
+                  >
+                    👍
+                  </button>
+                  <div class="vote-count">{video.up_vote}</div>
+                  <button 
+                    class="downvote-btn-small {isDownvoted(video.id) ? 'voted' : ''}" 
+                    on:click|stopPropagation={() => downVote(courseInViewer, video)}
+                  >
+                    👎
+                  </button>
+                  <div class="vote-count">{video.down_vote}</div>
+                </div>
               </div>
             {/each}
           </div>

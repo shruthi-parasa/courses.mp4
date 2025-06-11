@@ -9,6 +9,8 @@
     channel: string;
     thumbnail: string;
     video_url: string;
+    up_vote: number;
+    down_vote: number;
   }
 
   interface Course {
@@ -18,13 +20,16 @@
     keywords: string[];
     videos: Video[];
   }
-
   let courses: Course[] = [];
   let loading = true;
   let error: string | null = null;
   let selectedCourse: Course | null = null;
   let showViewer: boolean = false;
   let selectedVideo: Video | null = null;
+
+  // User vote tracking
+  let userVotes: { upvote: string[], downvote: string[] } = { upvote: [], downvote: [] };
+  let isLoggedIn = false;
 
   //fetch 3 courses with video data for landing page to highlight the landing page
   async function fetchLandingCourses() {
@@ -47,9 +52,23 @@
     }
   }
 
-  onMount(() => {
+    onMount(() => {
     fetchLandingCourses();
+    checkLoginStatus();
   });
+
+  async function checkLoginStatus() {
+    try {
+      const response = await fetch('/get-user');
+      const data = await response.json();
+      isLoggedIn = !!data.username;
+      if (isLoggedIn) {
+        await getUserVotes();
+      }
+    } catch (e) {
+      console.log("Error checking login status:", e);
+    }
+  }
 
   //opens the course viewer modal when a course card is clicked
   //sets the selected course, clears any previously selected video, and shows the viewer overlay
@@ -71,6 +90,171 @@
   //called when clicking a video thumbnail in the course viewer
   function playVideo(video: Video) {
     selectedVideo = video;
+  }
+  function handleCardKeydown(event: KeyboardEvent, course: Course) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openViewer(course);
+    }
+  }  // Voting functions (copied from MyCourses.svelte)
+  async function upVote(course: Course, video: Video) {
+    let courseCode = course.code;
+    let videoId = video.id;
+    
+    // Check if user is logged in
+    if (!isLoggedIn) {
+      alert('Please log in to vote on videos.');
+      return;
+    }
+    
+    try {
+      // If already upvoted, revert the upvote
+      if (isUpvoted(videoId)) {
+        await revertVote(course, video, true);
+        return;
+      }
+      
+      // If downvoted, revert the downvote first
+      if (isDownvoted(videoId)) {
+        await revertVote(course, video, false);
+      }
+      
+      const response = await fetch(`/api/vote/${courseCode}/${videoId}/upvote`, {
+        method: 'PUT',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        console.log("Upvote successful:", result.message);
+        await refreshCourseData(courseCode);
+      } else {
+        console.error("Upvote failed:", result.error);
+      }
+    } catch (e) {
+      console.log("Error Occurred - ", e);
+    }
+  }  async function downVote(course: Course, video: Video) {
+    let courseCode = course.code;
+    let videoId = video.id;
+    
+    // Check if user is logged in
+    if (!isLoggedIn) {
+      alert('Please log in to vote on videos.');
+      return;
+    }
+    
+    try {
+      // If already downvoted, revert the downvote
+      if (isDownvoted(videoId)) {
+        await revertVote(course, video, false);
+        return;
+      }
+      
+      // If upvoted, revert the upvote first
+      if (isUpvoted(videoId)) {
+        await revertVote(course, video, true);
+      }
+      
+      const response = await fetch(`/api/vote/${courseCode}/${videoId}/downvote`, {
+        method: 'PUT',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        console.log("Down vote successful:", result.message);
+        await refreshCourseData(courseCode);
+      } else {
+        console.error("Downvote failed:", result.error);
+      }
+    } catch (e) {
+      console.log("Error Occurred - ", e);
+    }
+  }
+
+  async function revertVote(course: Course, video: Video, upOrDown: boolean){
+    let courseCode = course.code;
+    let videoId = video.id;
+    let revert = '';
+    try {
+      if(upOrDown){
+        revert = "revert_upvote";
+      } else{
+        revert = "revert_downvote";
+      }
+      const response = await fetch(`/api/vote/${courseCode}/${videoId}/${revert}`, {
+        method: 'PUT',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      
+      const result = await response.json();      if (response.ok) {
+        console.log("Revert vote successful:", result.message," - ", revert);
+        await refreshCourseData(courseCode);
+      } else {
+        console.error("Revert vote failed:", result.error);
+      }
+    } catch (e) {
+      console.log("Error Occurred - ", e);
+    }
+  }  async function refreshCourseData(courseCode: string) {
+    try {
+      // Get fresh video data for the specific course
+      const response = await fetch(`/api/videos/${courseCode}`);
+      if (!response.ok) throw new Error('Failed to fetch videos');
+      const freshVideos = await response.json();
+      
+      // Update the courses array with fresh video data
+      courses = courses.map(course => {
+        if (course.code === courseCode) {
+          return { ...course, videos: freshVideos };
+        }
+        return course;
+      });
+      
+      // If the course viewer is open for this course, update the selected course
+      if (selectedCourse && selectedCourse.code === courseCode) {
+        selectedCourse = { ...selectedCourse, videos: freshVideos };
+      }
+
+      // Refresh user votes to update UI state
+      if (isLoggedIn) {
+        await getUserVotes();
+      }
+    } catch (error) {
+      console.error('Error refreshing course data:', error);
+    }
+  }
+
+  // Get user votes from backend
+  async function getUserVotes() {
+    try {
+      const res = await fetch('/api/user_votes');
+      const voteData = await res.json();
+      userVotes = voteData;
+    } catch(e) {
+      console.log("Error Occurred - ", e);
+    }
+  }
+
+  // Helper functions to check vote state
+  function isUpvoted(videoId: string): boolean {
+    return userVotes.upvote?.includes(videoId) || false;
+  }
+
+  function isDownvoted(videoId: string): boolean {
+    return userVotes.downvote?.includes(videoId) || false;
   }
 </script>
 
@@ -106,27 +290,33 @@
   </section> -->
 
 
-  <!--below code similar to search courses/course catalog page code-->
-  <section class="course-list landing-grid">
+  <!--below code similar to search courses/course catalog page code-->  <section class="grid">
     {#if loading}
       <div>Loading...</div>
     {:else if error}
       <div class="error">{error}</div>
     {:else}
       {#each courses as course}
-        <div class="landing-card" on:click={() => openViewer(course)} tabindex="0" role="button">
-          {#if course.videos && course.videos.length > 0}
-            <img class="landing-thumb" src={`https://i.ytimg.com/vi/${course.videos[0].id}/hqdefault.jpg`} alt={course.videos[0].title} />
-          {/if}
-          <div class="landing-keywords">
-            {#each course.keywords.slice(0, 2) as keyword}
-              <span class="landing-keyword-tag">{keyword}</span>
-            {/each}
-          </div>
-          <div class="landing-title-row">
-            <span class="landing-code landing-code-black">{course.code}</span>
-          </div>
-          <div class="landing-title">{course.title}</div>
+        <div class="cell">
+          <button 
+            class="course-btn"
+            on:click={() => openViewer(course)}
+            on:keydown={(e) => handleCardKeydown(e, course)}
+            aria-label={`View details for ${course.code} - ${course.title}`}
+          >
+            {#if course.videos && course.videos.length > 0}
+              <img class="landing-thumb" src={`https://i.ytimg.com/vi/${course.videos[0].id}/hqdefault.jpg`} alt={course.videos[0].title} />
+            {/if}
+            <div class="landing-keywords">
+              {#each course.keywords.slice(0, 2) as keyword}
+                <span class="landing-keyword-tag">{keyword}</span>
+              {/each}
+            </div>
+            <div class="landing-title-row">
+              <span class="landing-code landing-code-black">{course.code}</span>
+            </div>
+            <div class="landing-title">{course.title}</div>
+          </button>
         </div>
       {/each}
     {/if}
@@ -172,16 +362,33 @@
           <h4>Related Videos</h4>
           <div class="videos-grid">
             {#each selectedCourse.videos as video}
-              <button 
-                class="video-card"
-                on:click={() => playVideo(video)}
-              >
-                <img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} />
-                <div class="video-info">
-                  <h5>{video.title}</h5>
-                  <p class="channel">{video.channel}</p>
+              <div class="video-card-container">
+                <button 
+                  class="video-card"
+                  on:click={() => playVideo(video)}
+                >
+                  <img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} />
+                  <div class="video-info">
+                    <h5>{video.title}</h5>
+                    <p class="channel">{video.channel}</p>
+                  </div>
+                </button>                <div class="vote-controls-centered">
+                  <button 
+                    class="upvote-btn-small {isUpvoted(video.id) ? 'voted' : ''}" 
+                    on:click|stopPropagation={() => upVote(selectedCourse, video)}
+                  >
+                    👍
+                  </button>
+                  <div class="vote-count">{video.up_vote}</div>
+                  <button 
+                    class="downvote-btn-small {isDownvoted(video.id) ? 'voted' : ''}" 
+                    on:click|stopPropagation={() => downVote(selectedCourse, video)}
+                  >
+                    👎
+                  </button>
+                  <div class="vote-count">{video.down_vote}</div>
                 </div>
-              </button>
+              </div>
             {/each}
           </div>
         </div>
