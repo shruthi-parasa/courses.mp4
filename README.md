@@ -7,3 +7,7 @@ The Youtube API key can be sourced from the Google Developer Console - Youtube V
 
 Run the app on the prod environment; once docker is running, insert the sample data into MongoDB by running the temp_fetching.py script located in the backend directory with a venv that has the requirements installed.
 (Note that you could use fetch.py, which fetches and processes all data and puts it all into MongoDB, however due to the limitations of the Youtube V3 Data API, we cannot extract all the videos of our course collection at once)
+
+To run the tests on frontend, install the node packages and run sudo npm test in the frontend/frontend_tests directory
+
+To run the tests on backend, run the script inside backend/tests with a venv that has the installed requirements.
