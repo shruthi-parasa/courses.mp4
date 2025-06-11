@@ -9,7 +9,7 @@ charset-normalizer==3.4.2
 click==8.2.1
 cryptography==45.0.3
 dnspython==2.7.0
-Flask==2.3.2
+Flask==3.1.1
 flask-Cors==4.0.0
 google-api-core==2.24.2
 google-api-python-client==2.170.0

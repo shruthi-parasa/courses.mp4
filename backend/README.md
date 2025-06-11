@@ -30,3 +30,8 @@ Update requirements.txt
 pip freeze > requirements.txt
 ```
 
+Run unit tests:
+
+```bash
+python -m unittest discover -s tests
+```
